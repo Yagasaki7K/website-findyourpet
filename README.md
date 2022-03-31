@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+<p align="center">
+   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/public/assets/logotipo.png" width="300"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+   <a href="https://www.linkedin.com/in/andersonmarlon/">
+      <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-findyourpet?color=5965e0">
 
-## Available Scripts
+  <a href="https://github.com/Yagasaki7K/website-findyourpet/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-findyourpet?color=5965e0">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-findyourpet?color=5965e0" />
+  <a href="https://github.com/Yagasaki7K/website-findyourpet/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-findyourpet?color=5965e0&logo=github">
+  </a>
+</p>
 
-In the project directory, you can run:
+<div align="center">
+  <sub>Findyourpet. Built with ❤︎ by
+    <a href="https://github.com/Yagasaki7K">Anderson "Yagasaki" Marlon</a> and
+    <a href="https://github.com/Yagasaki7K/website-findyourpet/graphs/contributors">
+      contributors
+    </a>
+  </sub>
+</div>
 
-### `yarn start`
+# 📌 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Demo Website](#eyes-demo-website)
+* [Technologies](#computer-technologies)
+* [Features](#rocket-features)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 👀 Demo Website
+👉  Demo: https://website-findyourpet.vercel.app/
 
-### `yarn test`
+# 💻 Technologies
+This project was made using the follow technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* ReactJS
+* React Native
+* Expo
+* Firebase
 
-### `yarn build`
+# 🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🐶 - I lost my dog!
+You enter the application, register, go to the lost animals area, there you can register a new pet so that others know that you are looking for your pet. Fill in information with the type of animal it is, the color, size, name, last location and contact information, soon someone will let you know they found your pet!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🐱 - I found a cat!
+You enter the application, register, go to the lost animals area, there you can find people who are looking for lost pets, so you click on the animal that appears to be it, based on the information of places where it was lost, the description of the pet and you can get in touch with the owner. You deliver or he picks up and everything is resolved!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🐰 - I want to adopt/adopt a pet!
+You enter the application, register, go to the adoption area, and there you will find both people who want to adopt a pet, as well as those who are adopting a new one or something similar. Contact the person about the pet you are donating or looking for and everything is resolved, another pet that will have a new home to call its own!
 
-### `yarn eject`
+# 🚧 How to run
+```bash
+# Clone Repository
+$ git clone https://github.com/Yagasaki7K/website-findyourpet.git
+$ Go to folder using terminal
+$ yarn (needs yarn installed)
+$ yarn dev (if you wanna change something) // yarn start (just to see running)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you need change something, check using yarn build if everything is okay. And later you do a PR.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 🐛 Issues
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Feel free to **file a new issue** with a respective title and description on the the [Web findyourpet](https://github.com/Yagasaki7K/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 🎉 Contributing
+First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
-## Learn More
+Here's some tips:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Check the [issues page](https://github.com/Yagasaki7K/website-findyourpet/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+* Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
 
-### Code Splitting
+# 📕 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Released in 2021
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made by [Anderson Marlon](https://github.com/Yagasaki7K).
+This project is under the [MIT license](./LICENSE).
