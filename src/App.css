@@ -1,0 +1,79 @@
+.logo img {
+    width: 3%;
+    margin: 20px 0 0 50px;
+}
+
+a {
+    color: #703edb;
+    font-weight: bold;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    color: #151515;
+    width: 70%;
+    margin-left: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container h3 {
+    font-weight: 500;
+}
+
+.container img {
+    width: 500px;
+    margin-top: -20px;
+}
+
+.content img {
+    width: 50%;
+    margin-left: 17%;
+    margin-top: 5%;
+}
+
+.content .socialmedia {
+    display: flex;
+    margin: 0;
+}
+
+.content .socialmedia img {
+    width: 150px;
+}
+
+.content .socialmedia a:first-child {
+    margin-right: 20px;
+    margin-left: -30px;
+}
+
+.imgright img {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.howtoworks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 800px;
+    margin-left: 18%;
+}
+
+.breakline {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright i {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
