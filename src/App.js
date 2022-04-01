@@ -1,17 +1,16 @@
 import './App.css';
-import useEffect from 'react'
 
 function App() {
 
     return (
         <>
             <div className="logo">
-            <a href="#"><img src="/assets/logo.png" alt="Logo"/></a>
+            <a href="#"><img src="/assets/logo-white.png" alt="Logo"/></a>
             </div>
 
             <div className="container">
                 <div className="content">
-                    <a href="#"><img src="/assets/logotipo.png" alt="Logotipo"/></a>
+                    <a href="#"><img src="/assets/logotipo-white.png" alt="Logotipo"/></a>
                     <h1>Um app para te ajudar a encontrar, informar e doar seus pets com amor!</h1>
                     <h3>Um mundo melhor para nossos bichinhos</h3>
 
@@ -82,7 +81,7 @@ function App() {
                 <p>
                     Em caso de vendas de animais, por favor, entre em contato com 
                     a <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> que 
-                    estaremos retirando o anúncio do ar imediatamente. Adotar é muito melhor! 💜
+                    estaremos retirando o anúncio do ar imediatamente. Adotar é muito melhor! 🤍
                 </p>
 
                 <p>
