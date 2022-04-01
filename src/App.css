@@ -1,16 +1,26 @@
+:root {
+    --first-color: #703edb;
+    --font-color: #f7f7f7;
+}
+
+body {
+    background: var(--first-color);
+    color: var(--font-color);
+}
+
 .logo img {
     width: 3%;
     margin: 20px 0 0 50px;
 }
 
 a {
-    color: #703edb;
+    color: var(--font-color);
     font-weight: bold;
 }
 
 .container {
     font-family: 'Poppins', sans-serif;
-    color: #151515;
+    color: var(--font-color);
     width: 70%;
     margin-left: 220px;
     display: flex;
