@@ -10,8 +10,8 @@ function App() {
 
             <div className="container">
                 <div className="content">
-                    <a href="#"><img src="/assets/logotipo-white.png" alt="Logotipo"/></a>
-                    <h1>Um app para te ajudar a encontrar, informar e doar seus pets com amor!</h1>
+                    <a href="#"><img src="/assets/logotipo-white.png" alt="Logotipo" className="logotipo"/></a>
+                    <h1>Um app para te ajudar a encontrar, resgatar e doar seus pets com amor!</h1>
                     <h3>Um mundo melhor para nossos bichinhos</h3>
 
                     <div className="socialmedia">
@@ -41,7 +41,7 @@ function App() {
                     lá você consegue cadastrar um novo pet para que outros saibam que você
                     está procurando seu bichinho. Preencha informações com o tipo de animal
                     que ele é, a cor, tamanho, nome, a última localização e informações para
-                    contato, em breve alguém irá te informar que encontraram o seu bichinho!
+                    contato, em breve alguém irá te resgatar que encontraram o seu bichinho!
                 </p>
 
                 <h3>🐱 - Eu encontrei um gato!</h3>

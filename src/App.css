@@ -10,7 +10,7 @@ body {
 
 .logo img {
     width: 3%;
-    margin: 20px 0 0 50px;
+    margin: 25px 0 0 70px;
 }
 
 a {
@@ -38,8 +38,11 @@ a {
 
 .content img {
     width: 50%;
-    margin-left: 17%;
     margin-top: 5%;
+}
+
+.content .logotipo {
+    margin-left: 0px;
 }
 
 .content .socialmedia {
@@ -49,6 +52,7 @@ a {
 
 .content .socialmedia img {
     width: 150px;
+    margin-left: 1.6rem;
 }
 
 .content .socialmedia a:first-child {
