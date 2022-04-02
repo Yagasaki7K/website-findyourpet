@@ -41,16 +41,18 @@ function App() {
                     lá você consegue cadastrar um novo pet para que outros saibam que você
                     está procurando seu bichinho. Preencha informações com o tipo de animal
                     que ele é, a cor, tamanho, nome, a última localização e informações para
-                    contato, em breve alguém irá te resgatar que encontraram o seu bichinho!
+                    contato, em breve alguém irá te avisar a respeito do seu bichinho!
                 </p>
 
                 <h3>🐱 - Eu encontrei um gato!</h3>
                 <p>
                     Você entra no aplicativo, se cadastra, vá na área de animais perdidos,
                     lá você consegue encontrar pessoas que estão procurando por bichinhos perdidos,
-                    assim, você clica no animal que aparenta ser ele, baseado nas informações de
-                    lugares onde ele foi perdido, a descrição do bichinho e você consegue entrar
-                    em contato com o dono. Você entrega ou ele vem buscar e tudo está resolvido!
+                    assim, você clica no animal que aparenta ser ele ou cadastra um novo, 
+                    baseado nas informações de lugares onde ele foi perdido, a descrição do 
+                    bichinho e as demais informações, assim você consegue entrar em contato 
+                    com o dono ou o dono com você, vocês se alinham sobre como
+                    devolver o mascote de volta para sua família e pronto! Tudo está resolvido!
                 </p>
 
                 <h3>🐰 - Quero fazer uma adoção/adotar um animalzinho!</h3>
@@ -59,7 +61,7 @@ function App() {
                     você encontrará tanto pessoas que queiram adotar um bichinho, tanto
                     quanto aqueles que estão adotando um que acabou de nascer ou algo do tipo.
                     Entre em contato com a pessoa a respeito do animalzinho que você está doando
-                    ou que está procurando e tudo está resolvido, mais um animalzinho que terá
+                    ou que está procurando, alinhem-se e tudo está resolvido, mais um animalzinho que terá
                     um novo lar para chamar de seu!
                 </p>
 
