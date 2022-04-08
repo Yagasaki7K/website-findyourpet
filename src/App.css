@@ -1,93 +1,93 @@
 :root {
-    --first-color: #703edb;
-    --font-color: #f7f7f7;
+  --first-color: #703edb;
+  --font-color: #f7f7f7;
 }
 
 body {
-    background: var(--first-color);
-    color: var(--font-color);
+  background: var(--first-color);
+  color: var(--font-color);
 }
 
 .logo img {
-    width: 3%;
-    margin: 25px 0 0 70px;
+  width: 3%;
+  margin: 25px 0 0 70px;
 }
 
 a {
-    color: var(--font-color);
-    font-weight: bold;
+  color: var(--font-color);
+  font-weight: bold;
 }
 
 .container {
-    font-family: 'Poppins', sans-serif;
-    color: var(--font-color);
-    width: 70%;
-    margin-left: 220px;
-    display: flex;
-    justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color);
+  width: 70%;
+  margin-left: 220px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container h3 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .container img {
-    width: 500px;
-    margin-top: -20px;
+  width: 500px;
+  margin-top: -20px;
 }
 
 .content img {
-    width: 50%;
-    margin-top: 5%;
+  width: 50%;
+  margin-top: 5%;
 }
 
 .content .logotipo {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .content .socialmedia {
-    display: flex;
-    margin: 0;
+  display: flex;
+  margin: 0;
 }
 
 .content .socialmedia img {
-    width: 150px;
-    margin-left: 1.6rem;
+  width: 150px;
+  margin-left: 1.6rem;
 }
 
 .content .socialmedia a:first-child {
-    margin-right: 20px;
-    margin-left: -30px;
+  margin-right: 20px;
+  margin-left: -30px;
 }
 
 .imgright img {
-    width: 100%;
-    margin-right: 20px;
+  width: 100%;
+  margin-right: 20px;
 }
 
 .howtoworks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text {
-    width: 800px;
-    margin-left: 18%;
+  width: 800px;
+  margin-left: 18%;
 }
 
 .breakline {
-    flex-basis: 100%;
-    height: 0;
+  flex-basis: 100%;
+  height: 0;
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright i {
-    margin-bottom: 15px;
-    font-size: 12px;
+  margin-bottom: 15px;
+  font-size: 12px;
 }
