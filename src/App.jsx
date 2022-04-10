@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react'
 import jwt_decode from 'jwt-decode'
 import "./App.css";
 
+import LogoWhite from '/assets/logo-white.png'
+import LogotipoWhite from '/assets/logotipo-white.png'
+import Logo from '/assets/logo.png'
+import Petlook from '/assets/petlook.png'
+
 const App = () => {
     const [username, setUsername] = useState(null)
 
@@ -54,12 +59,12 @@ const App = () => {
 
             <div className="App">
                 <div className="logo">
-                    <a href="#"><img src="../assets/logo-white.png" alt="Logo" /></a>
+                    <a href="#"><img src={LogoWhite} alt="Logo" /></a>
                 </div>
 
                 <div className="container">
                     <div className="content">
-                        <a href="#"><img src="../assets/logotipo-white.png" alt="Logotipo" className="logotipo" /></a>
+                        <a href="#"><img src={LogotipoWhite} alt="Logotipo" className="logotipo" /></a>
                         <h1>Um app para te ajudar a encontrar, resgatar e doar seus pets com amor!</h1>
                         <h3>Um mundo melhor para nossos bichinhos</h3>
 
@@ -69,7 +74,7 @@ const App = () => {
                     </div>
 
                     <div className="imgright">
-                        <img src="../assets/petlook.png"></img>
+                        <img src={Petlook}></img>
                     </div>
 
                 </div>
