@@ -1,5 +1,5 @@
 {
-  "name": "findyourdog",
+  "name": "findyourpet",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,8 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^9.6.10",
+    "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

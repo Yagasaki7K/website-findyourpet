@@ -1,93 +1,175 @@
 :root {
-  --first-color: #703edb;
-  --font-color: #f7f7f7;
+    --first-color: #703edb;
+    --font-color: #f7f7f7;
 }
 
 body {
-  background: var(--first-color);
-  color: var(--font-color);
+    background: var(--first-color);
+    color: var(--font-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo img {
-  width: 3%;
-  margin: 25px 0 0 70px;
+    width: 3%;
+    margin: 25px 0 0 70px;
 }
 
 a {
-  color: var(--font-color);
-  font-weight: bold;
+    color: var(--font-color);
+    font-weight: bold;
+}
+
+button {
+    margin-right: 25px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    color: #aeaa46;
+    background: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .container {
-  font-family: 'Poppins', sans-serif;
-  color: var(--font-color);
-  width: 70%;
-  margin-left: 220px;
-  display: flex;
-  justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
+    width: 70%;
+    margin-left: 14rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container h3 {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .container img {
-  width: 500px;
-  margin-top: -20px;
+    width: 500px;
+    margin-top: -20px;
 }
 
 .content img {
-  width: 50%;
-  margin-top: 5%;
+    width: 50%;
+    margin-top: 5%;
 }
 
 .content .logotipo {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 
 .content .socialmedia {
-  display: flex;
-  margin: 0;
+    display: flex;
+    margin: 0;
 }
 
 .content .socialmedia img {
-  width: 150px;
-  margin-left: 1.6rem;
+    width: 150px;
+    margin-left: 1.6rem;
 }
 
 .content .socialmedia a:first-child {
-  margin-right: 20px;
-  margin-left: -30px;
+    margin-right: 20px;
+    margin-left: -30px;
 }
 
 .imgright img {
-  width: 100%;
-  margin-right: 20px;
+    width: 100%;
+    margin-right: 20px;
 }
 
 .howtoworks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text {
-  width: 800px;
-  margin-left: 18%;
+    width: 800px;
+    margin-left: 17rem;
 }
 
 .breakline {
-  flex-basis: 100%;
-  height: 0;
+    flex-basis: 100%;
+    height: 0;
 }
 
 .copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyright i {
-  margin-bottom: 15px;
-  font-size: 12px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: 10rem;
+    }
+
+    .text {
+        margin-left: 10rem;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        display: none;
+    }
+
+    .imgright {
+        display: none;
+    }
+
+    .container {
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+        width: 80%;
+    }
+
+    .text {
+        margin-left: 4rem;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin-left: 3rem;
+    }
+
+    .text {
+        width: 480px;
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        margin-left: 2rem;
+    }
+
+    .howtoworks h1 {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        width: 300px;
+        margin-left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: 1rem;
+    }
+
+    .text {
+        margin-left: 0.5rem;
+        width: 260px;
+    }
 }
