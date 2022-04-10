@@ -54,12 +54,12 @@ const App = () => {
 
             <div className="App">
                 <div className="logo">
-                    <a href="#"><img src="/assets/logo-white.png" alt="Logo" /></a>
+                    <a href="#"><img src="../assets/logo-white.png" alt="Logo" /></a>
                 </div>
 
                 <div className="container">
                     <div className="content">
-                        <a href="#"><img src="/assets/logotipo-white.png" alt="Logotipo" className="logotipo" /></a>
+                        <a href="#"><img src="../assets/logotipo-white.png" alt="Logotipo" className="logotipo" /></a>
                         <h1>Um app para te ajudar a encontrar, resgatar e doar seus pets com amor!</h1>
                         <h3>Um mundo melhor para nossos bichinhos</h3>
 
@@ -69,7 +69,7 @@ const App = () => {
                     </div>
 
                     <div className="imgright">
-                        <img src="/assets/petlook.png"></img>
+                        <img src="../assets/petlook.png"></img>
                     </div>
 
                 </div>
