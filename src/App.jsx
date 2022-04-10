@@ -5,7 +5,6 @@ import "./App.css";
 
 import LogoWhite from '/assets/logo-white.png'
 import LogotipoWhite from '/assets/logotipo-white.png'
-import Logo from '/assets/logo.png'
 import Petlook from '/assets/petlook.png'
 
 const App = () => {

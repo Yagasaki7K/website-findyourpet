@@ -139,18 +139,18 @@ button {
 
 @media screen and (max-width: 600px) {
     .container {
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     .text {
-        width: 480px;
-        margin-left: 3rem;
+        width: 320px;
+        margin-left: 2rem;
     }
 }
 
 @media screen and (max-width: 375px) {
     .container {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
     }
 
     .howtoworks h1 {
@@ -165,11 +165,11 @@ button {
 
 @media screen and (max-width: 320px) {
     .container {
-        margin-left: 1rem;
+        margin-left: .5rem;
     }
 
     .text {
-        margin-left: 0.5rem;
+        margin-left: .5rem;
         width: 260px;
     }
 }
