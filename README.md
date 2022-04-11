@@ -19,7 +19,7 @@
 </p>
 
 <div align="center">
-  <sub>Findyourpet. Built with ❤︎ by
+  <sub>FindYourPet. Built with ❤︎ by
     <a href="https://github.com/Yagasaki7K">Anderson "Yagasaki" Marlon</a> and
     <a href="https://github.com/Yagasaki7K/website-findyourpet/graphs/contributors">
       contributors
@@ -43,8 +43,9 @@
 This project was made using the follow technologies:
 
 * ReactJS
-* React Native
-* Expo
+* Vite
+* Typescript
+* Styled Components
 * Firebase
 
 # 🚀 Features
