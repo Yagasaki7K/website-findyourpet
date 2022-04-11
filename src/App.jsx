@@ -16,7 +16,7 @@ const App = () => {
 
         if (username != null) {
             if (response.type === 'success') {
-                window.location.href('/home')
+                window.location.href('/pets')
             } else {
                 console.log('Login falhou');
                 alert('Login falhou, tente novamente!');

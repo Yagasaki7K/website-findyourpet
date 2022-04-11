@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './App.css'
 
 import App from './App'
-import Home from './pages/Home'
+import Pets from './pages/Pets'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/pets" element={<Pets />} />
       </Routes>
     </Router>
 
