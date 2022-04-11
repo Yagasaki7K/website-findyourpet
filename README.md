@@ -32,7 +32,7 @@
 * [Demo Website](#eyes-demo-website)
 * [Technologies](#computer-technologies)
 * [Features](#rocket-features)
-* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Found a bug? Missing a specific feature?](#issues)
 * [Contributing](#tada-contributing)
 * [License](#closed_book-license)
 
@@ -72,7 +72,7 @@ If you need change something, check using yarn build if everything is okay. And 
 
 # 🐛 Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [Web findyourpet](https://github.com/Yagasaki7K/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Feel free to **file a new issue** with a respective title and description on the the [FindYourPet](https://github.com/Yagasaki7K/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 # 🎉 Contributing
 First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
