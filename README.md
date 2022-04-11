@@ -37,7 +37,7 @@
 * [License](#closed_book-license)
 
 # 👀 Demo Website
-👉  Demo: https://website-findyourpet.vercel.app/
+👉  Demo: https://findyourpet.vercel.app/
 
 # 💻 Technologies
 This project was made using the follow technologies:
