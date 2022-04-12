@@ -105,6 +105,22 @@ button {
     font-size: 12px;
 }
 
+.ActionLogin {
+    width: 200px;
+    height: 60px;
+    background: #50a773;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.ActionLogin:hover {
+    transition: 1s;
+    background: #419261;
+    color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         margin-left: 10rem;

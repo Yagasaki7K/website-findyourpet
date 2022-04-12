@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "project": {
+    "name": "back-end"
+  },
+  "api": {
+    "projectId": "3z7bi7zg",
+    "dataset": "categories"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}

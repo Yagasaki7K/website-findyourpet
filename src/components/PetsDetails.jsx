@@ -51,6 +51,11 @@ const HomeDetails = styled.div`
             margin-right: 20px;
             font-weight: 500;
         }
+
+        .menu {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 
     .pets-list {
@@ -98,6 +103,34 @@ const HomeDetails = styled.div`
             color: #703edb;
             transition: .3s;
         }
+    }
+
+    footer {
+        display: flex;
+        margin-left: 1.5rem;
+        
+        .footer-content {
+            margin-right: 200px;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                margin-bottom: -5px;
+            }
+            
+            a {
+                font-weight: 300;
+                margin-top: 10px;
+            }
+
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 20px;
     }
 `
 
