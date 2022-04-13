@@ -1,6 +1,4 @@
 import React from "react";
-import { useState, useEffect } from 'react'
-import jwt_decode from 'jwt-decode'
 import "./App.css";
 
 import LogoWhite from '/assets/logo-white.png'
@@ -8,46 +6,6 @@ import LogotipoWhite from '/assets/logotipo-white.png'
 import Petlook from '/assets/petlook.png'
 
 const App = () => {
-    // const [username, setUsername] = useState(null)
-
-    // function handleCredentialResponse(response) {
-    //     const data = jwt_decode(response.credential)
-    //     setUsername(data)
-
-    //     if (username != null) {
-    //         if (response.type === 'success') {
-    //             window.location.href('/pets')
-    //         } else {
-    //             console.log('Login falhou');
-    //             alert('Login falhou, tente novamente!');
-    //             window.location.reload()
-    //         }
-    //     }
-    // }
-
-    // const ActionLoginGoogle = () => {
-    //     window.google.accounts.id.initialize({
-    //         client_id: "843679913436-v4ob24vtnbv0ojjdcmpt5o22l7fko6a6.apps.googleusercontent.com",
-    //         callback: handleCredentialResponse
-    //     });
-    //     window.google.accounts.id.renderButton(
-    //         document.getElementById("ActionLoginGoogle"),
-    //         {
-    //             theme: "outline",
-    //             size: "large",
-    //             type: "standard",
-    //             shape: "pill",
-    //             text: "signin_with",
-    //             locale: "pt-BR",
-    //             logo_alignment: "left"
-    //         }
-    //     );
-    //     window.google.accounts.id.prompt();
-    // }
-
-    // useEffect(() => {
-    //     ActionLoginGoogle();
-    // }, handleCredentialResponse, [])
 
     function RedirectToPets() {
         window.location.href = '/pets'
@@ -55,11 +13,6 @@ const App = () => {
 
     return (
         <>
-        <header>
-            <script src="https://accounts.google.com/gsi/client" async defer></script>
-            <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
-        </header>
-
             <div className="App">
                 <div className="logo">
                     <a href="#"><img src={LogoWhite} alt="Logo" /></a>
@@ -72,8 +25,7 @@ const App = () => {
                         <h3>Um mundo melhor para nossos bichinhos</h3>
 
                         <div className="socialmedia">
-                            {/* <button id="ActionLoginGoogle" onClick={ActionLoginGoogle}></button> */}
-                            <button className="ActionLogin" onClick={RedirectToPets}><i class="uil uil-signin"></i> Acessar</button>
+                            <button className="ActionLogin" onClick={RedirectToPets}><i className="uil uil-signin"></i> Acessar</button>
                         </div>
                     </div>
 

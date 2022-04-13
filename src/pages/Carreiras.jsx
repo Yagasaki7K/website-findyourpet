@@ -4,13 +4,13 @@ import Logo from '../../assets/logotipo-white.png'
 import SubPages from '../components/SubPages'
 
 const Carreiras = () => {
-  return (
-    <SubPages>
-      <a href="/pets"><img src={Logo} /></a>
-      <h2>Carreiras</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis excepturi fuga eligendi iure architecto exercitationem corrupti ratione laborum reprehenderit omnis! Cum, minus ad. Quasi minus natus fuga libero aliquam neque!</p>
-    </SubPages>
-  )
+    return (
+        <SubPages>
+            <a href="/pets"><img src={Logo} /></a>
+            <h2>Carreiras</h2>
+            <p>minus natus fuga libero aliquam neque!</p>
+        </SubPages>
+    )
 }
 
 export default Carreiras
