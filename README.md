@@ -8,7 +8,7 @@
    </a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-findyourpet?color=5965e0">
 
-  <a href="https://github.com/Yagasaki7K/website-findyourpet/commits/master">
+  <a href="https://github.com/Yagasaki7K/website-findyourpet/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-findyourpet?color=5965e0">
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
