@@ -46,7 +46,7 @@ This project was made using the follow technologies:
 * Vite
 * Typescript
 * Styled Components
-* Firebase
+* Sanity.io
 
 # 🚀 Features
 

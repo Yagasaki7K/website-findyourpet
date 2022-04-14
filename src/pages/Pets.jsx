@@ -51,7 +51,7 @@ function Pets() {
                 <a href="/signup">Encontrei um bichinho</a>
                 <a href="/pets"><img src={Logo} alt="Logo"/></a>
                 <a href="/signup">Quero adotar um animalzinho</a>
-                <a href="/signup">Localizar um animalzinho</a>
+                <a href="/maps">Localizar um animalzinho</a>
             </nav>
 
             <a href="/signup" className="advice">

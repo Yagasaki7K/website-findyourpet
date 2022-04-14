@@ -15,12 +15,12 @@ const App = () => {
         <>
             <div className="App">
                 <div className="logo">
-                    <a href="#"><img src={LogoWhite} alt="Logo" /></a>
+                    <a href="/"><img src={LogoWhite} alt="Logo" /></a>
                 </div>
 
                 <div className="container">
                     <div className="content">
-                        <a href="#"><img src={LogotipoWhite} alt="Logotipo" className="logotipo" /></a>
+                        <a href="/"><img src={LogotipoWhite} alt="Logotipo" className="logotipo" /></a>
                         <h1>Um app para te ajudar a encontrar, resgatar e doar seus pets com amor!</h1>
                         <h3>Um mundo melhor para nossos bichinhos</h3>
 
