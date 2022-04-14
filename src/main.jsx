@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import createRoot from 'react-dom'
 import './App.css'
 
 import App from './App'
@@ -12,7 +12,7 @@ import SignUp from './pages/SignUp'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-ReactDOM.render(
+createRoot.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>

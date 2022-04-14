@@ -74,8 +74,8 @@ function Pets() {
                 {
                     petData && petData.map((pets, index) => (
 
-                        <a href={`tel:` + pets?.contact}>
-                        <div className="pets-list-item" key={index}>
+                        <a href={`tel:` + pets?.contact} key={index}>
+                        <div className="pets-list-item">
                             <img src={pets.image.asset.url} alt={pets?.name} />
 
                             <div className="pets-list-item-info">
