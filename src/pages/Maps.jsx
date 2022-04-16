@@ -1,9 +1,15 @@
-import React from 'react'
+import ReactMapboxGL, { MapContext } from 'react-mapbox-gl';
 
-const Maps = () => {
-    return (
-        <div>Maps</div>
-    )
-}
+const Map = ReactMapboxGL({ /* factory options */ });
+
+const Maps = () => (
+  <Map style="your-style-here">
+    <MapContext.Consumer>
+      {(map) => {
+        { Map }
+      }}
+    </MapContext.Consumer>
+  </Map>
+);
 
 export default Maps
