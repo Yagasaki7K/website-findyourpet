@@ -10,15 +10,7 @@ import Carreiras from './pages/Carreiras'
 import ComoFunciona from './pages/ComoFunciona'
 import SignUp from './pages/SignUp'
 import Maps from './pages/Maps'
-
-import mapboxgl from 'mapbox-gl'
-
-mapboxgl.accessToken = 'pk.eyJ1IjoieWFnYXNha2kiLCJhIjoiY2tnNno3ejN5MDJhZzJ3bXlmbzV2ZWhpaSJ9.nv2v5aSOhEwDtcbAKii8CA'
-
-if (!navigator.geolocation) {
-    alert('Geolocation is not supported by your browser');
-    throw new Error('Geolocation is not supported by your browser');
-}
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PetsDetails from '../components/PetsDetails'
+import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
 
 import Logo from '../../assets/logo-white.png'
@@ -47,11 +48,11 @@ function Pets() {
     return (
         <PetsDetails>
             <nav>
-                <a href="/signup">Perdi meu bichinho</a>
-                <a href="/signup">Encontrei um bichinho</a>
+                <a href="/signup">😨 Perdi meu bichinho</a>
+                <a href="/signup">😱 Encontrei um bichinho</a>
                 <a href="/pets"><img src={Logo} alt="Logo"/></a>
-                <a href="/signup">Quero adotar um animalzinho</a>
-                <a href="/maps">Localizar um animalzinho</a>
+                <a href="/signup">🥰 Quero adotar um animalzinho</a>
+                <a href="/maps">📌 Localizar um animalzinho</a>
             </nav>
 
             <a href="/signup" className="advice">
@@ -68,9 +69,9 @@ function Pets() {
                 </div>
             </div> */}
 
-            <h2 style={{marginLeft: '20px'}}>Últimos animais cadastrados</h2>
+            <h2 className="titlePets">Últimos animais cadastrados*</h2>
+            <i className="advicePets">*Os animais serão deletados automaticamente após cinco dias desde a data da publicação</i>
             <div className="pets-list">
-            
                 {
                     petData && petData.map((pets, index) => (
 
@@ -92,32 +93,7 @@ function Pets() {
             </div>
             <AddPetButton/>
 
-            <footer>
-                <div className="footer-content">
-                    <h2>FindYourPet</h2>
-                    <a href="http://kalify.netlify.com/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
-                    <a href="/sobre-nos">Sobre nós</a>
-                    <a href="/fale-conosco">Fale Conosco</a>
-                    <a href="/carreiras">Carreiras</a>
-                </div>
-
-                <div className="footer-content">
-                    <h2>Descubra</h2>
-                    <a href="/signup">Cadastre seu Pet</a>
-                    <a href="/como-funciona">Como funciona?</a>
-                    <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a>
-                </div>
-
-                <div className="footer-content">
-                    <h2>Social</h2>
-                    <a href="https://twitter.com/KalifyInc" target="_blank">Twitter <i className="uil uil-external-link-alt"></i></a>
-                    <a href="https://instagram.com/yagasaki.dev" target="_blank">Instagram <i className="uil uil-external-link-alt"></i></a>
-                </div>
-            </footer>
-
-            <div className="copyright">
-                <i> © Copyright 2018 - {new Date().getFullYear()} - Kalify Inc - Todos os direitos reservados</i>
-            </div>
+            <Footer/>
         </PetsDetails>
     )
 }

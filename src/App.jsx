@@ -42,27 +42,27 @@ const App = () => {
                 <div className="text">
                     <h3>🐶 - Eu perdi meu cachorro!</h3>
                     <p>
-                        Você entra no aplicativo, se cadastra, vá na área de animais perdidos,
+                        Você entra no aplicativo - gratuitamente - vá na área de animais perdidos,
                         lá você consegue cadastrar um novo pet para que outros saibam que você
-                        está procurando seu bichinho. Preencha informações com o tipo de animal
+                        está procurando seu bichinho. Preencha informações como o tipo de animal
                         que ele é, a cor, tamanho, nome, a última localização e informações para
                         contato, em breve alguém irá te avisar a respeito do seu bichinho!
                     </p>
 
                     <h3>🐱 - Eu encontrei um gato!</h3>
                     <p>
-                        Você entra no aplicativo, se cadastra, vá na área de animais perdidos,
+                        Você entra no aplicativo - gratuitamente - vá na área de animais perdidos,
                         lá você consegue encontrar pessoas que estão procurando por bichinhos perdidos,
                         assim, você clica no animal que aparenta ser ele ou cadastra um novo,
-                        baseado nas informações de lugares onde ele foi perdido, a descrição do
+                        baseado nas informações de lugares onde ele foi encontrado, a descrição do
                         bichinho e as demais informações, assim você consegue entrar em contato
                         com o dono ou o dono com você, vocês se alinham sobre como
-                        devolver o mascote de volta para sua família e pronto! Tudo está resolvido!
+                        devolver o mascote para a família e pronto! Tudo está resolvido!
                     </p>
 
                     <h3>🐰 - Quero fazer uma adoção/adotar um animalzinho!</h3>
                     <p>
-                        Você entra no aplicativo, se cadastra, vá na área de adoções, e lá
+                        Você entra no aplicativo - gratuitamente - vá na área de adoções, e lá
                         você encontrará tanto pessoas que queiram adotar um bichinho, tanto
                         quanto aqueles que estão adotando um que acabou de nascer ou algo do tipo.
                         Entre em contato com a pessoa a respeito do animalzinho que você está doando
@@ -74,7 +74,7 @@ const App = () => {
 
                     <h3>⚠️ - Avisos sobre o aplicativo</h3>
                     <p>
-                        Vale lembrar que a <a href="#">FindYourPet</a> é um aplicativo idealizado, manutenido e em funcionamento
+                        Vale lembrar que a <a href="/">FindYourPet</a> é um aplicativo idealizado, manutenido e em funcionamento
                         pela <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> - comunidade
                         de desenvolvedores - em união com a <a href="https://kalify.netlify.com" target="_blank" rel="noreferrer">Kalify Inc</a>.
                     </p>
@@ -87,15 +87,17 @@ const App = () => {
 
                     <p>
                         Em caso de vendas de animais, por favor, entre em contato com
-                        a <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> que
+                        a <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> ou 
+                        a <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</a> que
                         estaremos retirando o anúncio do ar imediatamente. Adotar é muito melhor! 🤍
                     </p>
 
                     <p>
                         Em caso de dúvidas ou se for necessário entrar em contato com o suporte, você poderá
-                        usar o nosso <a href="https://discord.gg/nyTRNSV" target="_blank" rel="noreferrer">Discord</a>,
-                        nossa comunidade de desenvolvedores ou você pode entrar em contato através do&nbsp;
-                        <a href="mailto:anderson18.marlon@gmail.com">E-mail do criador</a>
+                        usar a nossa comunidade de desenvolvedores no  <a href="https://discord.gg/nyTRNSV" target="_blank" rel="noreferrer">Discord</a> - existe
+                        uma aba de Suporte de Aplicativos, atente-se a isso - 
+                        ou você pode entrar em contato através do&nbsp;
+                        <a href="mailto:anderson18.marlon@gmail.com">E-mail do criador</a>.
                     </p>
 
                     <hr></hr>
@@ -103,7 +105,7 @@ const App = () => {
                     <div className="copyright">
                         <i> © 2020 - {new Date().getFullYear()} - Aperture Laboratories |
                             © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                            © {new Date().getFullYear()} - FindYourPet</i>
+                            © 2022 - {new Date().getFullYear()} - FindYourPet</i>
                     </div>
                 </div>
 

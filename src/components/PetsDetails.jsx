@@ -6,6 +6,16 @@ const HomeDetails = styled.div`
         color: #d2c4ff;
     }
 
+    .titlePets {
+        margin-left: 20px;
+        margin-bottom: -5px;
+    }
+
+    .advicePets {
+        margin-left: 20px;
+        font-size: 12px;
+    }
+
     nav {
         display: flex;
         justify-content: space-evenly;
@@ -107,7 +117,8 @@ const HomeDetails = styled.div`
 
     footer {
         display: flex;
-        margin-left: 1.5rem;
+        justify-content: center;
+        margin-left: 100px;
         
         .footer-content {
             margin-right: 200px;
@@ -131,6 +142,17 @@ const HomeDetails = styled.div`
 
     .copyright {
         margin-top: 20px;
+    }
+
+    hr {
+        margin-top: 20px;
+        width: 50%;
+    }
+
+    @media screen and (max-width: 1366px) {
+        footer {
+            margin-left: 200px;
+        }
     }
 `
 

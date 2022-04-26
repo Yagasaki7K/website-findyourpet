@@ -9,6 +9,19 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #50a773;        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #8e6bdb;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
+}
+
 .logo img {
     width: 3%;
     margin: 25px 0 0 70px;
@@ -87,6 +100,13 @@ button {
 .text {
     width: 800px;
     margin-left: 17rem;
+}
+
+@media screen and (min-width: 1920px) {
+    .text {
+        width: 1200px;
+        margin-left: 22rem;
+    }
 }
 
 .breakline {
