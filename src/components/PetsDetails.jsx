@@ -50,6 +50,23 @@ const HomeDetails = styled.div`
         }
     }
 
+    .advice-yellow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        background: #e0d754;
+        border: none;
+        font-weight: 500;
+        text-decoration: none;
+        outline: none;
+        color: #181818;
+
+        :hover {
+            color: #703edb;
+        }
+    }
+
     .categories {
         margin-left: 20px;
     }
