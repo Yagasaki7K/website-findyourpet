@@ -9,7 +9,7 @@ const Footer = () => {
                 <footer>
                     <div className="footer-content">
                         <h2>FindYourPet</h2>
-                        <a href="http://kalify.netlify.com/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
+                        <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
                         <a href="/sobre-nos">Sobre nós</a>
                         <a href="/fale-conosco">Fale Conosco</a>
                         <a href="/carreiras">Carreiras</a>
@@ -32,7 +32,8 @@ const Footer = () => {
                 <div className="copyright">
                     <i> © 2020 - {new Date().getFullYear()} - Aperture Laboratories |
                     © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                    © 2022 - {new Date().getFullYear()} - FindYourPet</i></div>
+                    © 2022 - {new Date().getFullYear()} - FindYourPet</i>
+                </div>
             </PetsDetails>
         </>
     )

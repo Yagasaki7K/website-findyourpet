@@ -7,7 +7,6 @@ import Logo from '../../assets/logo-white.png'
 
 import sanityClient from '../client'
 
-
 function Pets() {
     const [petData, setPetData] = useState(null);
 
@@ -31,19 +30,6 @@ function Pets() {
         .then((data) => setPetData(data))
         .catch(console.error);
     }, []);
-
-    function LostAnimals() {
-        window.location.href="/map"
-    }
-    function RescueAnimals() {
-        window.location.href="/map"
-    }
-    function AdoptAnimals() {
-        window.location.href="/map"
-    }
-    function MapAnimals() {
-        window.location.href="/map"
-    }
 
     return (
         <PetsDetails>
