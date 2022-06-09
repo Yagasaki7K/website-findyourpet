@@ -42,11 +42,11 @@
 # 💻 Technologies
 This project was made using the follow technologies:
 
-* ReactJS
 * Vite
-* Typescript
+* ReactJS
 * Styled Components
 * Sanity.io
+* Vercel
 
 # 🚀 Features
 
