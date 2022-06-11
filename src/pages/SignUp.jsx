@@ -40,7 +40,7 @@ const SignUp = () => {
 
         const formContact = document.getElementById('contact')
         const resultContact = formContact.value
-        setPetContact(resultContact)
+        setPetContact('+55'+resultContact)
 
         if (PetName === '' || PetDescription === '' ||
             PetLocale === '' || PetContact === '' || PetStatus === '') {
