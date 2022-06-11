@@ -1,35 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
-
 import Logo from '../../assets/logo-white.png'
+import imageNotFound from '../../assets/imagenotfound.png'
 
-import sanityClient from '../client'
+import PetServices from '../services/pet.services'
 
 function Pets() {
-    const [petData, setPetData] = useState(null);
+    const [Pets, setPets] = useState([])
 
     useEffect(() => {
-        sanityClient
-        .fetch(
-            `*[_type == "Animals"]{
-                    name,
-                    description,
-                    contact,
-                    type,
-                    location,
-                    image{
-                        asset->{
-                            url,
-                            assetId
-                        },
-                    }
-                }`
-        )
-        .then((data) => setPetData(data))
-        .catch(console.error);
-    }, []);
+        getPets()
+    }, [])
+
+    const getPets = async() => {
+        const data = await PetServices.getAllPets()
+        setPets(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    }
 
     return (
         <PetsDetails>
@@ -42,7 +30,7 @@ function Pets() {
             </nav>
 
             <a href="/signup" className="advice">
-                <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo adotar um? Ou encontrou um perdido? Cadastre ele! 
+                <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele! 
             </a>
 
             {/* <div className="categories">
@@ -56,19 +44,19 @@ function Pets() {
             </div> */}
 
             <h2 className="titlePets">Últimos animais cadastrados*</h2>
-            <i className="advicePets">*Os animais serão deletados automaticamente após cinco dias desde a data da publicação</i>
+            <i className="advicePets">*Os animais serão deletados automaticamente após cinco dias após a data da publicação</i>
             <div className="pets-list">
                 {
-                    petData && petData.map((pets, index) => (
+                    Pets && Pets.map((pets, index) => (
 
-                        <a href={`https://wa.me/` + pets?.contact} key={index}>
+                        <a href={`https://wa.me/` + pets?.contact} target="_blank" key={index}>
                         <div className="pets-list-item">
-                            <img src={pets.image.asset.url} alt={pets?.name} />
+                            <img src={pets?.image ? pets?.image : imageNotFound} alt={pets?.name} />
 
                             <div className="pets-list-item-info">
-                                <h3>{pets?.name} • {pets?.type}</h3>
+                                <h3>{pets?.name} • {pets?.status}</h3>
                                 <p>{pets?.description}</p>
-                                <p><i className="uil uil-map-marker"></i> {pets?.location}</p>
+                                <p><i className="uil uil-map-marker"></i> {pets?.locale}</p>
                                 <p><i className="uil uil-phone"></i> {pets?.contact}</p>
                             </div>
                         </div>

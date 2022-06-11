@@ -30,9 +30,8 @@ const Footer = () => {
                 </footer>
 
                 <div className="copyright">
-                    <i> © 2020 - {new Date().getFullYear()} - Aperture Laboratories |
-                    © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                    © 2022 - {new Date().getFullYear()} - FindYourPet</i>
+                    <i> © 2018 - {new Date().getFullYear()} - Kalify Inc |
+                    © {new Date().getFullYear()} - FindYourPet</i>
                 </div>
             </PetsDetails>
         </>

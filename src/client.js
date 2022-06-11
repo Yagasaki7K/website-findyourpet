@@ -1,11 +1,17 @@
-import sanityClient from '@sanity/client'
+import { initializeApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
 
-export default sanityClient({
-    "projectId": "3z7bi7zg",
-    "dataset": "categories",
-    apiVersion: '2021-03-25',
-    dataset: 'categories',
-    token: 'sk7XCP8vzgs5sOvb2vilhPE3tYCuVZCS6KnhMiTpaQy8qiL59Bz65UFglflEh7PPrS7aX73ddrWyYcUSHjo05fTjMKv0p9qQiifeNfAMbfQwSyh9jdWh2LH36GSxDm6hlPEZccWQmV7CsFLT1uGJF5itjTWrvZiz9FDNdVIKjhcOKVlW7uL2', // or leave blank for unauthenticated usage
-    useCdn: true,
-    ignoreBrowserTokenWarning: true,
-})
+const firebaseConfig = {
+  apiKey: "AIzaSyB305sY0GR-z1lnJx2lqnG0kkAr-JR-IeQ",
+  authDomain: "kalify-findyourpet.firebaseapp.com",
+  databaseURL: "https://kalify-findyourpet-default-rtdb.firebaseio.com",
+  projectId: "kalify-findyourpet",
+  storageBucket: "kalify-findyourpet.appspot.com",
+  messagingSenderId: "843679913436",
+  appId: "1:843679913436:web:55e00dc38e1731adbb6b19"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getFirestore(app)
+
+export default database

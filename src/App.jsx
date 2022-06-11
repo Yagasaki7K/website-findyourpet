@@ -1,16 +1,11 @@
 import React from "react";
-import "./App.css";
 
 import LogoWhite from '/assets/logo-white.png'
 import LogotipoWhite from '/assets/logotipo-white.png'
 import Petlook from '/assets/petlook.png'
+import "./App.css";
 
 const App = () => {
-
-    function RedirectToPets() {
-        window.location.href = '/pets'
-    }
-
     return (
         <>
             <div className="App">
@@ -25,7 +20,11 @@ const App = () => {
                         <h3>Um mundo melhor para nossos bichinhos</h3>
 
                         <div className="socialmedia">
-                            <button className="ActionLogin" onClick={RedirectToPets}><i className="uil uil-signin"></i> Acessar</button>
+                            <a href="/pets">
+                                <button className="ActionLogin">
+                                <i className="uil uil-signin"></i> Acessar
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -36,7 +35,7 @@ const App = () => {
                 </div>
 
                 <div className="howtoworks">
-                    <h1>🤔 Como funciona? 🤔</h1> 
+                    <h1>🤔 Como funciona? 🤔</h1>
                 </div>
 
                 <div className="text">
@@ -75,8 +74,7 @@ const App = () => {
                     <h3>⚠️ - Avisos sobre o aplicativo</h3>
                     <p>
                         Vale lembrar que a <a href="/">FindYourPet</a> é um aplicativo idealizado, manutenido e em funcionamento
-                        pela <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> - comunidade
-                        de desenvolvedores - em união com a <a href="https://kalify.netlify.com" target="_blank" rel="noreferrer">Kalify Inc</a>.
+                        pela <a href="https://kalify.netlify.com" target="_blank" rel="noreferrer">Kalify Inc</a>, uma equipe de desenvolvedores que visam a construção de aplicativos para ajudar a sociedade.
                     </p>
 
                     <p>
@@ -87,25 +85,15 @@ const App = () => {
 
                     <p>
                         Em caso de vendas de animais, por favor, entre em contato com
-                        a <a href="https://aperturelabs.netlify.com" target="_blank" rel="noreferrer">Aperture Laboratories</a> ou 
-                        a <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</a> que
+                        a <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</a> através do <a href="mailto:kalifyinc@gmail.com">e-mail</a> ou nosso <a href="https://discord.gg/CFhzRE6ztp" target="_blank">servidor no Discord</a> que
                         estaremos retirando o anúncio do ar imediatamente. Adotar é muito melhor! 🤍
-                    </p>
-
-                    <p>
-                        Em caso de dúvidas ou se for necessário entrar em contato com o suporte, você poderá
-                        usar a nossa comunidade de desenvolvedores no  <a href="https://discord.gg/nyTRNSV" target="_blank" rel="noreferrer">Discord</a> - existe
-                        uma aba de Suporte de Aplicativos, atente-se a isso - 
-                        ou você pode entrar em contato através do&nbsp;
-                        <a href="mailto:anderson18.marlon@gmail.com">E-mail do criador</a>.
                     </p>
 
                     <hr></hr>
 
                     <div className="copyright">
-                        <i> © 2020 - {new Date().getFullYear()} - Aperture Laboratories |
-                            © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                            © 2022 - {new Date().getFullYear()} - FindYourPet</i>
+                        <i> © 2018 - {new Date().getFullYear()} - Kalify Inc |
+                            © {new Date().getFullYear()} - FindYourPet</i>
                     </div>
                 </div>
 

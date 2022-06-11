@@ -13,6 +13,15 @@ const FormSignUpDetails = styled.div`
         background: #703edb;
         box-shadow: #9a48ff 0px 0px 50px;
         border-radius: 15px;
+
+        textarea {
+            width: 220px;
+            height: 60px;
+        }
+
+        i {
+            font-size: 10px;
+        }
         
         h4 {
             margin-bottom: 5px;

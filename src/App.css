@@ -126,6 +126,7 @@ button {
 }
 
 .ActionLogin {
+    margin-left: 30px;
     width: 200px;
     height: 60px;
     background: #50a773;
