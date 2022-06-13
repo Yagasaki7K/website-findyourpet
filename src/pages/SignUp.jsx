@@ -21,7 +21,7 @@ const SignUp = () => {
         console.log('Status:', resultStatus)
     }
 
-    function sendData() {
+    function collectData() {
         const formName = document.getElementById('name')
         const resultName = formName.value
         setPetName(resultName)
@@ -41,25 +41,27 @@ const SignUp = () => {
         const formContact = document.getElementById('contact')
         const resultContact = formContact.value
         setPetContact('+55'+resultContact)
+    }
 
+    function sendData() {
         if (PetName === '' || PetDescription === '' ||
-            PetLocale === '' || PetContact === '' || PetStatus === '') {
+            PetLocale === '' || PetContact === '') {
             alert('Por favor, preencha todos os campos')
         } else {
-            const NewPets = {
-                name: PetName,
-                description: PetDescription,
-                locale: PetLocale,
-                contact: PetContact,
-                status: PetStatus
-            }
-
             async function addToFirebase() {
-                await (PetServices.addPets(NewPets)),
-                window.location.href="/pets"
+                const NewPets = {
+                    name: PetName,
+                    description: PetDescription,
+                    locale: PetLocale,
+                    contact: PetContact,
+                    status: PetStatus
+                }
+                await (PetServices.addPets(NewPets))
+                async function Redirect() {
+                    await (window.location.href = '/pets')
+                }
+                Redirect();
             }
-            
-            
             addToFirebase();
         }
     }
@@ -83,7 +85,7 @@ const SignUp = () => {
             </PetsDetails>
 
             <FormSignUpDetails>
-                <form>
+                <form onChange={() => collectData()}>
                     <h4>Nome do Animal</h4>
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={30} />

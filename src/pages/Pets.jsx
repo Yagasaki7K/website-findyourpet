@@ -30,7 +30,7 @@ function Pets() {
             </nav>
 
             <a href="/signup" className="advice">
-                <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele! 
+                <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
             </a>
 
             {/* <div className="categories">
