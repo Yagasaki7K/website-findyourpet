@@ -22,11 +22,11 @@ function Pets() {
     return (
         <PetsDetails>
             <nav>
-                <a href="/signup">😨 Perdi meu bichinho</a>
-                <a href="/signup">😱 Encontrei um bichinho</a>
+                <a href="/signup" className="items">😨 Perdi meu bichinho</a>
+                <a href="/signup" className="items">😱 Encontrei um bichinho</a>
                 <a href="/pets"><img src={Logo} alt="Logo"/></a>
-                <a href="/signup">🥰 Quero adotar um animalzinho</a>
-                <a href="/maps">📌 Localizar um animalzinho</a>
+                <a href="/signup" className="items">🥰 Quero adotar um animalzinho</a>
+                <a href="/maps" className="items">📌 Localizar um animalzinho</a>
             </nav>
 
             <a href="/signup" className="advice">

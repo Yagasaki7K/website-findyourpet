@@ -22,6 +22,12 @@ const HomeDetails = styled.div`
         align-items: center;
         padding: 5px 40px;
 
+        @media (max-width: 768px) {
+            .items {
+                display: none;
+            }
+        }
+
         img {
             width: 50px;
             margin-bottom: 10px;
@@ -47,6 +53,17 @@ const HomeDetails = styled.div`
 
         :hover {
             color: #703edb;
+        }
+        @media (max-width: 768px) {
+            i {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            display: flex;
+            justify-content: center;
+            text-align: center;
         }
     }
 
@@ -107,6 +124,17 @@ const HomeDetails = styled.div`
         border-radius: 15px;
         display: flex;
 
+        @media (max-width: 414px) {
+            width: 325px;
+            height: 275px;
+
+            img {
+                width: 100px;
+                height: 80px;
+                margin-top: 50px;
+            }
+        }
+
         img {
             border-radius: 15px;
             width: 200px;
@@ -136,11 +164,28 @@ const HomeDetails = styled.div`
         display: flex;
         justify-content: center;
         margin-left: 100px;
+
+        @media (max-width: 1366px) {
+            margin-left: 200px;
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 60px;
+            margin-left: 100px;
+        }
+
+        @media (max-width: 414px) {
+            flex-direction: column;
+        }
         
         .footer-content {
             margin-right: 200px;
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 768px) {
+                margin-right: 50px;
+            }
 
             h2 {
                 margin-bottom: -5px;
@@ -164,12 +209,6 @@ const HomeDetails = styled.div`
     hr {
         margin-top: 20px;
         width: 50%;
-    }
-
-    @media screen and (max-width: 1366px) {
-        footer {
-            margin-left: 200px;
-        }
     }
 `
 
