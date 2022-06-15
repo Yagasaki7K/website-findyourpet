@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import PetButtonDetails from './AddPetButtonDetails'
 
 function RedirectToSignUp() {
-    window.location.href = '/signup'
+    window.location.href = '/cadastro'
 }
 
 function RedirectToMaps() {

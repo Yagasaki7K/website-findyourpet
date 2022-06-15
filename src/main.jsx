@@ -24,7 +24,7 @@ createRoot.render(
                 <Route path="/fale-conosco" element={<FaleConosco/>} exact />
                 <Route path="/carreiras" element={<Carreiras/>} exact />
                 <Route path="/como-funciona" element={<ComoFunciona/>} exact />
-                <Route path="/signup" element={<SignUp/>} exact />
+                <Route path="/cadastro" element={<SignUp/>} exact />
                 <Route path="/maps" element={<Maps/>} exact />
             </Routes>
         </BrowserRouter>

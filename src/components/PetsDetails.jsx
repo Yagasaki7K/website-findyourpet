@@ -14,6 +14,11 @@ const HomeDetails = styled.div`
     .advicePets {
         margin-left: 20px;
         font-size: 12px;
+
+        @media (max-width: 768px) {
+            margin-top: 10px;
+            width: 300px;
+        }
     }
 
     nav {
@@ -126,12 +131,16 @@ const HomeDetails = styled.div`
 
         @media (max-width: 414px) {
             width: 325px;
-            height: 275px;
+            height: 230px;
 
             img {
                 width: 100px;
                 height: 80px;
-                margin-top: 50px;
+                margin-top: 25px;
+            }
+
+            .pets-list-item-info {
+                margin-top: 10px;
             }
         }
 
@@ -170,12 +179,12 @@ const HomeDetails = styled.div`
         }
 
         @media (max-width: 768px) {
-            margin-left: 60px;
-            margin-left: 100px;
+            margin-left: 50px;
         }
 
         @media (max-width: 414px) {
             flex-direction: column;
+            text-align: center;
         }
         
         .footer-content {

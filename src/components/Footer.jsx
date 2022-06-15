@@ -17,7 +17,7 @@ const Footer = () => {
 
                     <div className="footer-content break">
                         <h2>Descubra</h2>
-                        <a href="/signup">Cadastre seu Pet</a>
+                        <a href="/cadastro">Cadastre seu Pet</a>
                         <a href="/como-funciona">Como funciona?</a>
                         <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a>
                     </div>

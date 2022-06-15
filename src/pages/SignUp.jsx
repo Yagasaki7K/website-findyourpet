@@ -70,14 +70,14 @@ const SignUp = () => {
         <>
             <PetsDetails>
                 <nav>
-                    <a href="/signup">Perdi meu bichinho</a>
-                    <a href="/signup">Encontrei um bichinho</a>
+                    <a href="/cadastro">Perdi meu bichinho</a>
+                    <a href="/cadastro">Encontrei um bichinho</a>
                     <a href="/pets"><img src={Logo} alt="Logo" /></a>
-                    <a href="/signup">Quero adotar um animalzinho</a>
+                    <a href="/cadastro">Quero adotar um animalzinho</a>
                     <a href="/maps">Localizar um animalzinho</a>
                 </nav>
 
-                <a href="/signup" className="advice-yellow">
+                <a href="/cadastro" className="advice-yellow">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;
                     Procure colocar as informações corretamente - Não será possível editar depois!
                     &nbsp;<i className="uil uil-shield-exclamation"></i>

@@ -22,14 +22,14 @@ function Pets() {
     return (
         <PetsDetails>
             <nav>
-                <a href="/signup" className="items">😨 Perdi meu bichinho</a>
-                <a href="/signup" className="items">😱 Encontrei um bichinho</a>
+                <a href="/cadastro" className="items">😨 Perdi meu bichinho</a>
+                <a href="/cadastro" className="items">😱 Encontrei um bichinho</a>
                 <a href="/pets"><img src={Logo} alt="Logo"/></a>
-                <a href="/signup" className="items">🥰 Quero adotar um animalzinho</a>
+                <a href="/cadastro" className="items">🥰 Quero adotar um animalzinho</a>
                 <a href="/maps" className="items">📌 Localizar um animalzinho</a>
             </nav>
 
-            <a href="/signup" className="advice">
+            <a href="/cadastro" className="advice">
                 <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
             </a>
 
@@ -44,7 +44,7 @@ function Pets() {
             </div> */}
 
             <h2 className="titlePets">Últimos animais cadastrados*</h2>
-            <i className="advicePets">*Os animais serão deletados automaticamente após cinco dias após a data da publicação</i>
+            <div className="advicePets"><i>*Os animais serão deletados automaticamente após cinco dias após a data da publicação</i></div>
             <div className="pets-list">
                 {
                     Pets && Pets.map((pets, index) => (
