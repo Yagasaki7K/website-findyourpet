@@ -40,6 +40,7 @@ const Carreiras = () => {
                 <li>Sistema de exclusão do item - depois de dez dias adicionado</li>
                 <li>Paginação depois de cerca quantidade de animais em tela</li>
                 <li>Separar animais por categorias: gatos, cachorros, etc</li>
+                <li>Criar um aplicativo mobile e aumentar o alcance e usabilidade</li>
             </ul>
             <p>
                 Se você tem conhecimento e acredita que pode ajudar nosso projeto a evoluir, você
