@@ -14,7 +14,7 @@ const AddPetButton = () => {
         <>
             <PetButtonDetails>
                 <button onClick={RedirectToSignUp} className="firstButton"><i className="uil uil-plus"></i></button>
-                <button onClick={RedirectToMaps} className="secondButton"><i className="uil uil-map-marker"></i></button>
+                {/* <button onClick={RedirectToMaps} className="secondButton"><i className="uil uil-map-marker"></i></button> */}
             </PetButtonDetails>
         </>
     )

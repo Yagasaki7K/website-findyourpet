@@ -11,7 +11,7 @@ const Footer = () => {
                         <h2>FindYourPet</h2>
                         <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
                         <a href="/sobre-nos">Sobre nós</a>
-                        <a href="/fale-conosco">Fale Conosco</a>
+                        <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
                         <a href="/carreiras">Carreiras</a>
                     </div>
 
@@ -19,7 +19,7 @@ const Footer = () => {
                         <h2>Descubra</h2>
                         <a href="/cadastro">Cadastre seu Pet</a>
                         <a href="/como-funciona">Como funciona?</a>
-                        <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a>
+                        {/* <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a> */}
                     </div>
 
                     <div className="footer-content break">

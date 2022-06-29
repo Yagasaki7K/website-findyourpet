@@ -13,7 +13,7 @@ const SubPage = styled.div`
     }
 
     p {
-        width: 80%;
+        width: 40%;
     }
 `
 

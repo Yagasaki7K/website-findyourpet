@@ -23,10 +23,10 @@ function Pets() {
         <PetsDetails>
             <nav>
                 <a href="/cadastro" className="items">😨 Perdi meu bichinho</a>
-                <a href="/cadastro" className="items">😱 Encontrei um bichinho</a>
+                {/* <a href="/cadastro" className="items">😱 Encontrei um bichinho</a> */}
                 <a href="/pets"><img src={Logo} alt="Logo"/></a>
                 <a href="/cadastro" className="items">🥰 Quero adotar um animalzinho</a>
-                <a href="/maps" className="items">📌 Localizar um animalzinho</a>
+                {/* <a href="/maps" className="items">📌 Localizar um animalzinho</a> */}
             </nav>
 
             <a href="/cadastro" className="advice">
@@ -44,7 +44,7 @@ function Pets() {
             </div> */}
 
             <h2 className="titlePets">Últimos animais cadastrados*</h2>
-            <div className="advicePets"><i>*Os animais serão deletados automaticamente após cinco dias após a data da publicação</i></div>
+            {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após dez dias após a data da publicação</i></div> */}
             <div className="pets-list">
                 {
                     Pets && Pets.map((pets, index) => (
