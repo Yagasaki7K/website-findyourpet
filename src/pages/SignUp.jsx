@@ -5,11 +5,12 @@ import FormSignUpDetails from '../components/FormSignUpDetails'
 
 import Logo from '../../assets/logo-white.png'
 import PetServices from '../services/pet.services'
+import petServices from '../services/pet.services'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
-    // const [PetPhoto, setPetPhoto] = useState('');
+    const [PetPhoto, setPetPhoto] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetStatus, setPetStatus] = useState('');
@@ -30,10 +31,6 @@ const SignUp = () => {
         const resultDescription = formDescription.value
         setPetDescription(resultDescription)
 
-        // const formPhoto = document.getElementById('photo')
-        // const resultPhoto = formPhoto.value
-        // setPetPhoto(resultPhoto)
-
         const formLocale = document.getElementById('locale')
         const resultLocale = formLocale.value
         setPetLocale(resultLocale)
@@ -41,6 +38,13 @@ const SignUp = () => {
         const formContact = document.getElementById('contact')
         const resultContact = formContact.value
         setPetContact('+55'+resultContact)
+    }
+
+    function getImage() {
+        const formPhoto = document.getElementById('photo')
+        const resultPhoto = formPhoto.value
+        setPetPhoto(resultPhoto)
+        console.log('Photo:', PetPhoto)
     }
 
     function sendData() {
@@ -56,6 +60,7 @@ const SignUp = () => {
                     contact: PetContact,
                     status: PetStatus
                 }
+
                 await (PetServices.addPets(NewPets))
                 async function Redirect() {
                     await (window.location.href = '/pets')
@@ -90,8 +95,8 @@ const SignUp = () => {
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={30} />
 
-                    {/* <h4>Foto do Animal</h4>
-                    <input type="file" id="photo" /> */}
+                    <h4>Foto do Animal</h4>
+                    <input type="file" id="photo" onChange={getImage}/>
 
                     <h4>Descrição do Animal</h4>
                     <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}

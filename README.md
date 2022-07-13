@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-   <a href="https://www.linkedin.com/in/andersonmarlon/">
-      <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+   <a href="https://github.com/KalifyInc">
+      <img alt="Kalify Inc" src="https://img.shields.io/badge/-KalifyInc-5965e0?style=flat&logo=Github&logoColor=white" />
    </a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-findyourpet?color=5965e0">
 
@@ -20,8 +20,8 @@
 
 <div align="center">
   <sub>FindYourPet. Built with ❤︎ by
-    <a href="https://github.com/Yagasaki7K">Anderson "Yagasaki" Marlon</a> and
-    <a href="https://github.com/Yagasaki7K/website-findyourpet/graphs/contributors">
+    <a href="https://github.com/KalifyInc">Kalify Inc</a> and
+    <a href="https://github.com/Yagasaki7K/mobile-findyourpet/graphs/contributors">
       contributors
     </a>
   </sub>
