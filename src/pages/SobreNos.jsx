@@ -22,7 +22,7 @@ const SobreNos = () => {
             <p>
                 Se você não for um desenvolvedor e quer ajudar ao projeto, você pode entrar
                 em contato através do <a href="mailto:kalifyinc@gmail.com">e-mail</a> solicitando uma feature ou uma
-                implementação ou através de nosso <a href="https://discord.gg/CFhzRE6ztp" target="_blank">Discord</a>. Se a ideia for de fato importante para nós, você será creditado
+                implementação ou através de nosso <a href="https://discord.gg/jhSepmE7nN" target="_blank">Discord</a>. Se a ideia for de fato importante para nós, você será creditado
                 em nossa página do Github para que outros possam ver a contribuição que fez com
                 o projeto e isso é de suma importância para a comunidade de desenvolvimento,
                 como também para nós e claro, outros usuários que estejam utilizando

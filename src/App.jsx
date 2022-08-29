@@ -85,7 +85,7 @@ const App = () => {
 
                     <p>
                         Em caso de vendas de animais, por favor, entre em contato com
-                        a <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</a> através do <a href="mailto:kalifyinc@gmail.com">e-mail</a> ou nosso <a href="https://discord.gg/CFhzRE6ztp" target="_blank">servidor no Discord</a> que
+                        a <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</a> através do <a href="mailto:kalifyinc@gmail.com">e-mail</a> ou nosso <a href="https://discord.gg/jhSepmE7nN" target="_blank">servidor no Discord</a> que
                         estaremos retirando o anúncio do ar imediatamente. Adotar é muito melhor! 🤍
                     </p>
 
