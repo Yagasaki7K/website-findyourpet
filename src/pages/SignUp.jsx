@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import FormSignUpDetails from '../components/FormSignUpDetails'
+import { useNavigate } from 'react-router-dom'
 
 import Logo from '../../assets/logo-white.png'
 import PetServices from '../services/pet.services'
-import petServices from '../services/pet.services'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -13,12 +13,13 @@ const SignUp = () => {
     const [PetPhoto, setPetPhoto] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
-    const [PetStatus, setPetStatus] = useState('');
+    const [PetSituation, setPetSituation] = useState('');
 
+    // Get Type Situation of Pet - Adopt, Rescue or Lost
     function sendDataSelect() {
         const formStatus = document.getElementById('status')
         const resultStatus = formStatus.value
-        setPetStatus(resultStatus)
+        setPetSituation(resultStatus)
         console.log('Status:', resultStatus)
     }
 
@@ -58,12 +59,12 @@ const SignUp = () => {
                     description: PetDescription,
                     locale: PetLocale,
                     contact: PetContact,
-                    status: PetStatus
+                    status: PetSituation
                 }
 
                 await (PetServices.addPets(NewPets))
-                async function Redirect() {
-                    await (window.location.href = '/pets')
+                function Redirect() {
+                    location.assign("/pets");
                 }
                 Redirect();
             }
