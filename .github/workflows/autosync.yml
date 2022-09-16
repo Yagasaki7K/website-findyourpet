@@ -1,5 +1,9 @@
 name: Sync Fork
 
+permissions:
+      actions: write
+      contents: write
+
 on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
