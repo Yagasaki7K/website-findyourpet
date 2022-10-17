@@ -7,6 +7,10 @@ body {
     background: var(--first-color);
     color: var(--font-color);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {

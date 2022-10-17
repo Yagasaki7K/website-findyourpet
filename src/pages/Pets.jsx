@@ -43,7 +43,7 @@ function Pets() {
                 </div>
             </div> */}
 
-            <h2 className="titlePets">Últimos animais cadastrados*</h2>
+            <h2 className="titlePets">Últimos animais cadastrados:</h2>
             {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após dez dias após a data da publicação</i></div> */}
             <div className="pets-list">
                 {

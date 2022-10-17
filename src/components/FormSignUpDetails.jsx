@@ -8,8 +8,7 @@ const FormSignUpDetails = styled.div`
 
     form {
         margin-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 30px;
+        padding: 20px 40px;
         background: #703edb;
         box-shadow: #9a48ff 0px 0px 50px;
         border-radius: 15px;
@@ -34,7 +33,7 @@ const FormSignUpDetails = styled.div`
             
             :hover {
                 transition: 1s;
-                background: #c7c7c7;
+                filter: brightness(85%)
             }
         }
 
