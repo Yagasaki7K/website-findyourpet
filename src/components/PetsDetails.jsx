@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const HomeDetails = styled.div`
     a:hover {
         transition: 1s;
-        color: #d2c4ff;
+        color: #ccc;
     }
 
     .titlePets {
@@ -49,7 +49,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: #50a773;
+        background: #9580ff;
         border: none;
         font-weight: 500;
         text-decoration: none;
@@ -57,7 +57,7 @@ const HomeDetails = styled.div`
         color: #fff;
 
         :hover {
-            color: #703edb;
+            color: #ccc;
         }
         @media (max-width: 768px) {
             i {
@@ -77,15 +77,15 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: #e0d754;
+        background: #9580ff;
         border: none;
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #181818;
+        color: #fff;
 
         :hover {
-            color: #703edb;
+            color: #ccc;
         }
     }
 
@@ -163,8 +163,7 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: #ccc;
-            color: #703edb;
+            background: #15171b;
             transition: .3s;
         }
     }

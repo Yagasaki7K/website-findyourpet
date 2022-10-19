@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
-import Logo from '../../assets/logo-white.png'
+import Logo from '../../assets/logo.png'
 import imageNotFound from '../../assets/imagenotfound.png'
 
 import PetServices from '../services/pet.services'
+import Navigation from '../components/Navigation'
 
 function Pets() {
     const [Pets, setPets] = useState([])
@@ -21,13 +22,7 @@ function Pets() {
 
     return (
         <PetsDetails>
-            <nav>
-                <a href="/cadastro" className="items">😨 Perdi meu bichinho</a>
-                {/* <a href="/cadastro" className="items">😱 Encontrei um bichinho</a> */}
-                <a href="/pets"><img src={Logo} alt="Logo"/></a>
-                <a href="/cadastro" className="items">🥰 Quero adotar um animalzinho</a>
-                {/* <a href="/maps" className="items">📌 Localizar um animalzinho</a> */}
-            </nav>
+            <Navigation/>
 
             <a href="/cadastro" className="advice">
                 <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>

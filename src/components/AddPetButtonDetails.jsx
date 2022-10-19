@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 const AddPetButtonDetails = styled.div`
     .firstButton {
-        background: #50a773;
+        background: #1d1e26;
         width: 50px;
         height: 50px;
-        color: #fff;
+        color: #9580ff;
         position: fixed;
+        border: 1px solid #9580ff;
         bottom: 20px;
         right: 0px;
         z-index: 99;
@@ -16,12 +17,13 @@ const AddPetButtonDetails = styled.div`
 
         :hover {
             transition: 1s;
-            background: #62ca8c;
+            background: #9580ff;
+            color: #fff;
         }
     }
 
     .secondButton {
-        background: #50a773;
+        background: #1d1e26;
         width: 50px;
         height: 50px;
         color: #fff;
@@ -35,7 +37,8 @@ const AddPetButtonDetails = styled.div`
 
         :hover {
             transition: 1s;
-            background: #62ca8c;
+            background: #9580ff;
+            color: #fff;
         }
     }
 `

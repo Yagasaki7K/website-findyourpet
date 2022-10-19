@@ -8,8 +8,9 @@ const FormSignUpDetails = styled.div`
 
     form {
         margin-top: 20px;
+        margin-bottom: 1rem;
         padding: 20px 40px;
-        background: #703edb;
+        background: #1d1e26;
         box-shadow: #9a48ff 0px 0px 50px;
         border-radius: 15px;
 

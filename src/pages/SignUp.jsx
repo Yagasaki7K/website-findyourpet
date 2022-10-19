@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import FormSignUpDetails from '../components/FormSignUpDetails'
-import { useNavigate } from 'react-router-dom'
 
-import Logo from '../../assets/logo-white.png'
 import PetServices from '../services/pet.services'
+import Navigation from '../components/Navigation'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -75,13 +74,7 @@ const SignUp = () => {
     return (
         <>
             <PetsDetails>
-                <nav>
-                    <a href="/cadastro">Perdi meu bichinho</a>
-                    <a href="/cadastro">Encontrei um bichinho</a>
-                    <a href="/pets"><img src={Logo} alt="Logo" /></a>
-                    <a href="/cadastro">Quero adotar um animalzinho</a>
-                    <a href="/maps">Localizar um animalzinho</a>
-                </nav>
+            <Navigation/>
 
                 <a href="/cadastro" className="advice-yellow">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;

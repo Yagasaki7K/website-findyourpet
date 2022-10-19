@@ -1,5 +1,5 @@
 :root {
-    --first-color: #703edb;
+    --first-color: #1d1e26;
     --font-color: #f7f7f7;
 }
 
@@ -18,11 +18,11 @@ body::-webkit-scrollbar {
 }
   
 body::-webkit-scrollbar-track {
-    background: #50a773;        /* color of the tracking area */
+    background: #7159c1;        /* color of the tracking area */
 }
   
 body::-webkit-scrollbar-thumb {
-    background-color: #8e6bdb;    /* color of the scroll thumb */
+    background-color: #9580ff;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
 }
 
