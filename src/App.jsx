@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AppDetails from './components/AppDetails'
 import AppBackground from './components/AppBackground'
-import Logo from '/assets/Logotipo-white.png'
+import Logo from '../assets/logotipo-white.png'
 
 function toHome() {
     window.location.href = "/pets"
