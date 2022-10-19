@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import AppDetails from './components/AppDetails'
 import AppBackground from './components/AppBackground'
+import Logo from '/assets/Logotipo-white.png'
 
 function toHome() {
     window.location.href = "/pets"
@@ -12,7 +13,7 @@ const App = () => {
             <AppBackground />
             <AppDetails>
                 <ul>
-                    <a href="/"><img src="/assets/Logotipo-white.png" /></a>
+                    <a href="/"><img src={Logo} /></a>
                     <li><a href="/sobre-nos">Sobre a Kalify</a></li>
                     <li><a href="/carreiras">Carreiras</a></li>
                     <li><a href="https://discord.gg/jhSepmE7nN" target="_blank">Suporte</a></li>
