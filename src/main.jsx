@@ -9,7 +9,6 @@ import Carreiras from './pages/Carreiras'
 import ComoFunciona from './pages/ComoFunciona'
 import SignUp from './pages/SignUp'
 import Maps from './pages/Maps'
-import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
