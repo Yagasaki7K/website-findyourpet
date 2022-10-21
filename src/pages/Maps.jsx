@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Navigation from '../components/Navigation';
 
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import MapStyle from '../components/MapStyle'
 
 import 'leaflet/dist/leaflet.css'
 
@@ -14,7 +15,6 @@ const Maps = () => {
         <>
             <PetsDetails>
                 <Navigation />
-
                 <a href="/signup" className="advice">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo adotar um? Ou encontrou um perdido? Cadastre ele!
                 </a>
@@ -23,27 +23,16 @@ const Maps = () => {
             <MapsDetails>
                 <MapStyle>
                     <div layout-align="center center" style={{ background: 'white', position: 'relative' }}>
-                        {/* <div style={{width:'100%', height: '70vh', maxHeight:'500px', position:'relative'}}>
-                <Leaflet id="evento-mapa" defaults="map.defaults" tiles="map.current_tile" markers="map.markers" bounds="map.bounds" lf-center="{}"></Leaflet>
-                    <div style={{ position:'absolute', right:'10px', bottom:'25px', zIndex: '1001'}}layout-align="center stretch">
-                        <div style={{border:'1px solid #666', background:'#fff', borderRadius: '5px',textAlign:'center', padding: '7px', margin: '3px 0'}} id="mapa-ctrl-view-mapa" ng-click="map.change_tiles('map')">M</div>
-                        <div style={{border:'1px solid #666', background:'#fff', borderRadius: '5px',textAlign: 'center', padding:'7px', margin:'3px 0'}} id="mapa-ctrl-view-satelite" ng-click="map.change_tiles('satellite')">S</div>
-                    </div>
-                </div> */}
-
                         <MapContainer center={[-16.350, -56.666]} zoom={4} scrollWheelZoom={false} className="mapa-projeto">
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
-                            <Marker position={[-16.350, -56.666]}>
+                            <Marker position={[-22.859352775021673, -47.04971628178976]}>
                                 <Popup>
-                                    <h1>{ProjetoNome}</h1>
-                                    <p><b>Tipo de Projeto</b>: {ProjetoTipo}</p>
-                                    <p><b>Bioma</b>: {ProjetoBioma}</p>
-                                    <p><b>Local</b>: {ProjetoLocal}</p>
-                                    <p><b>Padrão</b>: {ProjetoPadrao}</p>
-                                    <p><b>Kg de CO2eq</b>: {ProjetoKG}</p>
+                                    <h4>Animal Perdido</h4>
+                                    <p>Falar com: Fulano de Tal</p>
+                                    <p>Telefone: <a href="https://wa.me/1999999999" target="_blank">19 99999-9999</a></p>
                                 </Popup>
                             </Marker>
                         </MapContainer>

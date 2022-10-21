@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const MapDetails = styled.div`
-
+    margin-bottom: 40rem;
     .map-center{
         display: flex;
         justify-content: center;
