@@ -39,7 +39,7 @@ const SignUp = () => {
 
         const formContact = document.getElementById('contact')
         const resultContact = formContact.value
-        setPetContact('+55'+resultContact)
+        setPetContact('+55' + resultContact)
     }
 
     function getImage(event) {
@@ -47,8 +47,7 @@ const SignUp = () => {
     }
 
     function sendData() {
-        if (PetName === '' || PetDescription === '' ||
-            PetLocale === '' || PetContact === '' || !PetFile) {
+        if (!PetName || !PetDescription || !PetLocale || !PetContact) {
             alert('Por favor, preencha todos os campos')
         } else {
             async function addToFirebase() {
@@ -70,7 +69,7 @@ const SignUp = () => {
 
             const storageRef = ref(storage, `/files/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);
-        
+
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
@@ -94,7 +93,7 @@ const SignUp = () => {
     return (
         <>
             <PetsDetails>
-            <Navigation/>
+                <Navigation />
 
                 <a href="/cadastro" className="advice-yellow">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;
@@ -111,7 +110,7 @@ const SignUp = () => {
 
                     <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
-                    <p>{PetPercent} "% upload...</p>
+                    <p>{PetPercent} "% Uploading...</p>
 
                     <h4>Descrição do Animal</h4>
                     <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}

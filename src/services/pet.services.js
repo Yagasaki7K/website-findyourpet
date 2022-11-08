@@ -22,11 +22,6 @@ class PetService {
         return getDocs(petCollectionRef)
     }
 
-    /*getPhoto = () => {
-        const storageRef = ref(storage, 'gs://find-your-pet-945c4.appspot.com');
-        return getPhoto(storageRef)
-    }*/
-
     getPet = (id) => {
         const petDoc = doc(database, 'pets', id)
         return getDoc(petDoc)
