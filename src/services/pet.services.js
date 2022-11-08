@@ -1,6 +1,5 @@
 import database from '../client'
 import { collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore'
-import { getStorage, ref } from 'firebase/storage'
 
 const petCollectionRef = collection(database, 'pets')
 
@@ -23,14 +22,10 @@ class PetService {
         return getDocs(petCollectionRef)
     }
 
-    getPhoto = () => {
-        const storage = getStorage()
-        const mountainsRef = ref(storage, 'gs://kalify-findyourpet.appspot.com');
-
-        // While the file names are the same, the references point to different files
-        mountainsRef.name === mountainImagesRef.name;
-        mountainsRef.fullPath === mountainImagesRef.fullPath;  
-    }
+    /*getPhoto = () => {
+        const storageRef = ref(storage, 'gs://find-your-pet-945c4.appspot.com');
+        return getPhoto(storageRef)
+    }*/
 
     getPet = (id) => {
         const petDoc = doc(database, 'pets', id)
