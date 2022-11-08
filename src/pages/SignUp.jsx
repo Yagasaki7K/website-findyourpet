@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import FormSignUpDetails from '../components/FormSignUpDetails'
-
 import PetServices from '../services/pet.services'
+import { storage } from '../client'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
-    const [PetPhoto, setPetPhoto] = useState('');
+    const [PetFile, setPetFile] = useState('');
+    const [PetPercent, setPetPercent] = useState(0);
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
@@ -40,16 +42,13 @@ const SignUp = () => {
         setPetContact('+55'+resultContact)
     }
 
-    function getImage() {
-        const formPhoto = document.getElementById('photo')
-        const resultPhoto = formPhoto.value
-        setPetPhoto(resultPhoto)
-        console.log('Photo:', PetPhoto)
+    function getImage(event) {
+        setPetFile(event.target.files[0]);
     }
 
     function sendData() {
         if (PetName === '' || PetDescription === '' ||
-            PetLocale === '' || PetContact === '') {
+            PetLocale === '' || PetContact === '' || !PetFile) {
             alert('Por favor, preencha todos os campos')
         } else {
             async function addToFirebase() {
@@ -68,6 +67,27 @@ const SignUp = () => {
                 Redirect();
             }
             addToFirebase();
+
+            const storageRef = ref(storage, `/files/${PetFile.name}`);
+            const uploadTask = uploadBytesResumable(storageRef, PetFile);
+        
+            uploadTask.on(
+                "state_changed",
+                (snapshot) => {
+                    const percent = Math.round(
+                        (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                    );
+
+                    setPetPercent(percent);
+                },
+                (error) => console.log(error),
+                () => {
+                    // download url
+                    getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+                        console.log(url);
+                    });
+                }
+            )
         }
     }
 
@@ -90,7 +110,8 @@ const SignUp = () => {
                         maxLength={15} size={24} />
 
                     <h4>Foto do Animal</h4>
-                    <input type="file" id="photo" onChange={getImage}/>
+                    <input type="file" id="photo" onChange={getImage}></input>
+                    <p>{PetPercent} "% upload...</p>
 
                     <h4>Descrição do Animal</h4>
                     <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}
