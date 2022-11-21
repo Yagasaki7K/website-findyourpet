@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
-import Logo from '../../assets/logo.png'
 import imageNotFound from '../../assets/imagenotfound.png'
 
 import PetServices from '../services/pet.services'
@@ -15,14 +14,14 @@ function Pets() {
         getPets()
     }, [])
 
-    const getPets = async() => {
+    const getPets = async () => {
         const data = await PetServices.getAllPets()
-        setPets(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
     return (
         <PetsDetails>
-            <Navigation/>
+            <Navigation />
 
             <a href="/cadastro" className="advice">
                 <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
@@ -45,24 +44,31 @@ function Pets() {
                     Pets && Pets.map((pets, index) => (
 
                         <a href={`https://wa.me/` + pets?.contact} target="_blank" key={index}>
-                        <div className="pets-list-item">
-                            <img src={pets?.image ? pets?.image : imageNotFound} alt={pets?.name} />
+                            <div className="pets-list-item">
 
-                            <div className="pets-list-item-info">
-                                <h3>{pets?.name} • {pets?.status}</h3>
-                                <p>{pets?.description}</p>
-                                <p><i className="uil uil-map-marker"></i> {pets?.locale}</p>
-                                <p><i className="uil uil-phone"></i> {pets?.contact}</p>
+                                {
+                                    pets?.image ? (
+                                        <img src={"https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F" + pets?.image + ".png"} alt="Pet" />
+                                    ) : (
+                                        <img src={imageNotFound} alt="Pet" />
+                                    )
+                                }
+
+                                <div className="pets-list-item-info">
+                                    <h3>{pets?.name} • {pets?.status}</h3>
+                                    <p>{pets?.description}</p>
+                                    <p><i className="uil uil-map-marker"></i> {pets?.locale}</p>
+                                    <p><i className="uil uil-phone"></i> {pets?.contact}</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     ))
                 }
-            
-            </div>
-            <AddPetButton/>
 
-            <Footer/>
+            </div>
+            <AddPetButton />
+
+            <Footer />
         </PetsDetails>
     )
 }
