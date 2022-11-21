@@ -8,7 +8,6 @@ import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
 
 const SignUp = () => {
-    const [PetDocument, setPetDocument] = useState('');
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
@@ -44,7 +43,7 @@ const SignUp = () => {
     }
 
     function getImage(event) {
-        setPetFile(event.target.files[0]);   
+        setPetFile(event.target.files[0]);
     }
 
     function sendData() {
@@ -57,7 +56,8 @@ const SignUp = () => {
                     description: PetDescription,
                     locale: PetLocale,
                     contact: PetContact,
-                    status: PetSituation
+                    status: PetSituation,
+                    image: PetFile.name
                 }
 
                 await (PetServices.addPets(NewPets))
@@ -111,7 +111,7 @@ const SignUp = () => {
 
                     <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
-                    <p>{PetPercent} "% Uploading...</p>
+                    <p>{PetPercent}% Uploading...</p>
 
                     <h4>Descrição do Animal</h4>
                     <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}
