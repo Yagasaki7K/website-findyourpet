@@ -7,16 +7,27 @@ const FormSignUpDetails = styled.div`
     flex-direction: column;
 
     form {
-        margin-top: 20px;
-        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        margin: 20px 0 1rem 0rem;
         padding: 20px 40px;
         background: #1d1e26;
         box-shadow: #9a48ff 0px 0px 50px;
         border-radius: 15px;
 
-        textarea {
-            width: 220px;
-            height: 60px;
+        input, textarea, select {
+            padding: 0.3rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            width: 80%;
+        }
+
+        input, textarea, select, i, h4 {
+            margin-left: 1rem;
         }
 
         i {
@@ -45,6 +56,7 @@ const FormSignUpDetails = styled.div`
 
         .reset {
             background: #bbbd4d;
+            margin-left: 1.5rem;
         }
     }
 `

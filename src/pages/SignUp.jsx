@@ -111,7 +111,6 @@ const SignUp = () => {
 
                     <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
-                    <p>{PetPercent}% Uploading...</p>
 
                     <h4>Descrição do Animal</h4>
                     <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}
