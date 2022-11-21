@@ -8,6 +8,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
 
 const SignUp = () => {
+    const [PetDocument, setPetDocument] = useState('');
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
@@ -43,7 +44,7 @@ const SignUp = () => {
     }
 
     function getImage(event) {
-        setPetFile(event.target.files[0]);
+        setPetFile(event.target.files[0]);   
     }
 
     function sendData() {
