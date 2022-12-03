@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const FormSignUpDetails = styled.div`
     display: flex;
@@ -11,10 +12,10 @@ const FormSignUpDetails = styled.div`
         justify-content: center;
         flex-direction: column;
 
-        margin: 20px 0 1rem 0rem;
+        margin: 30px 0 1rem 0rem;
         padding: 20px 40px;
         background: #1d1e26;
-        box-shadow: #9a48ff 0px 0px 50px;
+        box-shadow: ${Colors.purple} 0px 0px 50px;
         border-radius: 15px;
 
         input, textarea, select {

@@ -10,10 +10,6 @@ import Navigation from '../components/Navigation'
 function Pets() {
     const [Pets, setPets] = useState([])
 
-    const changeExtension = (image) => {
-
-    }
-
     useEffect(() => {
         getPets()
     }, [])

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
     a:hover {
@@ -49,7 +50,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: #9580ff;
+        background: ${Colors.purple};
         border: none;
         font-weight: 500;
         text-decoration: none;
@@ -77,7 +78,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: #9580ff;
+        background: ${Colors.purple};
         border: none;
         font-weight: 500;
         text-decoration: none;

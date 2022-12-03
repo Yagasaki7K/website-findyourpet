@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const MapDetails = styled.div`
     margin-bottom: 40rem;
@@ -13,7 +14,7 @@ const MapDetails = styled.div`
     }
     
     .sidebar {
-        background: #703edb;
+        background: ${Colors.purple};
         color: #fff;
         padding: 6px 12px;
         font-family: monospace;

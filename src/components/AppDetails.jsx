@@ -15,6 +15,18 @@ const HomeDetails = styled.div`
         margin-top: -41rem;
     }
 
+    @media (max-width: 1024px) {
+        margin-top: -84rem;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: -62rem;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: -45rem;
+    }
+
     ul {
         margin-top: 2rem;
         display: flex;
@@ -24,12 +36,29 @@ const HomeDetails = styled.div`
             margin-top: -0.5rem;
             margin-right: 5rem;
             margin-left: 2rem;
+
+            @media (max-width: 1024px) {
+                margin-left: 19rem;
+            }
+
+            @media (max-width: 768px) {
+                margin-left: 10rem;
+            }
+
+            @media (max-width: 600px) {
+                margin-top: 0rem;
+                margin-left: 0rem;
+            }
         }
         
         li {
             margin-right: 3rem;
             margin-top: 2.2rem;
             list-style: none;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
 
             a {
                 color: #fff;
@@ -63,6 +92,10 @@ const HomeDetails = styled.div`
                 margin-left: 10rem;
             }
 
+            @media (max-width: 1024px) {
+                display: none;
+            }
+
             height: 2.5rem;
             width: 10rem;
 
@@ -91,11 +124,28 @@ const HomeDetails = styled.div`
             margin-left: 14.5rem;
         }
 
+        @media (max-width: 1024px) {
+            margin-left: 13rem;
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 5rem;
+        }
+
+        @media (max-width: 600px) {
+            margin-left: 1.5rem;
+        }
+
         h1 {
             font-size: 5rem;
             margin-top: 8rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
+
+            @media (max-width: 600px) {
+                margin-top: 2rem;
+                font-size: 3rem;
+            }
         }
 
         .love {
@@ -131,6 +181,10 @@ const HomeDetails = styled.div`
 
             @media (max-width: 1366px) {
                 margin-top: 6rem;
+            }
+
+            @media (max-width: 600px) {
+                margin-top: 5rem;
             }
 
             a {

@@ -6,6 +6,7 @@ import PetServices from '../services/pet.services'
 import { storage } from '../client'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
+import AddPetButton from '../components/AddPetButton'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -143,6 +144,7 @@ const SignUp = () => {
             </FormSignUpDetails>
 
             <Footer />
+            <AddPetButton />
         </>
     )
 }
