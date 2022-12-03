@@ -11,6 +11,14 @@ const HomeDetails = styled.div`
         font-weight: 400;
     }
 
+    @media (max-width: 1600px) {
+        margin-top: -55rem;
+    }
+
+    @media (max-width: 1440px) {
+        margin-top: -56rem;
+    }
+
     @media (max-width: 1366px) {
         margin-top: -41rem;
     }
@@ -36,6 +44,14 @@ const HomeDetails = styled.div`
             margin-top: -0.5rem;
             margin-right: 5rem;
             margin-left: 2rem;
+
+            @media (max-width: 1600px) {
+                margin-left: 10rem;
+            }
+
+            @media (max-width: 1440px) {
+                margin-left: 8rem;
+            }
 
             @media (max-width: 1024px) {
                 margin-left: 19rem;
@@ -88,6 +104,14 @@ const HomeDetails = styled.div`
             margin-top: 1.5rem;
             font-weight: bold;
 
+            @media (max-width: 1600px) {
+                margin-left: 10rem;
+            }
+
+            @media (max-width: 1440px) {
+                margin-left: 2rem;
+            }
+
             @media (max-width: 1366px) {
                 margin-left: 10rem;
             }
@@ -118,6 +142,14 @@ const HomeDetails = styled.div`
         margin-top: 5rem;
         margin-left: 18.5rem;
         line-height: 5rem;
+
+        @media (max-width: 1600px) {
+            margin-left: 19rem;
+        }
+
+        @media (max-width: 1440px) {
+            margin-left: 17rem;
+        }
 
         @media (max-width: 1366px) {
             margin-top: -2rem;
@@ -178,6 +210,10 @@ const HomeDetails = styled.div`
         
         .links {
             margin-top: 20rem;
+
+            @media (max-width: 1440px) {
+                margin-top: 12rem;
+            }
 
             @media (max-width: 1366px) {
                 margin-top: 6rem;
