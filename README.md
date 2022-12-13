@@ -1,27 +1,27 @@
 <p align="center">
-   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/assets/logotipo.png" width="300"/>
+   <img src="https://github.com/KalifyInc/website-findyourpet/blob/main/assets/logotipo.png" width="300"/>
 </p>
 
 <p align="center">
    <a href="https://github.com/KalifyInc">
       <img alt="Kalify Inc" src="https://img.shields.io/badge/-KalifyInc-5965e0?style=flat&logo=Github&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-findyourpet?color=5965e0">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/KalifyInc/website-findyourpet?color=5965e0">
 
-  <a href="https://github.com/Yagasaki7K/website-findyourpet/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-findyourpet?color=5965e0">
+  <a href="https://github.com/KalifyInc/website-findyourpet/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KalifyInc/website-findyourpet?color=5965e0">
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
-  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-findyourpet?color=5965e0" />
-  <a href="https://github.com/Yagasaki7K/website-findyourpet/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-findyourpet?color=5965e0&logo=github">
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/KalifyInc/website-findyourpet?color=5965e0" />
+  <a href="https://github.com/KalifyInc/website-findyourpet/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/KalifyInc/website-findyourpet?color=5965e0&logo=github">
   </a>
 </p>
 
 <div align="center">
   <sub>FindYourPet. Built with ❤︎ by
     <a href="https://github.com/KalifyInc">Kalify Inc</a> and
-    <a href="https://github.com/Yagasaki7K/mobile-findyourpet/graphs/contributors">
+    <a href="https://github.com/KalifyInc/mobile-findyourpet/graphs/contributors">
       contributors
     </a>
   </sub>
@@ -29,12 +29,14 @@
 
 # 📌 Table of Contents
 
-* [Demo Website](#eyes-demo-website)
-* [Technologies](#computer-technologies)
-* [Features](#rocket-features)
-* [Found a bug? Missing a specific feature?](#issues)
-* [Contributing](#tada-contributing)
-* [License](#closed_book-license)
+- [📌 Table of Contents](#-table-of-contents)
+- [👀 Demo Website](#-demo-website)
+- [💻 Technologies](#-technologies)
+- [🚀 Features](#-features)
+- [🚧 How to run](#-how-to-run)
+- [🐛 Issues](#-issues)
+- [🎉 Contributing](#-contributing)
+- [📕 License](#-license)
 
 # 👀 Demo Website
 👉  Demo: https://findyourpet.vercel.app/
@@ -62,7 +64,7 @@ You enter the application, register, go to the adoption area, and there you will
 # 🚧 How to run
 ```bash
 # Clone Repository
-$ git clone https://github.com/Yagasaki7K/website-findyourpet.git
+$ git clone https://github.com/KalifyInc/website-findyourpet.git
 $ Go to folder using terminal
 $ yarn (needs yarn installed)
 $ yarn dev (if you wanna change something) // yarn start (just to see running)
@@ -72,14 +74,14 @@ If you need change something, check using yarn build if everything is okay. And 
 
 # 🐛 Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [FindYourPet](https://github.com/Yagasaki7K/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Feel free to **file a new issue** with a respective title and description on the the [FindYourPet](https://github.com/KalifyInc/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 # 🎉 Contributing
 First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
 Here's some tips:
 
-* Check the [issues page](https://github.com/Yagasaki7K/website-findyourpet/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+* Check the [issues page](https://github.com/KalifyInc/website-findyourpet/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
 * Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
 Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
