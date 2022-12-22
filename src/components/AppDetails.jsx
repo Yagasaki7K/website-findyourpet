@@ -66,7 +66,7 @@ const HomeDetails = styled.div`
                 margin-left: 0rem;
             }
         }
-        
+
         li {
             margin-right: 3rem;
             margin-top: 2.2rem;
@@ -82,19 +82,19 @@ const HomeDetails = styled.div`
 
                 :hover {
                     transition: 1s;
-                    background: ${Colors.purple};
-                    background: linear-gradient(90deg, ${Colors.purple} 0%, ${Colors.purpleLight} 100%);
+                    background: ${Colors.primary};
+                    background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
                     background-clip: text;
                     -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; 
+                    -webkit-text-fill-color: transparent;
                 }
             }
 
         }
 
         button {
-            background: ${Colors.purple};
-            background: linear-gradient(90deg, ${Colors.purple} 0%, ${Colors.purpleLight} 100%); 
+            background: ${Colors.primary};
+            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
             color: #fff;
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
@@ -127,10 +127,10 @@ const HomeDetails = styled.div`
 
             :hover {
                 transition: 2s;
-                background: ${Colors.purpleLight};
-                background: linear-gradient(90deg, ${Colors.purpleLight} 0%, ${Colors.purple} 100%); 
+                background: ${Colors.primaryAlt};
+                background: linear-gradient(90deg, ${Colors.primaryAlt} 0%, ${Colors.primary} 100%);
             }
-        }   
+        }
     }
 
     .container {
@@ -181,16 +181,16 @@ const HomeDetails = styled.div`
         }
 
         .love {
-            background: ${Colors.purple};
-            background: linear-gradient(90deg, ${Colors.purple} 0%, ${Colors.purpleLight} 100%);
+            background: ${Colors.primary};
+            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         button {
-            background: ${Colors.purple};
-            background: linear-gradient(90deg, ${Colors.purple} 0%, ${Colors.purpleLight} 100%); 
+            background: ${Colors.primary};
+            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
             color: #fff;
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
@@ -203,11 +203,11 @@ const HomeDetails = styled.div`
 
             :hover {
                 transition: 2s;
-                background: ${Colors.purpleLight};
-                background: linear-gradient(90deg, ${Colors.purpleLight} 0%, ${Colors.purple} 100%); 
+                background: ${Colors.primaryAlt};
+                background: linear-gradient(90deg, ${Colors.primaryAlt} 0%, ${Colors.primary} 100%);
             }
         }
-        
+
         .links {
             margin-top: 20rem;
 
@@ -228,11 +228,11 @@ const HomeDetails = styled.div`
                 text-decoration: none;
 
                 :hover {
-                    background: ${Colors.purple};
-                    background: linear-gradient(90deg, ${Colors.purple} 0%, ${Colors.purpleLight} 100%);
+                    background: ${Colors.primary};
+                    background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
                     background-clip: text;
                     -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; 
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
