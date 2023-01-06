@@ -50,7 +50,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: ${Colors.purple};
+        background: ${Colors.primary};
         border: none;
         font-weight: 500;
         text-decoration: none;
@@ -78,7 +78,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: ${Colors.purple};
+        background: ${Colors.primary};
         border: none;
         font-weight: 500;
         text-decoration: none;
@@ -186,7 +186,7 @@ const HomeDetails = styled.div`
             flex-direction: column;
             text-align: center;
         }
-        
+
         .footer-content {
             margin-right: 200px;
             display: flex;
@@ -199,7 +199,7 @@ const HomeDetails = styled.div`
             h2 {
                 margin-bottom: -5px;
             }
-            
+
             a {
                 font-weight: 300;
                 margin-top: 10px;

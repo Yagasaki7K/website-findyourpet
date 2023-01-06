@@ -1,6 +1,6 @@
 const Colors = {
-    "purple": '#30AD80', //#9580ff
-    "purpleLight": '#41d8a1' //#a48fe9
+    "primary": '#30AD80', //#9580ff
+    "primaryAlt": '#41d8a1' //#a48fe9
 }
 
 export default Colors

@@ -15,7 +15,7 @@ const FormSignUpDetails = styled.div`
         margin: 30px 0 1rem 0rem;
         padding: 20px 40px;
         background: #1d1e26;
-        box-shadow: ${Colors.purple} 0px 0px 50px;
+        box-shadow: ${Colors.primary} 0px 0px 50px;
         border-radius: 15px;
 
         input, textarea, select {
@@ -34,7 +34,7 @@ const FormSignUpDetails = styled.div`
         i {
             font-size: 10px;
         }
-        
+
         h4 {
             margin-bottom: 5px;
         }
@@ -42,8 +42,8 @@ const FormSignUpDetails = styled.div`
         .send, .reset {
             color: #fff;
             font-weight: 300;
-            width: 100px;     
-            
+            width: 100px;
+
             :hover {
                 transition: 1s;
                 filter: brightness(85%)

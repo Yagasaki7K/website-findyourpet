@@ -12,9 +12,9 @@ const MapDetails = styled.div`
         height: 40rem;
         width: 80%;
     }
-    
+
     .sidebar {
-        background: ${Colors.purple};
+        background: ${Colors.primary};
         color: #fff;
         padding: 6px 12px;
         font-family: monospace;
