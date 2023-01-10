@@ -44,7 +44,7 @@ function Pets() {
             <div className="pets-list">
                 {
                     Pets && Pets.map((pets, index) => (
-                        <a href={`https://wa.me/` + pets?.contact} target="_blank" rel="noreferrer" key={index}>
+                        <a href={`https://wa.me/` + pets?.contact} target="_blank" key={index}>
                             <div className="pets-list-item">
                                 <img src={pets.image ? firebaseURL + pets.image + `?alt=media` : imageNotFound} alt={pets?.name} />
 
