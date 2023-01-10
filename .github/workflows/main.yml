@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@v2 # Checkout the repository
     - name: Set up upstream remote
       run: git remote add upstream https://github.com/KalifyInc/website-findyourpet.git
+    - name: Fetch All
+    - run: git fetch --all
     - name: Fetch from upstream
       run: git fetch upstream
     - name: Merge with upstream
