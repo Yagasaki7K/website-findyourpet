@@ -15,6 +15,6 @@ jobs:
     - name: Fetch from upstream
       run: git fetch upstream
     - name: Merge with upstream
-      run: git merge upstream/master
+      run: git merge upstream/main
     - name: Push to origin
-      run: git push origin HEAD:master
+      run: git push origin HEAD:main
