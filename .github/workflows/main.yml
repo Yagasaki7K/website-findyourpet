@@ -14,6 +14,8 @@ jobs:
       - uses: tgymnich/fork-sync@v1.2.1
         with:
           github_token: ${{ secrets.SECRET_WORKFLOW }}
-          owner: llvm
+          owner: Yagasaki7K
           base: main
           head: main
+          merge_method: merge
+          pr_title: Fork Sync
