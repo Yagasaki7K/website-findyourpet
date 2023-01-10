@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: tgymnich/fork-sync@v1.2.1
         with:
-          token: ${{ secrets.SECRET_WORKFLOW }}
+          github_token: ${{ secrets.SECRET_WORKFLOW }}
           owner: llvm
           base: main
           head: main
