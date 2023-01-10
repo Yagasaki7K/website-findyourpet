@@ -1,4 +1,4 @@
-name: Sync Fork
+name: Sync Fork v1.2.1
 
 on:
   schedule:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: tgymnich/fork-sync@v1.6.3
+      - uses: tgymnich/fork-sync@v1.2.1
         with:
           owner: llvm
           base: main
