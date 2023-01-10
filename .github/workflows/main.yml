@@ -1,22 +1,19 @@
-name: Sync fork
+name: Sync Fork
 
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron: '* * * * *' # every 30 minutes
+  workflow_dispatch: # on button click
 
 jobs:
   sync:
+
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2 # Checkout the repository
-    - name: Set up upstream remote
-      run: git remote add upstream https://github.com/KalifyInc/website-findyourpet.git
-    - name: Fetch All
-    - run: git fetch --all
-    - name: Fetch from upstream
-      run: git fetch upstream
-    - name: Merge with upstream
-      run: git merge upstream/main
-    - name: Push to origin
-      run: git push origin HEAD:main
+      - uses: tgymnich/fork-sync@v1.6.3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          owner: llvm
+          base: master
+          head: master
