@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
     --first-color: #1d1e26;
     --font-color: #f7f7f7;
@@ -16,11 +18,11 @@ body {
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }
-  
+
 body::-webkit-scrollbar-track {
     background: #268864;        /* color of the tracking area */
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background-color: #48e0a9;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
