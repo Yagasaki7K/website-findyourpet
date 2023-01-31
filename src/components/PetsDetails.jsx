@@ -35,7 +35,7 @@ const HomeDetails = styled.div`
         }
 
         img {
-            width: 50px;
+            width: 75px;
             margin-top: 0.5rem;
         }
 

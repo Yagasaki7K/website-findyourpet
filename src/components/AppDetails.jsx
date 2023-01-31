@@ -42,8 +42,7 @@ const HomeDetails = styled.div`
         img {
             width: 20rem;
             margin-top: -0.5rem;
-            margin-right: 5rem;
-            margin-left: 2rem;
+            margin-right: 4rem;
 
             @media (max-width: 1600px) {
                 margin-left: 10rem;
@@ -51,6 +50,10 @@ const HomeDetails = styled.div`
 
             @media (max-width: 1440px) {
                 margin-left: 8rem;
+            }
+
+            @media (max-width: 1366px) {
+                margin-left: 3rem;
             }
 
             @media (max-width: 1024px) {
@@ -68,8 +71,8 @@ const HomeDetails = styled.div`
         }
 
         li {
-            margin-right: 3rem;
-            margin-top: 2.2rem;
+            margin-right: 2rem;
+            margin-top: 2rem;
             list-style: none;
 
             @media (max-width: 1024px) {
