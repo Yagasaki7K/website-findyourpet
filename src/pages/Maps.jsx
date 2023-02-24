@@ -22,7 +22,7 @@ const Maps = () => {
 
             <MapsDetails>
                 <MapStyle>
-                    <div layout-align="center center" style={{ background: 'white', position: 'relative' }}>
+                    <div layout-align="center" style={{ background: 'white', position: 'relative' }}>
                         <MapContainer center={[-16.350, -56.666]} zoom={4} scrollWheelZoom={false} className="mapa-projeto">
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -30,9 +30,9 @@ const Maps = () => {
                             />
                             <Marker position={[-22.859352775021673, -47.04971628178976]}>
                                 <Popup>
-                                    <h4>Animal Perdido</h4>
-                                    <p>Falar com: Fulano de Tal</p>
-                                    <p>Telefone: <a href="https://wa.me/1999999999" target="_blank">19 99999-9999</a></p>
+                                    <h4>Animal em Adoção</h4>
+                                    <p>Rondele - Macho, médio 🐶19kg - Jovem adulto - @adotarondelli</p>
+                                    <p>Telefone: <a href="https://wa.me/+5519982698309" target="_blank"  rel='noreferrer'>+55 19 9 82698309</a></p>
                                 </Popup>
                             </Marker>
                         </MapContainer>

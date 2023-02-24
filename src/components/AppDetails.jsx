@@ -5,7 +5,7 @@ const HomeDetails = styled.div`
     color: #fff;
     position: absolute;
 
-    margin-top: -61rem;
+    margin-top: -59rem;
 
     a {
         font-weight: 400;
@@ -42,6 +42,7 @@ const HomeDetails = styled.div`
         img {
             width: 20rem;
             margin-top: -0.5rem;
+            margin-left: 4rem;
             margin-right: 4rem;
 
             @media (max-width: 1600px) {
@@ -212,7 +213,7 @@ const HomeDetails = styled.div`
         }
 
         .links {
-            margin-top: 20rem;
+            margin-top: 18rem;
 
             @media (max-width: 1440px) {
                 margin-top: 12rem;

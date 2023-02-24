@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AppDetails from './components/AppDetails'
 import AppBackground from './components/AppBackground'
 import Logo from '../assets/logotipo-white.png'
@@ -16,7 +16,7 @@ const App = () => {
                     <a href="/"><img src={Logo} /></a>
                     <li><a href="/sobre-nos">Sobre a Kalify</a></li>
                     <li><a href="/carreiras">Carreiras</a></li>
-                    <li><a href="https://discord.gg/jhSepmE7nN" target="_blank">Suporte</a></li>
+                    <li><a href="https://discord.gg/jhSepmE7nN" target="_blank" rel='noreferrer'>Suporte</a></li>
                     <li><a href="/">Download</a></li>
                     <button onClick={() => toHome()}>Acessar</button>
                 </ul>

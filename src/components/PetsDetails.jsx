@@ -138,6 +138,7 @@ const HomeDetails = styled.div`
                 width: 100px;
                 height: 80px;
                 margin-top: 25px;
+                object-fit: cover;
             }
 
             .pets-list-item-info {
@@ -147,8 +148,11 @@ const HomeDetails = styled.div`
 
         img {
             border-radius: 15px;
-            width: 200px;
+            width: 180px;
+            max-width: 180px;
             height: 180px;
+            max-height: 180px;
+            object-fit: cover;
         }
 
         h3, p {
