@@ -47,39 +47,41 @@ const SignUp = () => {
         setPetFile(event.target.files[0]);
     }
 
+    function Redirect() {
+        location.assign("/pets");
+    }
+
+    async function addToFirebase() {
+        const NewPets = {
+            name: PetName,
+            description: PetDescription,
+            locale: PetLocale,
+            contact: PetContact,
+            status: PetSituation,
+            image: PetFile.name,
+            createdAt: new Date().toString()
+        }
+
+        await (PetServices.addPets(NewPets))
+        Redirect();
+    }
+
     function sendData() {
         if (!PetName || !PetDescription || !PetLocale || !PetContact) {
             alert('Por favor, preencha todos os campos')
         } else {
-            async function addToFirebase() {
-                const NewPets = {
-                    name: PetName,
-                    description: PetDescription,
-                    locale: PetLocale,
-                    contact: PetContact,
-                    status: PetSituation,
-                    image: PetFile.name
-                }
-
-                await (PetServices.addPets(NewPets))
-                function Redirect() {
-                    location.assign("/pets");
-                }
-                Redirect();
-            }
             addToFirebase();
-
             const storageRef = ref(storage, `/files/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);
 
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
-                    const percent = Math.round(
+                    setPetPercent(Math.round(
                         (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-                    );
+                    ));
 
-                    setPetPercent(percent);
+                    setPetPercent(PetPercent);
                 },
                 (error) => console.log(error),
                 () => {
