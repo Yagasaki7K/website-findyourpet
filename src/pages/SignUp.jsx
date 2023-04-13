@@ -40,7 +40,7 @@ const SignUp = () => {
 
         const formContact = document.getElementById('contact')
         const resultContact = formContact.value
-        setPetContact('+55' + resultContact)
+        setPetContact('55' + resultContact)
     }
 
     function getImage(event) {
@@ -68,7 +68,7 @@ const SignUp = () => {
 
     function sendData() {
         if (!PetName || !PetDescription || !PetLocale || !PetContact) {
-            alert('Por favor, preencha todos os campos')
+            alert('Por favor, preencha todos os campos obrigatórios.');
         } else {
             addToFirebase();
             const storageRef = ref(storage, `/files/${PetFile.name}`);
@@ -77,11 +77,8 @@ const SignUp = () => {
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
-                    setPetPercent(Math.round(
-                        (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-                    ));
-
-                    setPetPercent(PetPercent);
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    setPetPercent(Math.floor(progress));
                 },
                 (error) => console.log(error),
                 () => {
@@ -90,7 +87,7 @@ const SignUp = () => {
                         console.log(url);
                     });
                 }
-            )
+            );
         }
     }
 
@@ -112,7 +109,7 @@ const SignUp = () => {
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={24} />
 
-                    <h4>Foto do Animal</h4>
+                    <h4>Foto do Animal {PetPercent ? PetPercent : null}</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
 
                     <h4>Descrição do Animal</h4>
