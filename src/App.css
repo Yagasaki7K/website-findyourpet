@@ -16,16 +16,21 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;
+    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: #268864;        /* color of the tracking area */
+    background: #268864;
+    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #48e0a9;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
+    background-color: #48e0a9;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
 }
 
 .logo img {
@@ -54,9 +59,6 @@ button {
     font-family: 'Poppins', sans-serif;
     color: var(--font-color);
     width: 70%;
-    margin-left: 14rem;
-    display: flex;
-    justify-content: space-between;
 }
 
 .container h3 {
@@ -151,6 +153,7 @@ button {
 @media screen and (max-width: 1024px) {
     .container {
         margin-left: 10rem;
+
     }
 
     .text {
@@ -189,22 +192,52 @@ button {
         width: 320px;
         margin-left: 2rem;
     }
+    
+}
+
+
+
+@media screen and (max-width: 390px) , (max-width: 414px) {
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .links {
+        width: 100%;
+        padding-left: 50%;
+        margin-top: 30rem;
+    }
+
 }
 
 @media screen and (max-width: 375px) {
-    .container {
-        margin-left: 1.5rem;
-    }
 
-    .howtoworks h1 {
-        font-size: 1.5rem;
+   
+    .container {
+        font-size: 10px;
+        justify-content: center;
     }
 
     .text {
         width: 300px;
         margin-left: 1.5rem;
     }
+
+    .links {
+        width: 320px;
+        padding-left: 50%;
+        margin-top: 30rem;
+        
+    }
+
+    .links a{
+        font-size: 1.5em;
+        padding-bottom: 10%;
+
+    }
 }
+
 
 @media screen and (max-width: 320px) {
     .container {

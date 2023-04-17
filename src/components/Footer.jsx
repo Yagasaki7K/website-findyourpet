@@ -9,7 +9,7 @@ const Footer = () => {
                 <footer>
                     <div className="footer-content break">
                         <h2>FindYourPet</h2>
-                        <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
+                        <a href="http://kalify.vercel.app/" target="_blank" rel="noreferrer">Site Institucional <i className="uil uil-external-link-alt"></i></a>
                         <a href="/sobre-nos">Sobre nós</a>
                         <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
                         <a href="/carreiras">Carreiras</a>
@@ -24,8 +24,8 @@ const Footer = () => {
 
                     <div className="footer-content break">
                         <h2>Social</h2>
-                        <a href="https://twitter.com/KalifyInc" target="_blank">Twitter <i className="uil uil-external-link-alt"></i></a>
-                        <a href="https://instagram.com/yagasaki.dev" target="_blank">Instagram <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://twitter.com/KalifyInc" target="_blank" rel="noreferrer">Twitter <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://instagram.com/yagasaki.dev" target="_blank" rel="noreferrer">Instagram <i className="uil uil-external-link-alt"></i></a>
                     </div>
                 </footer>
 

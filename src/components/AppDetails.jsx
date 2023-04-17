@@ -3,41 +3,43 @@ import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
     color: #fff;
-    position: absolute;
+    position: relative;
 
-    margin-top: -59rem;
+
+    margin: auto 0;
+    *{
+        padding: 0;
+        margin: 0;
+        }
 
     a {
         font-weight: 400;
     }
 
     @media (max-width: 1600px) {
-        margin-top: -55rem;
+        margin-top: -2rem;
+    }
+    
+    @media (max-width: 414px){
+        left: 3%;
+    
     }
 
-    @media (max-width: 1440px) {
-        margin-top: -56rem;
+    @media (max-width: 414px){
+        left: 3%;
+    
+    }
+    @media  (max-width: 360px){
+        left: 20%;
     }
 
-    @media (max-width: 1366px) {
-        margin-top: -41rem;
-    }
 
-    @media (max-width: 1024px) {
-        margin-top: -84rem;
-    }
-
-    @media (max-width: 768px) {
-        margin-top: -62rem;
-    }
-
-    @media (max-width: 600px) {
-        margin-top: -45rem;
-    }
-
+ 
     ul {
         margin-top: 2rem;
         display: flex;
+        width: 100%;
+
 
         img {
             width: 20rem;
@@ -214,7 +216,8 @@ const HomeDetails = styled.div`
 
         .links {
             margin-top: 18rem;
-
+            margin-left: 2rem;
+     
             @media (max-width: 1440px) {
                 margin-top: 12rem;
             }
@@ -223,9 +226,7 @@ const HomeDetails = styled.div`
                 margin-top: 6rem;
             }
 
-            @media (max-width: 600px) {
-                margin-top: 5rem;
-            }
+                  
 
             a {
                 color: #fff;
