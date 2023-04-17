@@ -29,6 +29,7 @@ const HomeDetails = styled.div`
         left: 3%;
     
     }
+    
     @media  (max-width: 360px){
         left: 20%;
     }
