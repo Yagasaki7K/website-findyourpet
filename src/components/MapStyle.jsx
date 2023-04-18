@@ -2,7 +2,12 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const MapStyle = styled.div`
-#evento-mapa { width:100%; height:100%; }
+
+#evento-mapa {
+    width:100%;
+    height:100%;
+}
+
 .mapa-projeto {
     height: 37rem;
     width: 100%;
@@ -12,6 +17,7 @@ const MapStyle = styled.div`
     color:#210062;
     z-index: 1;
 }
+
 .mapa-projeto > div {
     position:relative;
 }

@@ -6,6 +6,7 @@ const MapDetails = styled.div`
         display: flex;
         justify-content: center;
     }
+
     .map-container {
         margin-top: 10px;
         height: 40rem;
