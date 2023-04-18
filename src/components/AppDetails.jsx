@@ -242,37 +242,13 @@ const HomeDetails = styled.div`
             margin-top: 16rem;
             margin-left: 2rem;
 
-            @media (max-width: 1920px) {
-                margin-top: 18rem;
-            }
-
-            @media (max-width: 1600px) {
-                margin-top: 7rem;
+            @media (max-width: 1440px) {
+                margin-top: 12rem;
             }
 
             @media (max-width: 1366px) {
                 margin-top: 6rem;
             }
-
-
-            @media (max-width: 1280px) {
-                margin-top: 9rem;
-            }
-
-
-            @media (max-width: 1024px) {
-                margin-top: 3rem;
-            }
-
-            @media (max-width: 600px) {
-                margin-top: 10rem;
-            }
-
-
-
-
-
-
 
 
             a {
