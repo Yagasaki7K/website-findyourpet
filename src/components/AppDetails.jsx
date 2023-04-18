@@ -11,7 +11,6 @@ const HomeDetails = styled.div`
         font-weight: 400;
     }
 
-
   /* This code adjusts the position of an image based on the screen size */
     @media (max-width: 414px) {
     left: 3%;
