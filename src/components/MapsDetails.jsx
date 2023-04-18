@@ -15,7 +15,7 @@ const MapDetails = styled.div`
 
     .sidebar {
         background: ${Colors.primary};
-        color: #fff;
+        color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
         padding: 6px 12px;
         font-family: monospace;
         z-index: 1;

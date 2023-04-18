@@ -2,15 +2,15 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const AddPetButtonDetails = styled.div`
-    .firstButton {
-        background: #1d1e26;
+
+    .firstButton, .secondButton, .thirdButton {
+        background: ${(props) => (props.theme.mode === 'dark' ? Colors.darkColor : Colors.lightColor)};
         width: 50px;
         height: 50px;
         color: ${Colors.primary};
         position: fixed;
         border: 1px solid ${Colors.primary};
-        bottom: 20px;
-        right: 0px;
+
         z-index: 99;
         padding: 15px;
         border-radius: 10px;
@@ -19,29 +19,23 @@ const AddPetButtonDetails = styled.div`
         :hover {
             transition: 1s;
             background: ${Colors.primary};
-            color: #fff;
+            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
         }
     }
 
+    .firstButton {
+        bottom: 20px;
+        right: 0px;
+    }
+
     .secondButton {
-        background: #1d1e26;
-        width: 50px;
-        height: 50px;
-        color: ${Colors.primary};
-        position: fixed;
         bottom: 20px; // Side by Side 20px
         right: 60px; // Side by Side 60px
-        z-index: 99;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 18px;
-        border: 1px solid ${Colors.primary};
+    }
 
-        :hover {
-            transition: 1s;
-            background: ${Colors.primary};
-            color: #fff;
-        }
+    .thirdButton {
+        right: 0px;
+        bottom: 80px;
     }
 `
 

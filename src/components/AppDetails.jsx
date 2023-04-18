@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
-    color: #fff;
+    color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
     position: relative;
 
 
@@ -19,23 +19,23 @@ const HomeDetails = styled.div`
     @media (max-width: 1600px) {
         margin-top: -2rem;
     }
-    
+
     @media (max-width: 414px){
         left: 3%;
-    
+
     }
 
     @media (max-width: 414px){
         left: 3%;
-    
+
     }
-    
+
     @media  (max-width: 360px){
         left: 20%;
     }
 
 
- 
+
     ul {
         margin-top: 2rem;
         display: flex;
@@ -84,7 +84,7 @@ const HomeDetails = styled.div`
             }
 
             a {
-                color: #fff;
+                color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
                 text-decoration: none;
 
                 :hover {
@@ -102,7 +102,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: #fff;
+            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
@@ -198,7 +198,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: #fff;
+            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
@@ -218,7 +218,7 @@ const HomeDetails = styled.div`
         .links {
             margin-top: 18rem;
             margin-left: 2rem;
-     
+
             @media (max-width: 1440px) {
                 margin-top: 12rem;
             }
@@ -227,10 +227,10 @@ const HomeDetails = styled.div`
                 margin-top: 6rem;
             }
 
-                  
+
 
             a {
-                color: #fff;
+                color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
                 text-decoration: none;
 
                 :hover {

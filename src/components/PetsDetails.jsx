@@ -55,7 +55,7 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #fff;
+        color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
             color: #ccc;
@@ -75,10 +75,8 @@ const HomeDetails = styled.div`
 
         @media (max-width: 360px) {
           width: 80%;
-         
-        }
 
-    
+        }
     }
 
     .advice-yellow {
@@ -91,7 +89,7 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #fff;
+        color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
             color: #ccc;
@@ -134,7 +132,7 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-        border: 1px solid #fff;
+        border: 1px solid ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
         border-radius: 15px;
         display: flex;
 
@@ -196,7 +194,7 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: #15171b;
+            background: ${(props) => (props.theme.mode === 'dark' ? Colors.darkColor : Colors.lightColor)};
             transition: .3s;
         }
     }

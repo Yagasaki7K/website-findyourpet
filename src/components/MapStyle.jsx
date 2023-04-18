@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const MapStyle = styled.div`
 #evento-mapa { width:100%; height:100%; }
@@ -7,7 +8,7 @@ const MapStyle = styled.div`
     width: 100%;
     margin-top: 1rem;
     position:absolute;
-    background:#fff;
+    background:${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
     color:#210062;
     z-index: 1;
 }
@@ -34,7 +35,7 @@ const MapStyle = styled.div`
     margin-top: -1rem;
     margin-left: 4rem;
     z-index:5;
-    background:rgba(255,255,255,.8);
+    background:${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
     padding:20px;
     border:1px solid #ccc;
     border-radius:15px;
