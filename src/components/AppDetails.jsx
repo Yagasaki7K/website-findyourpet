@@ -25,10 +25,6 @@ const HomeDetails = styled.div`
     
     }
 
-    @media (max-width: 414px){
-        left: 3%;
-    
-    }
     
     @media  (max-width: 360px){
         left: 20%;

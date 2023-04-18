@@ -40,13 +40,6 @@ const MapStyle = styled.div`
     border-radius:15px;
 }
 
-@media(max-width:599px){
-    .mapa-legenda {
-        position:static;
-        width:100%;
-    }
-}
-
 .mapa-legenda>h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -81,6 +74,18 @@ const MapStyle = styled.div`
         }
     }
 }
+
+
+@media(max-width:599px){
+    .mapa-legenda {
+        position:static;
+        width:100%;
+    }
+}
+
+
+
+
 `
 
 export default MapStyle
