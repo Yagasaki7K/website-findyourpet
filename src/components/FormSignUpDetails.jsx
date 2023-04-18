@@ -14,7 +14,7 @@ const FormSignUpDetails = styled.div`
 
         margin: 30px 0 1rem 0rem;
         padding: 20px 40px;
-        background: #1d1e26;
+        background: ${Colors.darkColor};
         box-shadow: ${Colors.primary} 0px 0px 50px;
         border-radius: 15px;
 
@@ -40,7 +40,7 @@ const FormSignUpDetails = styled.div`
         }
 
         .send, .reset {
-            color: #fff;
+            color: ${Colors.lightColor};
             font-weight: 300;
             width: 100px;
 

@@ -52,7 +52,7 @@ function Pets() {
                                     <h3>{pets?.name} • {pets?.status}</h3>
                                     <p>{pets?.description}</p>
                                     <p><i className="uil uil-map-marker"></i> {pets?.locale}</p>
-                                    <p><i className="uil uil-phone"></i> {pets?.contact}</p>
+                                    <p><i className="uil uil-whatsapp"></i> {pets?.contact}</p>
                                 </div>
                             </div>
                         </a>

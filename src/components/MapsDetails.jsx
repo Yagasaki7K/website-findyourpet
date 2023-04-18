@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const MapDetails = styled.div`
-    margin-bottom: 40rem;
     .map-center{
         display: flex;
         justify-content: center;

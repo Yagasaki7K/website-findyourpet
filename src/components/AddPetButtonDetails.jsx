@@ -3,7 +3,7 @@ import Colors from '../utils/Colors'
 
 const AddPetButtonDetails = styled.div`
     .firstButton {
-        background: #1d1e26;
+        background: ${Colors.darkColor};
         width: 50px;
         height: 50px;
         color: ${Colors.primary};
@@ -19,12 +19,12 @@ const AddPetButtonDetails = styled.div`
         :hover {
             transition: 1s;
             background: ${Colors.primary};
-            color: #fff;
+            color: ${Colors.lightColor};
         }
     }
 
     .secondButton {
-        background: #1d1e26;
+        background: ${Colors.darkColor};
         width: 50px;
         height: 50px;
         color: ${Colors.primary};
@@ -40,7 +40,7 @@ const AddPetButtonDetails = styled.div`
         :hover {
             transition: 1s;
             background: ${Colors.primary};
-            color: #fff;
+            color: ${Colors.lightColor};
         }
     }
 `

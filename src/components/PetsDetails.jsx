@@ -4,7 +4,7 @@ import Colors from '../utils/Colors'
 const HomeDetails = styled.div`
     a:hover {
         transition: 1s;
-        color: #ccc;
+        color: ${Colors.lightColorAlt};
     }
 
     .titlePets {
@@ -55,10 +55,10 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #fff;
+        color: ${Colors.lightColor};
 
         :hover {
-            color: #ccc;
+            color: ${Colors.lightColorAlt};
         }
         @media (max-width: 768px) {
             i {
@@ -83,10 +83,10 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #fff;
+        color: ${Colors.lightColor};
 
         :hover {
-            color: #ccc;
+            color: ${Colors.lightColorAlt};
         }
     }
 
@@ -126,7 +126,7 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-        border: 1px solid #fff;
+        background: ${Colors.darkColorAlt};
         border-radius: 15px;
         display: flex;
 
@@ -168,8 +168,8 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: #15171b;
-            transition: .3s;
+            background: ${Colors.darkColorAlt2};
+            transition: 1s;
         }
     }
 

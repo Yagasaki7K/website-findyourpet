@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
-    color: #fff;
+    color: ${Colors.lightColor};
     position: absolute;
 
     margin-top: -59rem;
@@ -81,7 +81,7 @@ const HomeDetails = styled.div`
             }
 
             a {
-                color: #fff;
+                color: ${Colors.lightColor};
                 text-decoration: none;
 
                 :hover {
@@ -99,7 +99,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: #fff;
+            color: ${Colors.lightColor};
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
@@ -195,7 +195,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: #fff;
+            color: ${Colors.lightColor};
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
@@ -228,7 +228,7 @@ const HomeDetails = styled.div`
             }
 
             a {
-                color: #fff;
+                color: ${Colors.lightColor};
                 text-decoration: none;
 
                 :hover {
