@@ -11,37 +11,26 @@ const HomeDetails = styled.div`
         font-weight: 400;
     }
 
-    @media (max-width: 1600px) {
-        margin-top: -55rem;
+
+  /* This code adjusts the position of an image based on the screen size */
+    @media (max-width: 414px) {
+    left: 3%;
     }
 
-    @media (max-width: 1440px) {
-        margin-top: -56rem;
+    @media (max-width: 360px) {
+     left: 20%;
     }
 
-    @media (max-width: 1366px) {
-        margin-top: -41rem;
-    }
-
-    @media (max-width: 1024px) {
-        margin-top: -84rem;
-    }
-
-    @media (max-width: 768px) {
-        margin-top: -62rem;
-    }
-
-    @media (max-width: 600px) {
-        margin-top: -45rem;
-    }
 
     ul {
-        margin-top: 2rem;
         display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
 
         img {
             width: 20rem;
-            margin-top: -0.5rem;
             margin-left: 4rem;
             margin-right: 4rem;
 
@@ -49,12 +38,17 @@ const HomeDetails = styled.div`
                 margin-left: 10rem;
             }
 
+            @media (max-width: 1600px) {
+                margin-left: 2rem;
+            }
+
             @media (max-width: 1440px) {
                 margin-left: 8rem;
             }
 
             @media (max-width: 1366px) {
-                margin-left: 3rem;
+                margin-left: 1.5rem;
+                width: 15rem;
             }
 
             @media (max-width: 1024px) {
@@ -104,7 +98,6 @@ const HomeDetails = styled.div`
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
             border-radius: 15px;
-            margin-left: 45rem;
             margin-top: 1.5rem;
             font-weight: bold;
 
@@ -118,6 +111,8 @@ const HomeDetails = styled.div`
 
             @media (max-width: 1366px) {
                 margin-left: 10rem;
+                font-size: 0.8rem;
+                width: 10%;
             }
 
             @media (max-width: 1024px) {
@@ -143,26 +138,9 @@ const HomeDetails = styled.div`
         align-items: center;
         text-align: center;
         flex-direction: column;
-        margin-top: 5rem;
-        margin-left: 18.5rem;
         line-height: 5rem;
-
-        @media (max-width: 1600px) {
-            margin-left: 19rem;
-        }
-
-        @media (max-width: 1440px) {
-            margin-left: 17rem;
-        }
-
-        @media (max-width: 1366px) {
-            margin-top: -2rem;
-            margin-left: 14.5rem;
-        }
-
-        @media (max-width: 1024px) {
-            margin-left: 13rem;
-        }
+        max-width: 800px;
+        margin: 0 auto;
 
         @media (max-width: 768px) {
             margin-left: 5rem;
@@ -174,13 +152,21 @@ const HomeDetails = styled.div`
 
         h1 {
             font-size: 5rem;
-            margin-top: 8rem;
+            margin-top: 5rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
 
+            @media (max-width: 1366px) {
+                font-size: 2.7rem;
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 2.0rem;
+            }
+
             @media (max-width: 600px) {
                 margin-top: 2rem;
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
 
@@ -214,6 +200,7 @@ const HomeDetails = styled.div`
 
         .links {
             margin-top: 18rem;
+            margin-left: 2rem;
 
             @media (max-width: 1440px) {
                 margin-top: 12rem;
@@ -223,9 +210,7 @@ const HomeDetails = styled.div`
                 margin-top: 6rem;
             }
 
-            @media (max-width: 600px) {
-                margin-top: 5rem;
-            }
+
 
             a {
                 color: ${Colors.lightColor};

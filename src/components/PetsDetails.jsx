@@ -66,11 +66,19 @@ const HomeDetails = styled.div`
             }
         }
 
-        @media (max-width: 600px) {
-            display: flex;
-            justify-content: center;
-            text-align: center;
+        @media (max-width: 420px) {
+          width: 85%;
+          margin-left: 5%;
+          padding: 10px;
         }
+
+
+        @media (max-width: 360px) {
+          width: 80%;
+         
+        }
+
+    
     }
 
     .advice-yellow {
@@ -133,6 +141,7 @@ const HomeDetails = styled.div`
         @media (max-width: 414px) {
             width: 325px;
             height: 230px;
+            padding: 5px;
 
             img {
                 width: 100px;
@@ -143,6 +152,25 @@ const HomeDetails = styled.div`
 
             .pets-list-item-info {
                 margin-top: 10px;
+            }
+        }
+
+        @media (min-width: 320px ) and (max-width: 360px)  {
+            width: 300px;
+            height: 290px;
+            padding: 3px;
+
+
+            img {
+                width: 60px;
+                height: 60px;
+                margin-top: 25px;
+                object-fit: cover;
+            }
+
+            .pets-list-item-info {
+                margin-top: 10px;
+                padding-right: 10px;
             }
         }
 

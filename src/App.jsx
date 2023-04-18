@@ -10,7 +10,7 @@ function toHome() {
 const App = () => {
     return (
         <>
-            <AppBackground />
+            <AppBackground/>
             <AppDetails>
                 <ul>
                     <a href="/"><img src={Logo} /></a>
@@ -22,8 +22,10 @@ const App = () => {
                 </ul>
 
                 <div className="container">
+
                     <h1>Ajude um <span className="love">PET</span> <br /> a achar seu lar</h1>
                     <button onClick={() => toHome()}>Acessar</button>
+
 
                     <div className="links">
                         <a href="/termos">Termos de Uso</a> - &nbsp;

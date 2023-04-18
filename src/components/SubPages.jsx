@@ -15,6 +15,34 @@ const SubPage = styled.div`
     p {
         width: 40%;
     }
+
+    @media (max-width: 700px){
+        p {
+        margin: 0;
+        width: 90%;
+        padding: 10px;
+        }
+    }
+    @media (max-width:415px){
+        img {
+        width: 300px;
+        }
+        
+        p{
+            font-size: 1.2em;
+        }
+    }
+
+    @media (max-width:320px){
+        img {
+        width: 250px;
+        }
+    }
+
+    
+    
+
+
 `
 
 export default SubPage
