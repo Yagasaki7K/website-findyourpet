@@ -42,20 +42,17 @@ const HomeDetails = styled.div`
                 margin-top: 2rem;
             }
 
+            @media (max-width: 1600px) {
+              margin-left: -2rem;
+              margin-top: 1rem;
+            }
+
             @media (max-width: 1366px) {
                 margin-top: 0.6rem;
             }
 
-            @media (max-width: 1600px) {
-                margin-left: 10rem;
-            }
-
-            @media (max-width: 1600px) {
-                margin-left: 2rem;
-            }
-
             @media (max-width: 1440px) {
-                margin-left: 8rem;
+                margin-left: 3rem;
             }
 
             @media (max-width: 1366px) {
@@ -63,7 +60,7 @@ const HomeDetails = styled.div`
             }
 
             @media (max-width: 1024px) {
-                margin-left: 19rem;
+                margin-top: 5rem;
             }
 
             @media (max-width: 768px) {
@@ -81,6 +78,9 @@ const HomeDetails = styled.div`
             margin-top: 2rem;
             list-style: none;
 
+            @media (max-width: 1600px) {
+                margin-top: 1rem;
+            }
 
             @media (max-width: 1366px) {
                 margin-top: 1rem;
@@ -122,11 +122,11 @@ const HomeDetails = styled.div`
             }
 
             @media (max-width: 1600px) {
-                margin-left: 10rem;
+                margin-left: 25rem;
             }
 
             @media (max-width: 1440px) {
-                margin-left: 2rem;
+                margin-left: 15rem;
             }
 
             @media (max-width: 1366px) {
@@ -190,6 +190,17 @@ const HomeDetails = styled.div`
                 font-size: 2.0rem;
             }
 
+            @media (max-width: 1024px) {
+                margin-top: 1rem;
+                margin-top: 3rem;
+            }
+
+
+            @media (max-width: 800px) {
+                margin-top: -2rem;
+            }
+
+
             @media (max-width: 600px) {
                 margin-top: 2rem;
                 font-size: 2rem;
@@ -235,7 +246,6 @@ const HomeDetails = styled.div`
             @media (max-width: 1366px) {
                 margin-top: 6rem;
             }
-
 
 
             a {
