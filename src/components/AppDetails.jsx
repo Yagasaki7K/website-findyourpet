@@ -12,7 +12,7 @@ const HomeDetails = styled.div`
     a {
         font-weight: 400;
     }
-  
+
 
   /* This code adjusts the position of an image based on the screen size */
     @media (max-width: 414px) {
@@ -23,7 +23,7 @@ const HomeDetails = styled.div`
      left: 20%;
     }
 
- 
+
     ul {
         display: flex;
         width: 100%;
@@ -62,7 +62,7 @@ const HomeDetails = styled.div`
             }
 
             @media (max-width: 1366px) {
-                margin-left: 1.5rem; 
+                margin-left: 1.5rem;
             }
 
             @media (max-width: 1024px) {
@@ -121,7 +121,7 @@ const HomeDetails = styled.div`
             font-weight: bold;
 
             @media (max-width: 1920px){
-                margin-left: 45rem;                
+                margin-left: 45rem;
             }
 
             @media (max-width: 1600px) {
@@ -184,7 +184,7 @@ const HomeDetails = styled.div`
             margin-top: 5rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
-     
+
             @media (max-width: 1366px) {
                 font-size: 5rem;
             }
@@ -228,9 +228,9 @@ const HomeDetails = styled.div`
         }
 
         .links {
-            margin-top: 18rem;
+            margin-top: 16rem;
             margin-left: 2rem;
-     
+
             @media (max-width: 1440px) {
                 margin-top: 12rem;
             }
@@ -239,7 +239,7 @@ const HomeDetails = styled.div`
                 margin-top: 6rem;
             }
 
-                  
+
 
             a {
                 color: #fff;
