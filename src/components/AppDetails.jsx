@@ -27,14 +27,27 @@ const HomeDetails = styled.div`
     ul {
         display: flex;
         width: 100%;
+        padding-top: 1rem;
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 1366px) {
+            padding-top: 0.6rem;
+        }
 
         img {
             width: 20rem;
             margin-left: 4rem;
             margin-right: 4rem;
+
+
+            @media (max-width: 1920px) {
+                margin-top: 2rem;
+            }
+
+            @media (max-width: 1366px) {
+                margin-top: 0.6rem;
+            }
 
             @media (max-width: 1600px) {
                 margin-left: 10rem;
@@ -49,8 +62,7 @@ const HomeDetails = styled.div`
             }
 
             @media (max-width: 1366px) {
-                margin-left: 1.5rem;
-                width: 15rem;
+                margin-left: 1.5rem; 
             }
 
             @media (max-width: 1024px) {
@@ -71,6 +83,11 @@ const HomeDetails = styled.div`
             margin-right: 2rem;
             margin-top: 2rem;
             list-style: none;
+
+
+            @media (max-width: 1366px) {
+                margin-top: 1rem;
+            }
 
             @media (max-width: 1024px) {
                 display: none;
@@ -103,6 +120,10 @@ const HomeDetails = styled.div`
             margin-top: 1.5rem;
             font-weight: bold;
 
+            @media (max-width: 1920px){
+                margin-left: 45rem;                
+            }
+
             @media (max-width: 1600px) {
                 margin-left: 10rem;
             }
@@ -113,8 +134,6 @@ const HomeDetails = styled.div`
 
             @media (max-width: 1366px) {
                 margin-left: 10rem;
-                font-size: 0.8rem;
-                width: 10%;
             }
 
             @media (max-width: 1024px) {
@@ -144,6 +163,14 @@ const HomeDetails = styled.div`
         max-width: 800px;
         margin: 0 auto;
 
+        @media (max-width: 1920px) {
+            margin-top: 8rem;
+        }
+
+        @media (max-width: 1366px) {
+            margin-top: 3rem;
+        }
+
         @media (max-width: 768px) {
             margin-left: 5rem;
         }
@@ -159,7 +186,7 @@ const HomeDetails = styled.div`
             text-transform: uppercase;
      
             @media (max-width: 1366px) {
-                font-size: 2.7rem;
+                font-size: 5rem;
             }
 
             @media (max-width: 1024px) {
