@@ -4,7 +4,7 @@ import Colors from '../utils/Colors'
 const HomeDetails = styled.div`
     a:hover {
         transition: 1s;
-        color: ${Colors.lightColoprimaryrAlt};
+        color: ${Colors.primaryAlt};
     }
 
     .titlePets {

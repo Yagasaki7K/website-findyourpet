@@ -5,22 +5,21 @@ const Context = createContext();
 
 const AuthContext = (props) => {
 
-  const [theme, setTheme] = useState(false);
+    const [theme, setTheme] = useState(false);
 
-  function toggleTheme() {
-    theme ? setTheme(false) : setTheme(true);
-  }
-  
+    function toggleTheme() {
+        theme ? setTheme(false) : setTheme(true);
+    }
 
-  return (
-    <Context.Provider value={{ theme, toggleTheme }}>
-      {props.children}
-    </Context.Provider>
-  );
+    return (
+        <Context.Provider value={{ theme, toggleTheme }}>
+            {props.children}
+        </Context.Provider>
+    );
 }
 
 AuthContext.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export { AuthContext, Context };

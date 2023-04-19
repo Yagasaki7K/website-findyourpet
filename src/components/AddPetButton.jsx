@@ -1,19 +1,17 @@
 // import React, { useEffect } from 'react'
 import React, { useContext } from 'react'
 import PetButtonDetails from './AddPetButtonDetails'
-import { Context } from '../utils/ThemeContext';
+import { Context } from '../utils/ThemeContext'
 
 function RedirectToSignUp() {
     window.location.href = '/cadastro'
 }
 
 // function RedirectToMaps() {
-//      window.location.href = '/maps'
-//  }
-
+//     window.location.href = '/maps'
+// }
 
 const AddPetButton = () => {
-
 
     const { toggleTheme, theme } = useContext(Context);
 
