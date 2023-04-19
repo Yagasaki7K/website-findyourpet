@@ -7,6 +7,7 @@ import { storage } from '../client'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
 import AddPetButton from '../components/AddPetButton'
+import { badWords } from '../services/badwords'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -51,6 +52,19 @@ const SignUp = () => {
         location.assign("/pets");
     }
 
+    function checkBadWords(string) {
+        const filterBadWords = badWords; // Lista de palavras inapropriadas
+
+        const hasBadWords = filterBadWords.some(word => string.toLowerCase().includes(word.toLowerCase()));
+
+        if (hasBadWords) {
+            console.log('Alerta! Palavras inapropriadas encontradas!');
+            alert('Por favor, não use palavras inapropriadas!');
+        } else {
+            console.log('Texto validado com sucesso!');
+        }
+    }
+
     async function addToFirebase() {
         const NewPets = {
             name: PetName,
@@ -69,7 +83,10 @@ const SignUp = () => {
     function sendData() {
         if (!PetName || !PetDescription || !PetLocale || !PetContact) {
             alert('Por favor, preencha todos os campos obrigatórios.');
+
         } else {
+            checkBadWords(PetName);
+            checkBadWords(PetDescription);
             addToFirebase();
             const storageRef = ref(storage, `/files/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);

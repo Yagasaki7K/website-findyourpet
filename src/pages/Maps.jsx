@@ -25,9 +25,10 @@ const Maps = () => {
                     <div style={{ position: 'relative', backgroundColor: 'white', display: 'flex', justifyContent: 'center' }}>
                         <MapContainer center={[-16.350, -56.666]} zoom={4} scrollWheelZoom={false} style={{ height: '400px', width: '100%' }}>
                             <TileLayer
-                                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                attribution=''
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
+
                             <Marker position={[-22.859352775021673, -47.04971628178976]}>
                                 <Popup>
                                     <h4>Animal em Adoção</h4>

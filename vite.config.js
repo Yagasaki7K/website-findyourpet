@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import { defineConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
 
-// https://vitejs.dev/config/
+import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
-  plugins: [reactRefresh()]
-})
+    plugins: [
+        reactRefresh(),
+        VitePWA({
+            registerType: "autoUpdate",
+            devOptions: {
+                enabled: true,
+            },
+        }),
+    ],
+});

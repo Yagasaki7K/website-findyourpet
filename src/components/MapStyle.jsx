@@ -2,7 +2,12 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const MapStyle = styled.div`
-#evento-mapa { width:100%; height:100%; }
+
+#evento-mapa {
+    width:100%;
+    height:100%;
+}
+
 .mapa-projeto {
     height: 37rem;
     width: 100%;
@@ -12,6 +17,7 @@ const MapStyle = styled.div`
     color:#210062;
     z-index: 1;
 }
+
 .mapa-projeto > div {
     position:relative;
 }
@@ -39,13 +45,6 @@ const MapStyle = styled.div`
     padding:20px;
     border:1px solid #ccc;
     border-radius:15px;
-}
-
-@media(max-width:599px){
-    .mapa-legenda {
-        position:static;
-        width:100%;
-    }
 }
 
 .mapa-legenda>h2 {
@@ -82,6 +81,18 @@ const MapStyle = styled.div`
         }
     }
 }
+
+
+@media(max-width:599px){
+    .mapa-legenda {
+        position:static;
+        width:100%;
+    }
+}
+
+
+
+
 `
 
 export default MapStyle

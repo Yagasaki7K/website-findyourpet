@@ -1,34 +1,34 @@
-/* eslint-disable react/no-unknown-property */
-import React, { useState } from 'react'
+// import React, { useEffect } from 'react'
+import React, { useContext } from 'react'
 import PetButtonDetails from './AddPetButtonDetails'
-import { ThemeProvider } from 'styled-components';
+import { Context } from '../utils/ThemeContext';
 
 function RedirectToSignUp() {
     window.location.href = '/cadastro'
 }
 
-function RedirectToMaps() {
-    window.location.href = '/maps'
-}
+// function RedirectToMaps() {
+//      window.location.href = '/maps'
+//  }
+
 
 const AddPetButton = () => {
-    const [theme, setTheme] = useState({ mode: 'light' });
 
-    const SwitchMode = () => {
-        setTheme({ mode: theme.mode === 'light' ? 'dark' : 'light' });
-    };
+
+    const { toggleTheme, theme } = useContext(Context);
 
     return (
         <>
-            <ThemeProvider theme={theme}>
-                <PetButtonDetails>
-                    <button onClick={RedirectToSignUp} className="firstButton"><i className="uil uil-plus"></i></button>
-                    <button onClick={RedirectToMaps} className="secondButton"><i className="uil uil-map-marker"></i></button>
-                    <button onClick={SwitchMode} theme={theme} className="thirdButton"><i className="uil uil-lightbulb-alt"></i></button>
-                </PetButtonDetails>
-            </ThemeProvider>
+            <PetButtonDetails>
+                <button onClick={RedirectToSignUp} className="firstButton"><i className="uil uil-plus"></i></button>
+                <button onClick={toggleTheme} className="secondButton">
+                    {theme ? <i className="uil uil-moon"></i> : <i className="uil uil-sun"></i>}
+                </button>
+                {/* <button onClick={RedirectToMaps} className="thirdButton"><i className="uil uil-map-marker"></i></button>  */}
+            </PetButtonDetails>
         </>
     )
 }
 
-export default AddPetButton
+
+export default AddPetButton;

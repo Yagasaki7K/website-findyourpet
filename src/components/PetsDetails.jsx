@@ -4,7 +4,7 @@ import Colors from '../utils/Colors'
 const HomeDetails = styled.div`
     a:hover {
         transition: 1s;
-        color: #ccc;
+        color: ${Colors.lightColoprimaryrAlt};
     }
 
     .titlePets {
@@ -58,7 +58,7 @@ const HomeDetails = styled.div`
         color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
-            color: #ccc;
+            color: ${Colors.lightColorAlt};
         }
         @media (max-width: 768px) {
             i {
@@ -92,7 +92,7 @@ const HomeDetails = styled.div`
         color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
-            color: #ccc;
+            color: ${Colors.lightColorAlt};
         }
     }
 

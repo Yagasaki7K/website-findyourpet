@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/yagasaki7k/website-alogarapa/blob/main/assets/logotipo.png?raw=true" width="500"/>
+   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/assets/logotipo.png?raw=true" width="500"/>
 </p>
 
 <p align="center">

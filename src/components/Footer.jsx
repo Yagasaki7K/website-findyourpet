@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
             <PetsDetails>
-                <hr/>
+                <hr />
                 <footer>
                     <div className="footer-content break">
                         <h2>FindYourPet</h2>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className="footer-content break">
                         <h2>Social</h2>
                         <a href="https://twitter.com/KalifyInc" target="_blank" rel="noreferrer">Twitter <i className="uil uil-external-link-alt"></i></a>
-                        <a href="https://instagram.com/yagasaki.dev" target="_blank" rel="noreferrer">Instagram <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://discord.gg/jhSepmE7nN" target="_blank" rel="noreferrer">Discord <i className="uil uil-external-link-alt"></i></a>
                     </div>
                 </footer>
 

@@ -6,7 +6,6 @@ import imageNotFound from '../../assets/imagenotfound.png'
 
 import PetServices from '../services/pet.services'
 import Navigation from '../components/Navigation'
-import { ThemeProvider } from 'styled-components'
 
 function Pets() {
     const [Pets, setPets] = useState([])
@@ -53,7 +52,7 @@ function Pets() {
                                     <h3>{pets?.name} • {pets?.status}</h3>
                                     <p>{pets?.description}</p>
                                     <p><i className="uil uil-map-marker"></i> {pets?.locale}</p>
-                                    <p><i className="uil uil-phone"></i>+{pets?.contact}</p>
+                                    <p><i className="uil uil-whatsapp"></i> {pets?.contact}</p>
                                 </div>
                             </div>
                         </a>
