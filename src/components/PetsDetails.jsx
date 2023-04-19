@@ -4,7 +4,7 @@ import Colors from '../utils/Colors'
 const HomeDetails = styled.div`
     a:hover {
         transition: 1s;
-        color: ${Colors.lightColorAlt};
+        color: ${Colors.lightColoprimaryrAlt};
     }
 
     .titlePets {
@@ -134,7 +134,7 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-        background: ${Colors.darkColorAlt};
+        /* background: ${Colors.darkColorAlt}; */
         border-radius: 15px;
         display: flex;
 
