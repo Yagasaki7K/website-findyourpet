@@ -55,7 +55,7 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
             color: ${Colors.lightColorAlt};
@@ -89,7 +89,7 @@ const HomeDetails = styled.div`
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         :hover {
             color: ${Colors.lightColorAlt};
@@ -132,9 +132,11 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-        border: 1px solid ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+        border: 1px solid ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
         border-radius: 15px;
         display: flex;
+        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.darkColor)};
 
         @media (max-width: 414px) {
             width: 325px;
@@ -194,7 +196,9 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: ${(props) => (props.theme.mode === 'dark' ? Colors.darkColor : Colors.lightColor)};
+            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.primaryAlt : Colors.darkColorAlt2)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)};
+            
             transition: .3s;
         }
     }
@@ -203,6 +207,7 @@ const HomeDetails = styled.div`
         display: flex;
         justify-content: center;
         margin-left: 100px;
+        
 
         @media (max-width: 1366px) {
             margin-left: 200px;
@@ -218,6 +223,7 @@ const HomeDetails = styled.div`
         }
 
         .footer-content {
+
             margin-right: 200px;
             display: flex;
             flex-direction: column;
@@ -242,12 +248,15 @@ const HomeDetails = styled.div`
     }
 
     .copyright {
+        text-align: center;
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColorAlt2)};
         margin-top: 20px;
     }
 
     hr {
         margin-top: 20px;
         width: 50%;
+        margin-left: 25%;
     }
 `
 

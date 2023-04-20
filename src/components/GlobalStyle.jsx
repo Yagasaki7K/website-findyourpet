@@ -1,18 +1,26 @@
 import { createGlobalStyle } from "styled-components";
+import Colors from '../utils/Colors'
 
 export default createGlobalStyle`
-:is(h3, p, form){
-  color: ${(props) => props.theme.colors.textInfoPet};
+
+:is(form){
+  color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.darkColor)};
 
 }
 a {
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
+
 }
-.pets-list-item{
-    background: ${(props) => props.theme.colors.backgroundPets} ;
-}
+
+*{
+        padding: 0;
+        margin: 0;
+    }
+
 body{
-    background-color: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
+
+    background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+
+    color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)};
 }
 `

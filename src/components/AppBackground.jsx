@@ -21,10 +21,10 @@ const LoginDetails = styled.div`
       height: 130vh;
   }
 
-  @media(max-width: 320px) {
-    width: 140vw;
-      height: 140vh;
-}
+    @media(max-width: 320px) {
+      width: 140vw;
+        height: 140vh;
+  }
 
 
 `

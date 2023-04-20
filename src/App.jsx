@@ -1,38 +1,40 @@
-import React from 'react'
-import AppDetails from './components/AppDetails'
-import AppBackground from './components/AppBackground'
-import Logo from '../assets/logotipo-white.png'
+import React, { useContext } from 'react'
+import Home from './pages/Home'
+import Pets from './pages/Pets'
+import SobreNos from './pages/SobreNos'
+import FaleConosco from './pages/FaleConosco'
+import Carreiras from './pages/Carreiras'
+import ComoFunciona from './pages/ComoFunciona'
+import SignUp from './pages/SignUp'
+import Maps from './pages/Maps'
 
-function toHome() {
-    window.location.href = "/pets"
-}
+
+import { Routes, Route } from 'react-router-dom'
+import GlobalStyle from './components/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
+import {lightTheme,darkTheme} from './utils/Colors'
+import { Context } from './utils/ThemeContext'
 
 const App = () => {
+
+    const {theme} = useContext(Context)
+ 
+
     return (
         <>
-            <AppBackground />
-            <AppDetails>
-                <ul>
-                    <a href="/"><img src={Logo} /></a>
-                    <li><a href="/sobre-nos">Sobre a Kalify</a></li>
-                    <li><a href="/carreiras">Carreiras</a></li>
-                    <li><a href="https://discord.gg/jhSepmE7nN" target="_blank" rel='noreferrer'>Suporte</a></li>
-                    <li><a href="/">Download</a></li>
-                    <button onClick={() => toHome()}>Acessar</button>
-                </ul>
-
-                <div className="container">
-
-                    <h1>Ajude um <span className="love">PET</span> <br /> a achar seu lar</h1>
-                    <button onClick={() => toHome()}>Acessar</button>
-
-
-                    <div className="links">
-                        <a href="/termos">Termos de Uso</a> - &nbsp;
-                        <a href="/politicas-de-privacidade">Políticas de Privacidade</a>
-                    </div>
-                </div>
-            </AppDetails>
+            <ThemeProvider theme={theme === 'darkTheme' ? darkTheme : lightTheme}>
+                <GlobalStyle />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/pets" element={<Pets />} exact />
+                        <Route path="/sobre-nos" element={<SobreNos />} exact />
+                        <Route path="/fale-conosco" element={<FaleConosco />} exact />
+                        <Route path="/carreiras" element={<Carreiras />} exact />
+                        <Route path="/como-funciona" element={<ComoFunciona />} exact />
+                        <Route path="/cadastro" element={<SignUp />} exact />
+                        <Route path="/maps" element={<Maps />} exact />
+                    </Routes>
+            </ThemeProvider>
         </>
     )
 }

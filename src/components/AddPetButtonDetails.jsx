@@ -4,7 +4,7 @@ import Colors from '../utils/Colors'
 const AddPetButtonDetails = styled.div`
 
     .firstButton, .secondButton, .thirdButton {
-        background: ${(props) => (props.theme.mode === 'dark' ? Colors.darkColor : Colors.lightColor)};
+        background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)};
         width: 50px;
         height: 50px;
         color: ${Colors.primary};
@@ -17,9 +17,10 @@ const AddPetButtonDetails = styled.div`
         font-size: 18px;
 
         :hover {
+            cursor: pointer;
             transition: 1s;
             background: ${Colors.primary};
-            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
         }
     }
 

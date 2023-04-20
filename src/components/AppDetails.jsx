@@ -2,35 +2,26 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
-    color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+
+    color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
+
     position: relative;
 
-    *{
-        padding: 0;
-        margin: 0;
-    }
-
+ 
     a {
         font-weight: 400;
     }
 
-    @media (max-width: 1600px) {
-        margin-top: -2rem;
+
+  /* This code adjusts the position of an image based on the screen size */
+    @media (max-width: 414px) {
+    left: 3%;
     }
 
-    @media (max-width: 414px){
-        left: 3%;
-
+    @media (max-width: 360px) {
+     left: 20%;
     }
 
-    @media (max-width: 414px){
-        left: 3%;
-
-    }
-
-    @media  (max-width: 360px){
-        left: 20%;
-    }
 
 
 
@@ -104,7 +95,8 @@ const HomeDetails = styled.div`
             }
 
             a {
-                color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+                color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
+      
                 text-decoration: none;
 
                 :hover {
@@ -122,7 +114,8 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
@@ -231,7 +224,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
@@ -252,16 +245,37 @@ const HomeDetails = styled.div`
             margin-top: 16rem;
             margin-left: 2rem;
 
-            @media (max-width: 1440px) {
-                margin-top: 12rem;
+            @media (max-width: 1920px) {
+                margin-top: 18rem;
+            }
+
+            @media (max-width: 1600px) {
+                margin-top: 7rem;
             }
 
             @media (max-width: 1366px) {
                 margin-top: 6rem;
             }
 
+            
+            @media (max-width: 1280px) {
+                margin-top: 9rem;
+            }
+
+ 
+            @media (max-width: 1024px) {
+                margin-top: 3rem;
+            }
+
+            @media (max-width: 600px) {
+                margin-top: 10rem;
+            }
+
+
             a {
-                color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+                color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme'  ? Colors.lightColor : Colors.lightColor)}; 
+
+            
                 text-decoration: none;
 
                 :hover {

@@ -5,12 +5,17 @@ const Context = createContext();
 
 const AuthContext = (props) => {
 
-    const [theme, setTheme] = useState(false);
+    const [theme, setTheme] = useState('darkTheme');
 
     function toggleTheme() {
-        theme ? setTheme(false) : setTheme(true);
+        if (theme === 'darkTheme') {
+            setTheme('lightTheme')
+        } else {
+            setTheme('darkTheme');
+        }
+        
     }
-
+    
     return (
         <Context.Provider value={{ theme, toggleTheme }}>
             {props.children}

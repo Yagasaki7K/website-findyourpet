@@ -9,18 +9,26 @@ const Colors = {
 }
 
 export const darkTheme = {
-    colors: {
+    modo: {
+        darkTheme: 'darkTheme',
         background: '#15171b',
-        text: '#f7f7f7'
+        text: '#f7f7f7',
+        textHome: '#f7f7f7',
+        button: '#15171b',
+        textLink: '#f7f7f7'
     }
 };
 
 export const lightTheme = {
-    colors: {
+    modo: {
+        lightTheme: 'lightTheme',
         background: '#f7f7f7',
         backgroundPets: "#30AD80",
+        textInfoPet: '#f7f7f7',
         text: '#15171b',
-        textInfoPet: '#ffffff'
+        textLink: '#f7f7f7',
+        textHome: '#f7f7f7',
+        button: '#f7f7f7'
 
     }
 };

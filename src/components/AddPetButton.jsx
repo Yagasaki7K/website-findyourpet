@@ -15,12 +15,13 @@ const AddPetButton = () => {
 
     const { toggleTheme, theme } = useContext(Context);
 
+
     return (
         <>
             <PetButtonDetails>
                 <button onClick={RedirectToSignUp} className="firstButton"><i className="uil uil-plus"></i></button>
                 <button onClick={toggleTheme} className="secondButton">
-                    {theme ? <i className="uil uil-moon"></i> : <i className="uil uil-sun"></i>}
+                    {theme === 'lightTheme' ? <i className="uil uil-moon"></i> : <i className="uil uil-sun"></i>}
                 </button>
                 {/* <button onClick={RedirectToMaps} className="thirdButton"><i className="uil uil-map-marker"></i></button>  */}
             </PetButtonDetails>
