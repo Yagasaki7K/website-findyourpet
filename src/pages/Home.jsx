@@ -17,7 +17,7 @@ const Home = () => {
                     <li><a href="/sobre-nos">Sobre a Kalify</a></li>
                     <li><a href="/carreiras">Carreiras</a></li>
                     <li><a href="https://discord.gg/jhSepmE7nN" target="_blank" rel='noreferrer'>Suporte</a></li>
-                    <li><a href="/src/apk/FindYourPet-v1.0.apk">Download</a></li>
+                    <li><a href="/src/apk/FindYourPet.apk">Download</a></li>
                     <button onClick={() => toHome()}>Acessar</button>
                 </ul>
 

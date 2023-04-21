@@ -10,15 +10,16 @@ const Footer = () => {
                     <div className="footer-content break">
                         <h2>FindYourPet</h2>
                         <a href="http://kalify.vercel.app/" target="_blank" rel="noreferrer">Site Institucional <i className="uil uil-external-link-alt"></i></a>
-                        <a href="/sobre-nos">Sobre nós</a>
-                        <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
+                        <a href="/src/apk/FindYourPet.apk">Download do App</a>
                         <a href="/carreiras">Carreiras</a>
+                        <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
                     </div>
 
                     <div className="footer-content break">
                         <h2>Descubra</h2>
                         <a href="/cadastro">Cadastre seu Pet</a>
                         <a href="/como-funciona">Como funciona?</a>
+                        <a href="/sobre-nos">Sobre nós</a>
                         {/* <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a> */}
                     </div>
 
@@ -30,7 +31,7 @@ const Footer = () => {
                 </footer>
 
                 <div className="copyright">
-                    <i> © 2018 - {new Date().getFullYear()} | Kalify Inc</i>
+                    <i> © 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas as imagens dos animais são de propriedade de seus devidos anunciantes</i>
                 </div>
             </PetsDetails>
         </>
