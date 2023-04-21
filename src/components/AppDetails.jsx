@@ -114,7 +114,7 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
 
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
@@ -224,14 +224,14 @@ const HomeDetails = styled.div`
         button {
             background: ${Colors.primary};
             background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
             text-transform: uppercase;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             font-size: 1.2rem;
             border-radius: 25px;
-            padding: 0rem 3rem;
-
+        
+            
             cursor: pointer;
 
             :hover {

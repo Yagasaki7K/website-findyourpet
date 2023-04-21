@@ -14,11 +14,13 @@ const FormSignUpDetails = styled.div`
 
         margin: 30px 0 1rem 0rem;
         padding: 20px 40px;
-        background: ${(props) => (props.theme.mode === 'dark' ? Colors.darkColor : Colors.lightColor)};
+        background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)};
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
         box-shadow: ${Colors.primary} 0px 0px 50px;
         border-radius: 15px;
 
         input, textarea, select {
+            margin-bottom: 10px;
             padding: 0.3rem;
             border-radius: 5px;
             border: none;
@@ -40,7 +42,7 @@ const FormSignUpDetails = styled.div`
         }
 
         .send, .reset {
-            color: ${(props) => (props.theme.mode === 'dark' ? Colors.lightColor : Colors.darkColor)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
             font-weight: 300;
             width: 100px;
 

@@ -135,8 +135,8 @@ const HomeDetails = styled.div`
         border: 1px solid ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
         border-radius: 15px;
         display: flex;
-        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
-        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.darkColor)};
+        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+        color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         @media (max-width: 414px) {
             width: 325px;
@@ -196,8 +196,8 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.primaryAlt : Colors.darkColorAlt2)};
-            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)};
+            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt2 : Colors.darkColorAlt2)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)};
             
             transition: .3s;
         }
