@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
 const HomeDetails = styled.div`
+
     a:hover {
         transition: 1s;
         color: ${Colors.primaryAlt};
@@ -14,7 +15,7 @@ const HomeDetails = styled.div`
 
     .advicePets {
         margin-left: 20px;
-        font-size: 12px;
+        font-size: 30px;
 
         @media (max-width: 768px) {
             margin-top: 10px;
@@ -50,6 +51,7 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
+        margin-bottom: 20px;
         background: ${Colors.primary};
         border: none;
         font-weight: 500;
@@ -132,10 +134,10 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-        border: 1px solid ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
+    
         border-radius: 15px;
         display: flex;
-        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColor : Colors.lightColor)}; 
+        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)}; 
         color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         @media (max-width: 414px) {
@@ -185,10 +187,12 @@ const HomeDetails = styled.div`
 
         h3, p {
             margin: 10px;
+     
         }
 
         p {
             font-size: 14px;
+       
         }
 
         i {
@@ -233,6 +237,7 @@ const HomeDetails = styled.div`
             }
 
             h2 {
+                margin: 28px 0 30px 0;
                 margin-bottom: -5px;
             }
 
