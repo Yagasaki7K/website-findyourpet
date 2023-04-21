@@ -2,6 +2,8 @@ import React from 'react'
 
 import Logo from '../../assets/logotipo-white.png'
 import SubPages from '../components/SubPages'
+import Footer from '../components/Footer'
+import AddPetButton from '../components/AddPetButton'
 
 const SobreNos = () => {
     return (
@@ -13,12 +15,14 @@ const SobreNos = () => {
                 informar animais que foram encontrados ou até mesmo anunciar animais em
                 doação. NÃO ACEITAMOS QUALQUER TIPO DE VENDA DE ANIMAIS.
             </p>
+            <br />
             <p>
                 O aplicativo é mantido pela equipe de desenvolvimento da Kalify Inc. e é
                 um projeto que atualmente se encontra open source - qualquer desenvolvedor
                 pode ajudar a fazer melhorias no projeto, seja por adicionar novas features
                 ou por qualquer outra forma que agregue ao projeto.
             </p>
+            <br />
             <p>
                 Se você não for um desenvolvedor e quer ajudar ao projeto, você pode entrar
                 em contato através do <a href="mailto:kalifyinc@gmail.com">e-mail</a> solicitando uma feature ou uma
@@ -28,6 +32,7 @@ const SobreNos = () => {
                 como também para nós e claro, outros usuários que estejam utilizando
                 e usufruindo da plataforma.
             </p>
+            <br />
             <p>
                 Nossa intenção é ajudar em solucionar uma dor que atualmente temos na sociedade,
                 o número de animais perdidos só aumentam e a falta de comunicação em respeito disso
@@ -36,12 +41,16 @@ const SobreNos = () => {
                 do animalzinho, é raro a falta de interesse sobre isso e soltar esse tipo de informação
                 para todas as redes sociais, sem de uma forma centralizar isso apenas dificulta.
             </p>
+            <br />
             <p>
                 Pensando nesse problema, criamos a FindYourPet - do inglês, encontre seu animal -
                 para que você possa relatar sobre o seu animal ou um animal que viu com mais
                 facilidade, de uma forma centralizada, gratuita e com uma imensa facilidade de
                 acesso, que é a internet.
             </p>
+            <br />
+            <AddPetButton />
+            <Footer />
         </SubPages>
     )
 }

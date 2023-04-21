@@ -2,6 +2,8 @@ import React from 'react'
 
 import Logo from '../../assets/logotipo-white.png'
 import SubPages from '../components/SubPages'
+import AddPetButton from '../components/AddPetButton'
+import Footer from '../components/Footer'
 
 const Carreiras = () => {
     return (
@@ -24,6 +26,8 @@ const Carreiras = () => {
                 avaliar ela e se for de total importância e qualidade para o projeto, você será
                 citado como um dos contribuidores. <br /> <br />
             </p>
+            <AddPetButton />
+            <Footer />
         </SubPages>
     )
 }

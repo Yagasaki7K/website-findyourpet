@@ -2,6 +2,8 @@ import React from 'react'
 
 import Logo from '../../assets/logotipo-white.png'
 import SubPages from '../components/SubPages'
+import Footer from '../components/Footer'
+import AddPetButton from '../components/AddPetButton'
 
 const Termos = () => {
     return (
@@ -34,6 +36,8 @@ const Termos = () => {
                 <br /><br />
                 Estes termos de uso foram atualizados em 21 de Abril de 2023.
             </p>
+            <AddPetButton />
+            <Footer />
         </SubPages>
     )
 }

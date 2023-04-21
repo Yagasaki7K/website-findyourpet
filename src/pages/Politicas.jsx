@@ -2,6 +2,8 @@ import React from 'react'
 
 import Logo from '../../assets/logotipo-white.png'
 import SubPages from '../components/SubPages'
+import Footer from '../components/Footer'
+import AddPetButton from '../components/AddPetButton'
 
 const Politicas = () => {
     return (
@@ -31,6 +33,8 @@ const Politicas = () => {
                 <br /><br />
                 Esta política de privacidade foi atualizada em 21 de Abril de 2023.
             </p>
+            <AddPetButton />
+            <Footer />
         </SubPages>
     )
 }
