@@ -6,7 +6,6 @@ export default createGlobalStyle`
 
 a {
   color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
-
 }
 
 *{

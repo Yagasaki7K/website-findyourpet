@@ -5,13 +5,16 @@ const Context = createContext();
 
 const AuthContext = (props) => {
 
-    const [theme, setTheme] = useState('darkTheme');
+    const data = localStorage.getItem("Theme");
+    const [theme, setTheme] = useState(data ? data : '');
 
     function toggleTheme() {
         if (theme === 'darkTheme') {
             setTheme('lightTheme')
+            localStorage.setItem("Theme", 'lightTheme');
         } else {
             setTheme('darkTheme');
+            localStorage.setItem("Theme", 'darkTheme');
         }
         
     }
