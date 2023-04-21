@@ -6,13 +6,15 @@ const HomeDetails = styled.div`
     color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
 
     position: relative;
-
- 
+    
     a {
         font-weight: 400;
     }
 
-
+    *{
+        padding: 0;
+        margin: 0;
+    }
   /* This code adjusts the position of an image based on the screen size */
     @media (max-width: 414px) {
     left: 3%;
@@ -31,6 +33,7 @@ const HomeDetails = styled.div`
         padding-top: 1rem;
         align-items: center;
         justify-content: center;
+
 
         @media (max-width: 1366px) {
             padding-top: 0.6rem;
