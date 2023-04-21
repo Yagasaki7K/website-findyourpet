@@ -244,6 +244,7 @@ const HomeDetails = styled.div`
             a {
                 font-weight: 300;
                 margin-top: 10px;
+                
             }
 
             i {
