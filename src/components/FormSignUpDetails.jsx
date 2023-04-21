@@ -24,6 +24,8 @@ const FormSignUpDetails = styled.div`
             padding: 0.3rem;
             border-radius: 5px;
             border: none;
+            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)};
+            color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
             font-size: 0.8rem;
             font-family: 'Poppins', sans-serif;
             width: 80%;
