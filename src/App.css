@@ -180,6 +180,11 @@ button {
         margin-left: 2rem;
     }
 
+    .links{
+        font-size: 0.9em;
+        transform: scale(1.2);
+    }
+
 }
 
 
@@ -195,6 +200,8 @@ button {
         width: 100%;
         padding-left: 50%;
         margin-top: 30rem;
+        font-size: 0.8em;
+        transform: scale(1.2);
     }
 
 }

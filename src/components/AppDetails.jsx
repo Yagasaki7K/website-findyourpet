@@ -274,9 +274,9 @@ const HomeDetails = styled.div`
                 margin-top: 10rem;
             }
 
-
+   
             a {
-                color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme'  ? Colors.lightColor : Colors.lightColor)}; 
+                color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)}; 
 
             
                 text-decoration: none;
