@@ -15,6 +15,11 @@ const Download = () => {
             <br /><br />
             <h2>Changelog</h2>
             <p>
+                <strong>1.0.1</strong>
+                <br />
+                - Adicionado: Termos e Políticas
+
+                <br /><br />
                 <strong>1.0.0</strong>
                 <br />
                 - Lançamento do aplicativo
