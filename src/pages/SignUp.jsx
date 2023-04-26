@@ -13,7 +13,7 @@ const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
-    const [PetPercent, setPetPercent] = useState(0);
+    const [PetUrl, setPetUrl] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
@@ -73,7 +73,9 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
-            createdAt: new Date().toString()
+            imageUrl: PetUrl,
+            createdAt: new Date().toString(),
+            validity: new Date(NewPets.createdAt.getTime() + 1 * 60 * 1000).toString()
         }
 
         await (PetServices.addPets(NewPets))
@@ -95,13 +97,13 @@ const SignUp = () => {
                 "state_changed",
                 (snapshot) => {
                     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    setPetPercent(Math.floor(progress));
+                    console.log(Math.floor(progress));
                 },
                 (error) => console.log(error),
                 () => {
                     // download url
                     getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                        console.log(url);
+                        setPetUrl(url);
                     });
                 }
             );
