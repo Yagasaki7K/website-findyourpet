@@ -17,6 +17,7 @@ const SignUp = () => {
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
+    const [PetValid , setPetValid] = useState('');
 
     // Get Type Situation of Pet - Adopt, Rescue or Lost
     function sendDataSelect() {
@@ -75,7 +76,7 @@ const SignUp = () => {
             image: PetFile.name,
             imageUrl: PetUrl,
             createdAt: new Date().toString(),
-            validity: new Date(NewPets.createdAt.getTime() + 1 * 60 * 1000).toString()
+            validUntil: new Date()
         }
 
         await (PetServices.addPets(NewPets))
@@ -128,7 +129,7 @@ const SignUp = () => {
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={24} />
 
-                    <h4>Foto do Animal {PetPercent ? PetPercent : null}</h4>
+                    <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
 
                     <h4>Descrição do Animal</h4>
