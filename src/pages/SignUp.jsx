@@ -28,6 +28,9 @@ const SignUp = () => {
     }
 
     function collectData() {
+        const dateValid = new Date()
+        setPetValid(new Date(dateValid.getTime() + (5 * 60 * 1000)))
+
         const formName = document.getElementById('name')
         const resultName = formName.value
         setPetName(resultName)
@@ -76,7 +79,7 @@ const SignUp = () => {
             image: PetFile.name,
             imageUrl: PetUrl,
             createdAt: new Date().toString(),
-            validUntil: new Date()
+            validUntil: PetValid.toString()
         }
 
         await (PetServices.addPets(NewPets))
