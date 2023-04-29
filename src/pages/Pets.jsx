@@ -3,12 +3,15 @@ import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
 import imageNotFound from '../../assets/imagenotfound.png'
-
+import ImgServices from '../services/img.services'
 import PetServices from '../services/pet.services'
 import Navigation from '../components/Navigation'
 
 function Pets() {
     const [Pets, setPets] = useState([])
+    const [ValidPets, setValidPets] = useState('')
+    const [IdPets, setIdPets] = useState('')
+    const [CreatedPets, setCreatedPets] = useState('')
 
     useEffect(() => {
         getPets()
@@ -17,7 +20,17 @@ function Pets() {
     const getPets = async () => {
         const data = await PetServices.getAllPets()
         setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        
     }
+
+    const deletePets = async (createdAt, validUntil, id, image) => {
+        if((createdAt - validUntil) >= (5 * 60 * 1000)){
+            await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)]).then(
+                console.log("Auto delelete feito com sucesso!")
+            )
+            console.error('erro');
+        }
+     }
 
     const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 

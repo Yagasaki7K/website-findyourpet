@@ -13,10 +13,11 @@ const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
-    const [PetPercent, setPetPercent] = useState(0);
+    const [PetUrl, setPetUrl] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
+    const [PetValid , setPetValid] = useState('');
 
     // Get Type Situation of Pet - Adopt, Rescue or Lost
     function sendDataSelect() {
@@ -27,6 +28,9 @@ const SignUp = () => {
     }
 
     function collectData() {
+        const dateValid = new Date()
+        setPetValid(new Date(dateValid.getTime() + (5 * 60 * 1000)))
+
         const formName = document.getElementById('name')
         const resultName = formName.value
         setPetName(resultName)
@@ -73,7 +77,9 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
-            createdAt: new Date().toString()
+            imageUrl: PetUrl,
+            createdAt: new Date().toString(),
+            validUntil: PetValid.toString()
         }
 
         await (PetServices.addPets(NewPets))
@@ -95,13 +101,13 @@ const SignUp = () => {
                 "state_changed",
                 (snapshot) => {
                     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    setPetPercent(Math.floor(progress));
+                    console.log(Math.floor(progress));
                 },
                 (error) => console.log(error),
                 () => {
                     // download url
                     getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                        console.log(url);
+                        setPetUrl(url);
                     });
                 }
             );
@@ -126,7 +132,7 @@ const SignUp = () => {
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={24} />
 
-                    <h4>Foto do Animal {PetPercent ? PetPercent : null}</h4>
+                    <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
 
                     <h4>Descrição do Animal</h4>
