@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="footer-content break">
                         <h2>FindYourPet</h2>
                         <a href="http://kalify.vercel.app/" target="_blank" rel="noreferrer">Site Institucional <i className="uil uil-external-link-alt"></i></a>
-                        <a href="/download">Download do App</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.kalifyinc.findyourpet&pli=1" target="_blank" rel="noreferrer">Download do App</a>
                         <a href="/carreiras">Carreiras</a>
                         <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
                     </div>

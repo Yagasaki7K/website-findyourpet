@@ -10,7 +10,7 @@ const Download = () => {
         <SubPages>
             <a href="/pets"><img src={Logo} /></a>
             <h1>Download</h1>
-            <a href="https://download1076.mediafire.com/com8sxa298igfi84RvbPrhAOWwoLcdfRNYrMEfqAzgqmktCGdj7a6rsxRnHd-8l-QUEGA1mm-wAu4EP93Tb0AjQMSiqy/mr7lvt7z2zmtzga/FindYourPet.apk">Clique aqui para baixar a versão do aplicativo para Android</a>
+            <a href="https://play.google.com/store/apps/details?id=com.kalifyinc.findyourpet&pli=1" target="_blank" rel="noreferrer">Clique aqui para baixar a versão do aplicativo para Android</a>
 
             <br /><br />
             <h2>Changelog</h2>
