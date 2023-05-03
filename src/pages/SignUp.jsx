@@ -17,6 +17,7 @@ const SignUp = () => {
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
+    const [PetCreated, setPetCreated] = useState('');
     const [PetValid , setPetValid] = useState('');
 
     // Get Type Situation of Pet - Adopt, Rescue or Lost
@@ -28,8 +29,19 @@ const SignUp = () => {
     }
 
     function collectData() {
-        const dateValid = new Date()
-        setPetValid(new Date(dateValid.getTime() + (5 * 60 * 1000)))
+        //Pet registration creation date
+        const date = new Date()
+        const year = date.getFullYear()
+        const month = (date.getMonth() + 1).toString().padStart(2, '0')
+        const day = date.getDate().toString().padStart(2, '0')
+        setPetCreated(`${day}/${month}/${year}`)
+        
+        //Pet registration expiration date
+        date.setDate(date.getDate() + 1)
+        const yearv = date.getFullYear()
+        const monthv = (date.getMonth() + 1).toString().padStart(2, '0')
+        const dayv = date.getDate().toString().padStart(2, '0')
+        setPetValid(`${dayv}/${monthv}/${yearv}`)
 
         const formName = document.getElementById('name')
         const resultName = formName.value
@@ -78,8 +90,8 @@ const SignUp = () => {
             status: PetSituation,
             image: PetFile.name,
             imageUrl: PetUrl,
-            createdAt: new Date().toString(),
-            validUntil: PetValid.toString()
+            createdAt: PetCreated,
+            validUntil: PetValid
         }
 
         await (PetServices.addPets(NewPets))
