@@ -9,9 +9,6 @@ import Navigation from '../components/Navigation'
 
 function Pets() {
     const [Pets, setPets] = useState([])
-    const [ValidPets, setValidPets] = useState('')
-    const [IdPets, setIdPets] = useState('')
-    const [CreatedPets, setCreatedPets] = useState('')
 
     useEffect(() => {
         getPets()
@@ -20,17 +17,24 @@ function Pets() {
     const getPets = async () => {
         const data = await PetServices.getAllPets()
         setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        
+        console.log(data.docs.map((doc) => doc.data().validUntil))
     }
 
-    const deletePets = async (createdAt, validUntil, id, image) => {
-        if((createdAt - validUntil) >= (5 * 60 * 1000)){
-            await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)]).then(
-                console.log("Auto delelete feito com sucesso!")
-            )
-            console.error('erro');
-        }
-     }
+    const deletePets = async (id, image) => {
+        await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)])
+    }
+    
+    async function checkTime() {
+        const data = await PetServices.getAllPets()
+
+        const now = new Date()
+        const year = now.getFullYear()
+        const month = (now.getMonth() + 1).toString().padStart(2, '0')
+        const day = now.getDate().toString().padStart(2, '0')
+        const today = `${day}/${month}/${year}`
+
+        //if (today === data.docs.map((doc) => doc.data()))
+    }
 
     const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 
