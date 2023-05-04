@@ -37,7 +37,7 @@ const SignUp = () => {
         setPetCreated(`${day}/${month}/${year}`)
         
         //Pet registration expiration date
-        date.setDate(date.getDate() + 1)
+        date.setDate(date.getDate() + 60)
         const yearv = date.getFullYear()
         const monthv = (date.getMonth() + 1).toString().padStart(2, '0')
         const dayv = date.getDate().toString().padStart(2, '0')
