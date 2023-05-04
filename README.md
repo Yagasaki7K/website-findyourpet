@@ -20,7 +20,7 @@
 
 <div align="center">
   <sub>FindYourPet. Built with 💚 by
-    <a href="https://github.com/Yagasaki7K">Kalify Inc</a> and
+    <a href="https://github.com/Yagasaki7K">Anderson Marlon</a> and
     <a href="https://github.com/Yagasaki7K/mobile-findyourpet/graphs/contributors">
       contributors
     </a>
@@ -29,14 +29,14 @@
 
 # 📌 Table of Contents
 
--   [📌 Table of Contents](#-table-of-contents)
--   [👀 Demo Website](#-demo-website)
--   [💻 Technologies](#-technologies)
--   [🚀 Features](#-features)
--   [🚧 How to run](#-how-to-run)
--   [🐛 Issues](#-issues)
--   [🎉 Contributing](#-contributing)
--   [📕 License](#-license)
+- [📌 Table of Contents](#-table-of-contents)
+- [👀 Demo Website](#-demo-website)
+- [💻 Technologies](#-technologies)
+- [🚀 Features](#-features)
+- [🚧 How to run](#-how-to-run)
+- [🐛 Issues](#-issues)
+- [🎉 Contributing](#-contributing)
+- [📕 License](#-license)
 
 # 👀 Demo Website
 
@@ -49,7 +49,7 @@ This project was made using the follow technologies:
 -   Vite
 -   ReactJS
 -   Styled Components
--   Sanity.io
+-   Firebase
 -   Vercel
 
 # 🚀 Features
@@ -88,11 +88,9 @@ Here's some tips:
 -   Check the [issues page](https://github.com/Yagasaki7K/website-findyourpet/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
 -   Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
-
 # 📕 License
 
 Released in 2021
 
-Made by [Anderson Marlon](https://github.com/Yagasaki7K).
+Made by [Anderson Marlon](https://github.com/Yagasaki7K) & [Kalify Team](https://github.com/KalifyInc).
 This project is under the [MIT license](./LICENSE).
