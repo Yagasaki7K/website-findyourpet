@@ -13,10 +13,14 @@ const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
-    const [PetPercent, setPetPercent] = useState(0);
+    // eslint-disable-next-line no-unused-vars
+    const [PetUrl, setPetUrl] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
+    // eslint-disable-next-line no-unused-vars
+    const [PetCreated, setPetCreated] = useState('');
+    const [PetValid, setPetValid] = useState('');
 
     // Get Type Situation of Pet - Adopt, Rescue or Lost
     function sendDataSelect() {
@@ -27,6 +31,20 @@ const SignUp = () => {
     }
 
     function collectData() {
+        //Pet registration creation date
+        const date = new Date()
+        const year = date.getFullYear()
+        const month = (date.getMonth() + 1).toString().padStart(2, '0')
+        const day = date.getDate().toString().padStart(2, '0')
+        setPetCreated(`${day}/${month}/${year}`)
+
+        //Pet registration expiration date
+        date.setDate(date.getDate() + 60)
+        const yearv = date.getFullYear()
+        const monthv = (date.getMonth() + 1).toString().padStart(2, '0')
+        const dayv = date.getDate().toString().padStart(2, '0')
+        setPetValid(`${dayv}/${monthv}/${yearv}`)
+
         const formName = document.getElementById('name')
         const resultName = formName.value
         setPetName(resultName)
@@ -74,7 +92,8 @@ const SignUp = () => {
             status: PetSituation,
             image: PetFile.name,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
-            createdAt: new Date().toString()
+            createdAt: new Date().toString(),
+            validUntil: PetValid
         }
 
         await (PetServices.addPets(NewPets))
@@ -96,13 +115,13 @@ const SignUp = () => {
                 "state_changed",
                 (snapshot) => {
                     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    setPetPercent(Math.floor(progress));
+                    console.log(Math.floor(progress));
                 },
                 (error) => console.log(error),
                 () => {
                     // download url
                     getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                        console.log(url);
+                        setPetUrl(url);
                     });
                 }
             )
@@ -127,7 +146,7 @@ const SignUp = () => {
                     <input type="text" id="name" placeholder="Nome do Animalzinho"
                         maxLength={15} size={24} />
 
-                    <h4>Foto do Animal {PetPercent ? PetPercent : null}</h4>
+                    <h4>Foto do Animal</h4>
                     <input type="file" id="photo" onChange={getImage}></input>
 
                     <h4>Descrição do Animal</h4>

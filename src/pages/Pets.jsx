@@ -3,7 +3,7 @@ import PetsDetails from '../components/PetsDetails'
 import Footer from '../components/Footer'
 import AddPetButton from '../components/AddPetButton'
 import imageNotFound from '../../assets/imagenotfound.png'
-
+import ImgServices from '../services/img.services'
 import PetServices from '../services/pet.services'
 import Navigation from '../components/Navigation'
 
@@ -14,10 +14,36 @@ function Pets() {
         getPets()
     }, [])
 
-    const getPets = async () => {
+    async function getPets() {
         const data = await PetServices.getAllPets()
         setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
+
+    async function deletePets(id, image) {
+        await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)])
+    }
+    
+    async function checkTime() {
+        const data = await PetServices.getAllPets()
+        const id = data.docs.map((doc) => doc.id)
+        const image = data.docs.map((doc) => doc.data().image)
+        const validUntil = data.docs.map((doc) => doc.data().validUntil)
+
+        const date = new Date()
+        const year = date.getFullYear()
+        const month = (date.getMonth() + 1).toString().padStart(2, '0')
+        const day = date.getDate().toString().padStart(2, '0')
+        const today = `${day}/${month}/${year}`
+
+        for (let index = 0; index < validUntil.length; index++) {
+            if (validUntil[index] === today) {
+                deletePets(id[index], image[index])
+                getPets()
+            }
+        }
+    }
+
+    setInterval(checkTime(), 86400000) //Every 24 hours the function will run
 
     const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 
