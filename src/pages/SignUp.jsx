@@ -73,6 +73,7 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
+            slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
             createdAt: new Date().toString()
         }
 
@@ -104,7 +105,7 @@ const SignUp = () => {
                         console.log(url);
                     });
                 }
-            );
+            )
         }
     }
 

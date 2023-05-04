@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp'
 import Maps from './pages/Maps'
 import Politicas from './pages/Politicas'
 import Download from './pages/Download'
+import SlugPage from './pages/slug'
 
 import { Routes, Route } from 'react-router-dom'
 import GlobalStyle from './components/GlobalStyle'
@@ -20,7 +21,6 @@ import Termos from './pages/Termos'
 const App = () => {
 
     const { theme } = useContext(Context)
-
 
     return (
         <>
@@ -38,6 +38,7 @@ const App = () => {
                     <Route path="/termos" element={<Termos />} exact />Politicas
                     <Route path="/politicas-de-privacidade" element={<Politicas />} exact />
                     <Route path="/Download" element={<Download />} exact />
+                    <Route path=":slug" element={<SlugPage />} />
                 </Routes>
             </ThemeProvider>
         </>

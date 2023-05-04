@@ -77,7 +77,6 @@ const HomeDetails = styled.div`
 
         @media (max-width: 360px) {
           width: 80%;
-
         }
     }
 
@@ -134,10 +133,10 @@ const HomeDetails = styled.div`
     .pets-list-item {
         width: 420px;
         height: 180px;
-    
+
         border-radius: 15px;
         display: flex;
-        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)}; 
+        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)};
         color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         @media (max-width: 414px) {
@@ -187,12 +186,12 @@ const HomeDetails = styled.div`
 
         h3, p {
             margin: 10px;
-     
+
         }
 
         p {
             font-size: 14px;
-       
+
         }
 
         i {
@@ -202,7 +201,7 @@ const HomeDetails = styled.div`
         :hover {
             background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt2 : Colors.darkColorAlt2)};
             color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)};
-            
+
             transition: .3s;
         }
     }
@@ -211,7 +210,7 @@ const HomeDetails = styled.div`
         display: flex;
         justify-content: center;
         margin-left: 100px;
-        
+
 
         @media (max-width: 1366px) {
             margin-left: 200px;
@@ -244,7 +243,7 @@ const HomeDetails = styled.div`
             a {
                 font-weight: 300;
                 margin-top: 10px;
-                
+
             }
 
             i {

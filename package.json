@@ -16,8 +16,7 @@
         "react": "^18.0.0",
         "react-dom": "^18.2.0",
         "react-leaflet": "^4.2.1",
-        "react-modal": "^3.16.1",
-        "react-router-dom": "^6.10.0",
+        "react-router-dom": "^6.11.0",
         "styled-components": "^5.3.10",
         "url": "^0.11.0",
         "uuid": "^9.0.0"

@@ -44,7 +44,7 @@ function Pets() {
             <div className="pets-list">
                 {
                     Pets && Pets.map((pets, index) => (
-                        <a href={`https://api.whatsapp.com/send/?phone=` + pets?.contact + '&text=Olá%2C+tudo+bom%3F+Vim+do+FindYourPet+e+estou+interessada+em+saber+mais+a+respeito+do+pet+que+está+no+anúncio+..'} target="_blank" rel="noreferrer" key={index}>
+                        <a href={'/' + pets.slug} key={index}>
                             <div className="pets-list-item">
                                 <img src={pets.image ? firebaseURL + pets.image + `?alt=media` : imageNotFound} alt={pets?.name} />
 
