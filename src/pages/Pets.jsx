@@ -6,6 +6,7 @@ import imageNotFound from '../../assets/imagenotfound.png'
 import ImgServices from '../services/img.services'
 import PetServices from '../services/pet.services'
 import Navigation from '../components/Navigation'
+import Modal from '../components/Modal'
 
 function Pets() {
     const [Pets, setPets] = useState([])
@@ -89,6 +90,7 @@ function Pets() {
             <AddPetButton />
 
             <Footer />
+            <Modal />
         </PetsDetails>
     )
 }

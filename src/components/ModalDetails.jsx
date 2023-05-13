@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   z-index: 990;
   width: 100vw;
   height: 100vh;
-  @media (min-width: 1024px) {
+  @media (min-width: 1080px) {
     display: none;
   }
 `;
@@ -22,7 +22,7 @@ const Flexbox = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  @media (min-width: 1024px) {
+  @media (min-width: 1080px) {
     display: none;
   }
 `;

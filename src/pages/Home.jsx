@@ -2,7 +2,7 @@ import React from 'react'
 import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../../assets/logotipo-white.png'
-import { Modal } from '../components/Modal'
+import Modal from '../components/Modal'
 
 function toHome() {
     window.location.href = "/pets"

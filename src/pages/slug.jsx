@@ -8,6 +8,7 @@ import SlugDetails from '../components/SlugDetails';
 import AddPetButton from '../components/AddPetButton';
 import Footer from '../components/Footer';
 import imageNotFound from '../../assets/imagenotfound.png'
+import Modal from '../components/Modal';
 
 const slugPage = () => {
     const { slug } = useParams();
@@ -71,6 +72,7 @@ const slugPage = () => {
 
             <AddPetButton />
             <Footer />
+            <Modal />
         </PetsDetails >
     )
 }

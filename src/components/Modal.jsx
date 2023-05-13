@@ -7,22 +7,22 @@ import Googleplay from '../../assets/googleplay.png'
 
 const DOWNLOAD_NOTICE_KEY = "hasOpenedModal";
 
-export function Modal() {
+export default function Modal() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const hasOpenedModal = localStorage.getItem(DOWNLOAD_NOTICE_KEY);
 
         if (!hasOpenedModal) {
-            localStorage.setItem(DOWNLOAD_NOTICE_KEY, true);
-        } else {
             setIsOpen(true);
+        } else {
+            setIsOpen(false);
         }
     }, []);
 
     function handleCloseModal() {
-        setIsOpen(false);
         localStorage.setItem(DOWNLOAD_NOTICE_KEY, true);
+        setIsOpen(false);
     }
 
     return (
