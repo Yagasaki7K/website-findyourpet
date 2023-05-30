@@ -160,7 +160,7 @@ const SignUp = () => {
                     <h4>Qual é a Situação:</h4>
                     <select id="status" onChange={() => sendDataSelect()}>
                         <option value="">Selecione</option>
-                        <option value="Doação">Doação</option>
+                        <option value="Adoção">Adoção</option>
                         <option value="Encontrado">Animal Encontrado</option>
                         <option value="Perdido">Animal Perdido</option>
                     </select>
