@@ -91,8 +91,9 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
+            imageUrl: PetUrl,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
-            createdAt: new Date().toString(),
+            createdAt: PetCreated,
             validUntil: PetValid
         }
 

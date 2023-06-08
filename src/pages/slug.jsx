@@ -31,7 +31,7 @@ const slugPage = () => {
         alert('Link copiado com sucesso!')
     }
 
-    const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
+    //const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 
     return (
         <PetsDetails>
@@ -45,7 +45,7 @@ const slugPage = () => {
                         pets.slug === slug ? (
                             <div className="content" key={index}>
                                 <div className="leftContent">
-                                    <img src={pets.image ? firebaseURL + pets.image + `?alt=media` : imageNotFound} alt={pets?.name} />
+                                    <img src={pets.imageUrl ? pets.imageUrl : imageNotFound} alt={pets?.name} />
                                 </div>
 
                                 <div className="rightContent">
