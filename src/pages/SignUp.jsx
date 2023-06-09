@@ -108,7 +108,7 @@ const SignUp = () => {
         } else {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
-            addToFirebase();
+
             const storageRef = ref(storage, `/files/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);
 
@@ -126,6 +126,7 @@ const SignUp = () => {
                     });
                 }
             )
+            addToFirebase();
         }
     }
 
