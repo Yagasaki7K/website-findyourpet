@@ -46,7 +46,7 @@ function Pets() {
 
     setInterval(checkTime(), 86400000) //Every 24 hours the function will run
 
-    const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
+    //const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 
     return (
         <PetsDetails>
@@ -73,7 +73,7 @@ function Pets() {
                     Pets && Pets.map((pets, index) => (
                         <a href={'/' + pets.slug} key={index}>
                             <div className="pets-list-item">
-                                <img src={pets.image ? firebaseURL + pets.image + `?alt=media` : imageNotFound} alt={pets?.name} />
+                                <img src={pets.imageUrl ? pets.imageUrl : imageNotFound} alt={pets?.name} />
 
                                 <div className="pets-list-item-info">
                                     <h3>{pets?.name} • {pets?.status}</h3>

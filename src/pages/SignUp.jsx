@@ -91,8 +91,9 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
+            imageUrl: PetUrl,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
-            createdAt: new Date().toString(),
+            createdAt: PetCreated,
             validUntil: PetValid
         }
 
@@ -107,7 +108,7 @@ const SignUp = () => {
         } else {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
-            addToFirebase();
+
             const storageRef = ref(storage, `/files/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);
 
@@ -125,6 +126,7 @@ const SignUp = () => {
                     });
                 }
             )
+            addToFirebase();
         }
     }
 
