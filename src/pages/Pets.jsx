@@ -7,7 +7,6 @@ import ImgServices from '../services/img.services'
 import PetServices from '../services/pet.services'
 import Navigation from '../components/Navigation'
 import Modal from '../components/Modal'
-import { sendNotification } from '../utils/sendNotification'
 
 function Pets() {
     const [Pets, setPets] = useState([])
@@ -23,14 +22,8 @@ function Pets() {
 
     async function deletePets(id, image) {
         await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)])
-
-        sendNotification({
-            title: 'Um pet foi deletado',
-            body: 'Um pet foi deletado, verifique a lista de pets cadastrados para mais informações',
-            url: 'https://findyourpet.vercel.app/pets'
-        })
     }
-    
+
     async function checkTime() {
         const data = await PetServices.getAllPets()
         const id = data.docs.map((doc) => doc.id)

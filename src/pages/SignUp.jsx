@@ -100,8 +100,8 @@ const SignUp = () => {
         await (PetServices.addPets(NewPets))
 
         sendNotification({
-            title: 'Novo Pet Cadastrado',
-            body: 'Um novo pet foi cadastrado no site, clique aqui para ver!',
+            title: 'Um novo animalzinho foi cadastrado',
+            body: 'Dê uma olhada, talvez ele precise de sua ajuda!',
             url: 'https://findyourpet.vercel.app/pets'
         });
 
