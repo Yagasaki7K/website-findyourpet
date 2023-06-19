@@ -116,7 +116,7 @@ const SignUp = () => {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
             addToFirebase();
-            const storageRef = ref(storage, `/files/${PetFile.name}`);
+            const storageRef = ref(storage, `/files-dev/${PetFile.name}`);
             const uploadTask = uploadBytesResumable(storageRef, PetFile);
 
             uploadTask.on(

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../../assets/logotipo-white.png'
@@ -9,6 +9,23 @@ function toHome() {
 }
 
 const Home = () => {
+    useEffect(() => {
+        const sendPermissionRequestForNotification = async () => {
+            let permission = await Notification.requestPermission()
+                .then((result) => {
+                    console.log('User choice', result)
+                    if (result === 'granted') {
+                        return
+                    } else {
+                        console.log('No notification permission granted!')
+                    }
+                })
+            
+            return permission
+        }
+
+        sendPermissionRequestForNotification()
+    }, [])
     return (
         <>
             <AppBackground />
