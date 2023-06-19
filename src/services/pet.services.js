@@ -1,7 +1,7 @@
 import database from '../client'
 import { collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore'
 
-const petCollectionRef = collection(database, 'pets')
+const petCollectionRef = collection(database, 'pets-dev')
 
 class PetService {
     addPets = (newPets) => {

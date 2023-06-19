@@ -23,7 +23,7 @@ function Pets() {
     async function deletePets(id, image) {
         await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)])
     }
-    
+
     async function checkTime() {
         const data = await PetServices.getAllPets()
         const id = data.docs.map((doc) => doc.id)

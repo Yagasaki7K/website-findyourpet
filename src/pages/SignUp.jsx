@@ -8,6 +8,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import Navigation from '../components/Navigation'
 import AddPetButton from '../components/AddPetButton'
 import { badWords } from '../services/badwords'
+import { sendNotification } from '../utils/sendNotification'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -98,6 +99,13 @@ const SignUp = () => {
         }
 
         await (PetServices.addPets(NewPets))
+
+        sendNotification({
+            title: 'Um novo animalzinho foi cadastrado',
+            body: 'Dê uma olhada, talvez ele precise de sua ajuda!',
+            url: 'https://findyourpet.vercel.app/pets'
+        });
+
         Redirect();
     }
 
