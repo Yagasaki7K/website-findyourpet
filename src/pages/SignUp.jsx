@@ -92,10 +92,10 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
-            imageUrl: PetUrl,
+            imageURL: PetUrl,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
             createdAt: PetCreated,
-            validUntil: PetValid
+            validDate: PetValid
         }
 
         await (PetServices.addPets(NewPets))
