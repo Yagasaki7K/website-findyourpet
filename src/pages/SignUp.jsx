@@ -65,6 +65,24 @@ const SignUp = () => {
 
     function getImage(event) {
         setPetFile(event.target.files[0]);
+
+        const storageRef = ref(storage, `/files/${PetFile.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, PetFile);
+
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(Math.floor(progress));
+            },
+            (error) => console.log(error),
+            () => {
+                // download url
+                getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+                    setPetUrl(url);
+                });
+            }
+        )
     }
 
     function Redirect() {
@@ -117,23 +135,6 @@ const SignUp = () => {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
 
-            const storageRef = ref(storage, `/files/${PetFile.name}`);
-            const uploadTask = uploadBytesResumable(storageRef, PetFile);
-
-            uploadTask.on(
-                "state_changed",
-                (snapshot) => {
-                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    console.log(Math.floor(progress));
-                },
-                (error) => console.log(error),
-                () => {
-                    // download url
-                    getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                        setPetUrl(url);
-                    });
-                }
-            )
             addToFirebase();
         }
     }
