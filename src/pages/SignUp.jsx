@@ -64,11 +64,12 @@ const SignUp = () => {
     }
 
     function getImage(event) {
-        setPetFile(event.target.files[0]);
-
-        const storageRef = ref(storage, `/files/${PetFile.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, PetFile);
-
+        const file = event.target.files[0];
+        setPetFile(file);
+    
+        const storageRef = ref(storage, `/files/${file.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+    
         uploadTask.on(
             "state_changed",
             (snapshot) => {
@@ -82,8 +83,9 @@ const SignUp = () => {
                     setPetUrl(url);
                 });
             }
-        )
+        );
     }
+    
 
     function Redirect() {
         location.assign("/pets");
@@ -134,7 +136,6 @@ const SignUp = () => {
         } else {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
-
             addToFirebase();
         }
     }
