@@ -136,7 +136,7 @@ const HomeDetails = styled.div`
 
         border-radius: 15px;
         display: flex;
-        background-color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)};
+        background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt : Colors.lightColorAlt)};
         color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.darkColor)};
 
         @media (max-width: 414px) {
@@ -156,11 +156,10 @@ const HomeDetails = styled.div`
             }
         }
 
-        @media (min-width: 320px ) and (max-width: 360px)  {
+        @media (min-width: 320px) and (max-width: 360px)  {
             width: 300px;
             height: 290px;
             padding: 3px;
-
 
             img {
                 width: 60px;
@@ -199,9 +198,9 @@ const HomeDetails = styled.div`
         }
 
         :hover {
-            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt2 : Colors.darkColorAlt2)};
+            background: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.darkColorAlt2 : Colors.lightColorAlt)};
             color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)};
-
+            border-radius: 15px;
             transition: .3s;
         }
     }
@@ -226,7 +225,6 @@ const HomeDetails = styled.div`
         }
 
         .footer-content {
-
             margin-right: 200px;
             display: flex;
             flex-direction: column;
@@ -243,7 +241,6 @@ const HomeDetails = styled.div`
             a {
                 font-weight: 300;
                 margin-top: 10px;
-
             }
 
             i {
