@@ -64,8 +64,28 @@ const SignUp = () => {
     }
 
     function getImage(event) {
-        setPetFile(event.target.files[0]);
+        const file = event.target.files[0];
+        setPetFile(file);
+    
+        const storageRef = ref(storage, `/files/${file.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+    
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(Math.floor(progress));
+            },
+            (error) => console.log(error),
+            () => {
+                // download url
+                getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+                    setPetUrl(url);
+                });
+            }
+        );
     }
+    
 
     function Redirect() {
         location.assign("/pets");
@@ -92,10 +112,10 @@ const SignUp = () => {
             contact: PetContact,
             status: PetSituation,
             image: PetFile.name,
-            imageUrl: PetUrl,
+            imageURL: PetUrl,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
             createdAt: PetCreated,
-            validUntil: PetValid
+            validDate: PetValid
         }
 
         await (PetServices.addPets(NewPets))
@@ -116,24 +136,6 @@ const SignUp = () => {
         } else {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
-
-            const storageRef = ref(storage, `/files/${PetFile.name}`);
-            const uploadTask = uploadBytesResumable(storageRef, PetFile);
-
-            uploadTask.on(
-                "state_changed",
-                (snapshot) => {
-                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    console.log(Math.floor(progress));
-                },
-                (error) => console.log(error),
-                () => {
-                    // download url
-                    getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                        setPetUrl(url);
-                    });
-                }
-            )
             addToFirebase();
         }
     }

@@ -45,7 +45,7 @@ const slugPage = () => {
                         pets.slug === slug ? (
                             <div className="content" key={index}>
                                 <div className="leftContent">
-                                    <img src={pets.imageUrl ? pets.imageUrl : imageNotFound} alt={pets?.name} />
+                                    <img src={pets.imageURL ? pets.imageURL : imageNotFound} alt={pets?.name} />
                                 </div>
 
                                 <div className="rightContent">

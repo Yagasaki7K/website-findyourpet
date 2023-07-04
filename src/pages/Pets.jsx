@@ -28,7 +28,7 @@ function Pets() {
         const data = await PetServices.getAllPets()
         const id = data.docs.map((doc) => doc.id)
         const image = data.docs.map((doc) => doc.data().image)
-        const validUntil = data.docs.map((doc) => doc.data().validUntil)
+        const validUntil = data.docs.map((doc) => doc.data().validDate)
 
         const date = new Date()
         const year = date.getFullYear()
@@ -73,7 +73,7 @@ function Pets() {
                     Pets && Pets.map((pets, index) => (
                         <a href={'/' + pets.slug} key={index}>
                             <div className="pets-list-item">
-                                <img src={pets.imageUrl ? pets.imageUrl : imageNotFound} alt={pets?.name} />
+                                <img src={pets.imageURL ? pets.imageURL : imageNotFound} alt={pets?.name} />
 
                                 <div className="pets-list-item-info">
                                     <h3>{pets?.name} • {pets?.status}</h3>
