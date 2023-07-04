@@ -36,7 +36,7 @@ const App = () => {
                     <Route path="/cadastro" element={<SignUp />} exact />
                     <Route path="/maps" element={<Maps />} exact />
                     <Route path="/termos" element={<Termos />} exact />Politicas
-                    <Route path="/politicas-de-privacidade" element={<Politicas />} exact />
+                    <Route path="/politicas" element={<Politicas />} exact />
                     <Route path="/Download" element={<Download />} exact />
                     <Route path=":slug" element={<SlugPage />} />
                 </Routes>

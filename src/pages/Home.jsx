@@ -20,7 +20,7 @@ const Home = () => {
                         console.log('No notification permission granted!')
                     }
                 })
-            
+
             return permission
         }
 
@@ -47,7 +47,7 @@ const Home = () => {
 
                     <div className="links">
                         <a href="/termos">Termos de Uso</a> - &nbsp;
-                        <a href="/politicas-de-privacidade">Políticas de Privacidade</a>
+                        <a href="/politicas">Políticas de Privacidade</a>
                     </div>
                 </div>
             </AppDetails>
