@@ -13,8 +13,8 @@ const Footer = () => {
                         <a href="https://play.google.com/store/apps/details?id=com.kalifyinc.findyourpet&pli=1" target="_blank" rel="noreferrer">Download do App  <i className="uil uil-external-link-alt" /></a>
                         <a href="/carreiras">Carreiras</a>
                         <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
-                        <a href="/termos">Termos de Uso</a>
-                        <a href="/politicas">Políticas de Privacidade</a>
+                        <a href="https://kalify.vercel.app/termos">Termos de Uso</a>
+                        <a href="https://kalify.vercel.app/politicas">Políticas de Privacidade</a>
                     </div>
 
                     <div className="footer-content break">

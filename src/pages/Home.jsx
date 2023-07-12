@@ -46,8 +46,8 @@ const Home = () => {
 
 
                     <div className="links">
-                        <a href="/termos">Termos de Uso</a> - &nbsp;
-                        <a href="/politicas">Políticas de Privacidade</a>
+                        <a href="https://kalify.vercel.app/termos">Termos de Uso</a> - &nbsp;
+                        <a href="https://kalify.vercel.app/politicas">Políticas de Privacidade</a>
                     </div>
                 </div>
             </AppDetails>
