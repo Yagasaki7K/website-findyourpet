@@ -8,6 +8,11 @@ function toHome() {
     window.location.href = "/pets"
 }
 
+const pet1 = '../../assets/pet1.jpg'
+const pet2 = '../../assets/pet2.jpg'
+const pet3 = '../../assets/pet3.jpg'
+const pet4 = '../../assets/pet4.jpg'
+
 const Home = () => {
     useEffect(() => {
         const sendPermissionRequestForNotification = async () => {
@@ -72,13 +77,13 @@ const Home = () => {
                         <div className="rightSide">
                             <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg>
 
-                            <img src="../../assets/pet1.jpg" className="pet1" alt="" />
+                            <img src={pet1} className="pet1" alt="" />
                         </div>
                     </div>
 
                     <div className="content">
                         <div className="leftSide">
-                            <img src="../../assets/pet2.jpg" className="pet2" alt="" />
+                            <img src={pet2} className="pet2" alt="" />
                         </div>
 
                         <div className="rightSide">
@@ -102,14 +107,14 @@ const Home = () => {
                         </div>
 
                         <div className="rightSide">
-                            <img src="../../assets/pet3.jpg" className="pet3" alt="" />
+                            <img src={pet3} className="pet3" alt="" />
                         </div>
                     </div>
 
                     <div className="content">
                         <div className="leftSide">
                             <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg>
-                            <img src="../../assets/pet4.jpg" className="pet4" alt="" />
+                            <img src={pet4} className="pet4" alt="" />
                         </div>
 
                         <div className="rightSide">
