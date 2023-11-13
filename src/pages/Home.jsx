@@ -3,15 +3,14 @@ import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../../assets/logotipo-white.png'
 import Modal from '../components/Modal'
+import pet1 from '../../assets/pet1.jpg'
+import pet2 from '../../assets/pet2.jpg'
+import pet3 from '../../assets/pet3.jpg'
+import pet4 from '../../assets/pet4.jpg'
 
 function toHome() {
     window.location.href = "/pets"
 }
-
-const pet1 = '../../assets/pet1.jpg'
-const pet2 = '../../assets/pet2.jpg'
-const pet3 = '../../assets/pet3.jpg'
-const pet4 = '../../assets/pet4.jpg'
 
 const Home = () => {
     useEffect(() => {
