@@ -1,13 +1,23 @@
 import React, { useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../../assets/logotipo-white.png'
 import Modal from '../components/Modal'
+import { FaBeer } from "react-icons/fa"
+import { CiSquareCheck } from "react-icons/ci"
+import { LuFolderHeart } from "react-icons/lu"
+import { TiMessages } from "react-icons/ti"
+import { MdOutlinePets  } from "react-icons/md"
+
 import pet1 from '../../assets/pet1.jpg'
-import pet2 from '../../assets/pet2.jpg'
 import pet3 from '../../assets/pet3.jpg'
 import pet4 from '../../assets/pet4.jpg'
+
+import 'swiper/css';
 
 function toHome() {
     window.location.href = "/pets"
@@ -45,19 +55,32 @@ const Home = () => {
                 </ul>
 
                 <div className="container">
-
                     <div className="content">
                         <div className="leftSide leftSide-highlight">
                             <h1>Encontre seu companheiro de estimação perfeito</h1>
                             <p>Procurando por um amigo de quatro patas? O FindYourPet ajuda você a encontrar e resgatar animais que precisam de um lar amoroso</p>
 
-                            {/* <div className="newsletter">
-                                <input type="text" placeholder='Insira seu email ...' />
-                                <button>Enviar</button>
-                            </div> */}
+                            <button onClick={() => toHome()}>Conheça</button>
+                        </div>
 
-                            <button onClick={() => toHome()}>Entrar</button>
+                        <div className="rightSide rightSide-highlight">
+                            <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg>
 
+                            <img src={pet1} className="pet1" alt="" />
+                        </div>
+                    </div>
+
+                    <div className="content">
+
+                    <Swiper
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        // navigation
+                        pagination={{ clickable: true }}
+                        loop={true}
+                        autoplay={{ delay: 4000, disableOnInteraction: false }}
+                        >
+                        <SwiperSlide>
                             <div className="contact">
                                 <div className="left-contact">
                                     <img src="https://storage.googleapis.com/mixo-files/public/img/avatars/male-19.png" alt="" />
@@ -69,24 +92,45 @@ const Home = () => {
                                     </h2>
                                     <h4>Pedro Guilherme</h4>
                                 </div>
-
-
                             </div>
-                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="contact">
+                                <div className="left-contact">
+                                    <img src="https://storage.googleapis.com/mixo-files/public/img/avatars/male-19.png" alt="" />
+                                </div>
 
-                        <div className="rightSide rightSide-highlight">
-                            <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg>
-                            
-                            <img src={pet1} className="pet1" alt="" />
-                        </div>
+                                <div className="right-contact">
+                                    <h2>
+                                        &quot;Encontrei meu melhor amigo através do FindYourPet. É uma plataforma incrível para amantes de animais de estimação.&quot;
+                                    </h2>
+                                    <h4>Pedro Guilherme</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="contact">
+                                <div className="left-contact">
+                                    <img src="https://storage.googleapis.com/mixo-files/public/img/avatars/male-19.png" alt="" />
+                                </div>
+
+                                <div className="right-contact">
+                                    <h2>
+                                        &quot;Encontrei meu melhor amigo através do FindYourPet. É uma plataforma incrível para amantes de animais de estimação.&quot;
+                                    </h2>
+                                    <h4>Pedro Guilherme</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                      
                     </div>
+                </div>
 
+                <div className="about">
                     <div className="content">
-                        <div className="leftSide">
-                            <img src={pet2} className="pet2" alt="" />
-                        </div>
 
-                        <div className="rightSide">
+                        <div className="about-header">
                             <h1>
                                 Pesquisa fácil de animais de estimação
                             </h1>
@@ -94,8 +138,105 @@ const Home = () => {
                                 FindYourPet facilita a busca de animais de estimação com base em suas preferências. Encontre o companheiro perfeito que corresponda ao seu estilo de vida e necessidades.
                             </p>
                         </div>
-                    </div>
+                    
+                        <div className="about-search">
 
+                            <input placeholder="Digite aqui sua busca" />
+                            <ul>
+                                <li>
+                                    <a href="/f">
+                                        <FaBeer />
+                                        Dogs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/f">
+                                        <FaBeer />
+                                        Gatos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/f">
+                                        <FaBeer />
+                                        Outros animais
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/f">
+                                        <FaBeer />
+                                        Resgates
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+
+                <div className="know">
+                    <div className="content">
+                        <div className="know-header">
+                            <h1>
+                                <MdOutlinePets /> Planeja adotar um Pet?
+                            </h1>
+                            <p>
+                                FindYourPet facilita a busca de animais de estimação com base em suas preferências. Encontre o companheiro perfeito que corresponda ao seu estilo de vida e necessidades.
+                            </p>
+                        </div>
+                    
+                        <div className="know-search">
+
+                            <ul>
+                                <li>
+                                    <a href="/f">
+                                        <CiSquareCheck  />
+                                        <span>
+                                            Checklist para adoção
+                                        </span>
+                                        <p>
+                                            Faça sua transição tranquila para adotar.
+                                        </p>
+                                        <button>
+                                            Conheça tudo
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/f">
+                                        <LuFolderHeart  />
+                                        <span>
+                                            Recursos 
+                                        </span>
+                                        <p>
+                                            Descubra como ajudamos os pets, e seus futuros donos.
+                                        </p>
+                                        <button>
+                                            Conheça tudo
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/f">
+                                        <TiMessages  />
+                                        <span>
+                                            Fórum PET
+                                        </span>
+                                        <p>
+                                            Tire suas dúvidas com a comunidade.
+                                        </p>
+                                        <button>
+                                            Conheça tudo
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container">
                     <div className="content">
                         <div className="leftSide">
                             <h1>
@@ -107,13 +248,14 @@ const Home = () => {
                         </div>
 
                         <div className="rightSide">
+                            {/* <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg> */}
                             <img src={pet3} className="pet3" alt="" />
                         </div>
                     </div>
 
                     <div className="content">
                         <div className="leftSide">
-                            <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg>
+                            {/* <svg width="404" height="392" fill="none" viewBox="0 0 404 392"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect></svg> */}
                             <img src={pet4} className="pet4" alt="" />
                         </div>
 

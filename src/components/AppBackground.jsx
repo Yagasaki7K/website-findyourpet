@@ -8,7 +8,7 @@ const LoginDetails = styled.div`
     position: fixed;
     width: 100vw;
     height: 100vh;
-    filter: brightness(20%);
+    filter: brightness(50%);
     z-index: 0;
 
     @media (max-width: 414px){

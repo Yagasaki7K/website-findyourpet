@@ -207,17 +207,10 @@ const HomeDetails = styled.div`
 
     footer {
         display: flex;
-        justify-content: center;
-        margin-left: 100px;
-
-
-        @media (max-width: 1366px) {
-            margin-left: 200px;
-        }
-
-        @media (max-width: 768px) {
-            margin-left: 50px;
-        }
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
 
         @media (max-width: 414px) {
             flex-direction: column;
@@ -225,13 +218,8 @@ const HomeDetails = styled.div`
         }
 
         .footer-content {
-            margin-right: 200px;
             display: flex;
             flex-direction: column;
-
-            @media (max-width: 768px) {
-                margin-right: 50px;
-            }
 
             h2 {
                 margin: 28px 0 30px 0;
