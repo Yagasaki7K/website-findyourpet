@@ -174,7 +174,7 @@ ul {
             font-size: 3.75rem;
             line-height: 1;
             font-weight: 900;
-            font-family: 'Nunito', sans-serif;
+            /* font-family: 'Nunito', sans-serif; */
             font-family: 'Marhey', sans-serif;
         }
 
@@ -250,6 +250,15 @@ ul {
             }
         }
 
+        .leftSide-highlight {
+            width: 60%;
+
+            p {
+                width: 80%;
+                margin: 2rem 0;
+            }
+        }
+
         .rightSide {
             width: 50%;
 
@@ -258,8 +267,29 @@ ul {
             }
         }
 
+        .rightSide-highlight {
+            position: relative;
+            width: 40%;
+            height: 100%;
+
+            svg {
+                width: 100%;
+                margin-left: 4rem;
+                height: 60%;
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: auto;
+                max-width: 90%;
+                z-index: 100;
+            }
+        }
+
         .pet1 {
-            margin-left: -23rem;
+            /* margin-left: -23rem; */
         }
 
         .pet4 {
