@@ -29,18 +29,21 @@ ul {
     width: 100%;
     padding-top: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 72px;
 
     @media (max-width: 1366px) {
         padding-top: 0.6rem;
     }
 
     img {
-        width: 20rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        max-width: 200px;
+        /* margin-left: 4rem;
+        margin-right: 4rem; */
 
-        @media (max-width: 1920px) {
+        /* @media (max-width: 1920px) {
             margin-top: 2rem;
         }
 
@@ -72,15 +75,15 @@ ul {
         @media (max-width: 600px) {
             margin-top: 0rem;
             margin-left: 0rem;
-        }
+        } */
     }
 
     li {
-        margin-right: 2rem;
-        margin-top: 2rem;
+        /* margin-right: 2rem;
+        margin-top: 2rem; */
         list-style: none;
 
-        @media (max-width: 1600px) {
+        /* @media (max-width: 1600px) {
             margin-top: 1rem;
         }
 
@@ -90,7 +93,7 @@ ul {
 
         @media (max-width: 1024px) {
             display: none;
-        }
+        } */
 
         a {
             color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)};
@@ -112,38 +115,32 @@ ul {
         background: ${Colors.primary};
         background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
         color: ${(props) => (props.theme.modo.darkTheme === 'darkTheme' ? Colors.lightColor : Colors.lightColor)};
-
         text-transform: uppercase;
         font-family: 'Poppins', sans-serif;
         font-size: 1.2rem;
         border-radius: 15px;
-        margin-top: 1.5rem;
         font-weight: bold;
+        cursor: pointer;
 
         @media (max-width: 1920px){
-            margin-left: 45rem;
+            /* margin-left: 45rem; */
         }
 
         @media (max-width: 1600px) {
-            margin-left: 25rem;
+            /* margin-left: 25rem; */
         }
 
         @media (max-width: 1440px) {
-            margin-left: 15rem;
+            /* margin-left: 15rem; */
         }
 
         @media (max-width: 1366px) {
-            margin-left: 10rem;
+            /* margin-left: 10rem; */
         }
 
         @media (max-width: 1024px) {
             display: none;
         }
-
-        height: 2.5rem;
-        width: 10rem;
-
-        cursor: pointer;
 
         :hover {
             transition: 2s;
@@ -155,14 +152,18 @@ ul {
 
 .container {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .content {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 4rem;
-        font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+        max-width: 1200px;
+        padding: 3rem 0;
+        /* font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"; */
 
         img {
             border-radius: 15px;
@@ -173,6 +174,8 @@ ul {
             font-size: 3.75rem;
             line-height: 1;
             font-weight: 900;
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Marhey', sans-serif;
         }
 
         p {
@@ -183,8 +186,7 @@ ul {
         }
 
         .leftSide {
-            margin-right: 5rem;
-            max-width: 40rem;
+            width: 50%;
 
             button {
                 background: #30ad80;
@@ -249,7 +251,7 @@ ul {
         }
 
         .rightSide {
-            max-width: 40rem;
+            width: 50%;
 
             svg {
                 color: gray;

@@ -8,9 +8,8 @@ const LoginDetails = styled.div`
     position: fixed;
     width: 100vw;
     height: 100vh;
-    filter: brightness(40%);
+    filter: brightness(20%);
     z-index: 0;
-
 
     @media (max-width: 414px){
       width: 103vw;

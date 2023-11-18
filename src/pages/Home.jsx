@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+
 import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../../assets/logotipo-white.png'

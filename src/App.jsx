@@ -1,4 +1,8 @@
 import React, { useContext } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { Context } from './utils/ThemeContext'
+
 import Home from './pages/Home'
 import Pets from './pages/Pets'
 import SobreNos from './pages/SobreNos'
@@ -11,11 +15,8 @@ import Politicas from './pages/Politicas'
 import Download from './pages/Download'
 import SlugPage from './pages/slug'
 
-import { Routes, Route } from 'react-router-dom'
 import GlobalStyle from './components/GlobalStyle'
-import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './utils/Colors'
-import { Context } from './utils/ThemeContext'
 import Termos from './pages/Termos'
 
 const App = () => {
