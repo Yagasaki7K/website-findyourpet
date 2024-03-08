@@ -1,0 +1,46 @@
+:root {
+  --background: #303446;
+  --background-alt: #232634;
+  --green: #a6d189;
+  --orange: #ef9f76;
+  --yellow: #eed49f;
+  --purple: #ca9ee6;
+  --blue: #99d1db;
+  --red: #e68284;
+  --white: #fff;
+  --gray: #ccc;
+  --black: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #232634;
+    --background-alt: #303446;
+    --font: #f8f8f2;
+    --font-alt: #ccc;
+    --gray: rgba(255, 255, 255, 0.3);
+    --border: #3d3f52;
+    --font-black: #282a36;
+  }
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--white);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
