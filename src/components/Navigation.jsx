@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 
-const Navigation = (isHome) => {
+const Navigation = () => {
 
     function redirectToHome() {
         window.location.href = '/pets'
@@ -18,7 +18,7 @@ const Navigation = (isHome) => {
                 <li><a href="#">Artigos</a></li>
                 <li><a href="#">Contato</a></li>
 
-                <button onClick={redirectToHome}><i className="uil uil-signout"></i> Entrar</button>
+                <button onClick={redirectToHome}><i className="uil uil-signout"></i> Acessar</button>
             </div>
         </NavigationDetails>
     )

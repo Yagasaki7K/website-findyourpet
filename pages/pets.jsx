@@ -51,7 +51,8 @@ const pets = () => {
         setSearch(query);
     }
 
-    const filteredPets = search !== "" ? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLocaleLowerCase())) : Pets;
+    const filteredPets = search !== "" ? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLocaleLowerCase()) || pet.locale.toLowerCase().includes(search.toLocaleLowerCase())) : Pets;
+
     return (
         <>
             <Head>
@@ -64,7 +65,7 @@ const pets = () => {
                     <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
                 </a>
 
-                <input type="text" placeholder="Pesquisar" onChange={handleSearch} />
+                <input type="text" placeholder="Digite o nome da cidade ou do animal..." onChange={handleSearch} />
 
                 <h2 className="titlePets">Últimos animais cadastrados:</h2>
                 {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div> */}
