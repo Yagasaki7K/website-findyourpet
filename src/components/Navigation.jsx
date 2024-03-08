@@ -2,17 +2,21 @@ import styled from 'styled-components'
 import React from 'react'
 
 const Navigation = () => {
+    function redirectToHome() {
+        window.location.href = '/pets'
+    }
+
     return (
         <NavigationDetails>
-            <h4><a href="#">FindYourPet</a></h4>
+            <h4><a href="/">FindYourPet</a></h4>
 
             <div className="menu">
-                <li><a href="#">Como Funciona?</a></li>
-                <li><a href="#">Achados & Perdidos</a></li>
-                <li><a href="#">Mapa</a></li>
+                <li><a href="/#howWorks">Como Funciona?</a></li>
+                <li><a href="/pets">Achados & Perdidos</a></li>
+                <li><a href="/mapa">Mapa</a></li>
                 <li><a href="#">Artigos</a></li>
                 <li><a href="#">Contato</a></li>
-                <button>Entre</button>
+                <button onClick={redirectToHome}>Entre</button>
             </div>
         </NavigationDetails>
     )

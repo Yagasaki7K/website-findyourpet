@@ -4,6 +4,18 @@ import HomeDetails from '../src/components/HomeDetails'
 import Footer from '../src/components/Footer'
 
 export default function Home() {
+    function redirectToHome() {
+        window.location.href = '/pets'
+    }
+
+    function redirectToReport() {
+        window.location.href = '/reporte'
+    }
+
+    function redirectToMaps() {
+        window.location.href = '/mapa'
+    }
+
     return (
         <>
             <Head>
@@ -21,7 +33,7 @@ export default function Home() {
                             Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa.
                         </p>
 
-                        <div className="button">
+                        <div className="button" onClick={redirectToReport}>
                             <div className="icon">
                                 <i className="uil uil-search"></i>
                             </div>
@@ -31,7 +43,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="button2">
+                        <div className="button2" onClick={redirectToReport}>
                             <div className="icon">
                                 <i className="uil uil-map-marker"></i>
                             </div>
@@ -46,7 +58,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="howWorks">
+                <div className="howWorks" id="howWorks">
                     <div className="leftContent">
                         <img src="/bird.png" alt="" />
                     </div>
@@ -114,7 +126,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <button>Veja mais</button>
+                    <button onClick={redirectToHome}>Veja mais</button>
                 </div>
 
                 <div className="maps">
@@ -125,7 +137,7 @@ export default function Home() {
                         <h1>Confira animais e abrigos relatados no mapa</h1>
                         <p>Explore um mapa ao vivo com animais de estimação perdidos e encontrados, bem como abrigos de animais locais. <br />
                             Descubra uma rede de apoio para ajudar animais de estimação necessitados e ajudá-los a encontrar o caminho de casa!</p>
-                        <button>Veja no mapa</button>
+                        <button onClick={redirectToMaps}>Veja no mapa</button>
                     </div>
                 </div>
 
@@ -135,7 +147,7 @@ export default function Home() {
                     </div>
                     <div className="rightContent">
                         <h2>Tenha seu pet de volta</h2>
-                        <button>Reportar agora</button>
+                        <button onClick={redirectToReport}>Reportar agora</button>
                     </div>
                 </div>
 

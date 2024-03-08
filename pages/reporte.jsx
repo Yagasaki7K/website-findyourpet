@@ -123,14 +123,15 @@ const SignUp = () => {
     return (
         <>
             <Head>
-                <title>FindYourPet | Área de Cadastro </title>
+                <title>FindYourPet | Área de Cadastro</title>
             </Head>
+
             <Navigation />
             <PagesDetails>
                 <a href="/cadastro" className="advice-yellow">
-                    <i className="uil uil-shield-exclamation"></i>&nbsp;
+                    <i className="uil uil-shield-exclamation" />&nbsp;
                     Procure colocar as informações corretamente - Não será possível editar depois!
-                    &nbsp;<i className="uil uil-shield-exclamation"></i>
+                    &nbsp;<i className="uil uil-shield-exclamation" />
                 </a>
 
                 <div className="modal-signup">

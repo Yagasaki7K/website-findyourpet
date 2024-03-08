@@ -8,9 +8,9 @@ const Footer = () => {
                 <footer>
                     <div className="footer-content break">
                         <h2>Geral</h2>
-                        <li><a href="#">Perdi meu pet</a></li>
-                        <li><a href="#">Achei um pet</a></li>
-                        <li><a href="#">Quero adotar um pet</a></li>
+                        <li><a href="/reporte">Perdi meu pet</a></li>
+                        <li><a href="/reporte">Achei um pet</a></li>
+                        <li><a href="/pets">Quero adotar um pet</a></li>
                         <li><a href="#">Artigos</a></li>
                         <li><a href="#">Mapa</a></li>
                         <li><a href="#">Sobre</a></li>
