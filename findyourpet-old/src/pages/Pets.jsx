@@ -44,7 +44,7 @@ function Pets() {
         }
     }
 
-    setInterval(checkTime(), 86400000) //Every 24 hours the function will run
+    setInterval(checkTime(), 86400000) // Every 24 hours the function will run
 
     //const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/kalify-findyourpet.appspot.com/o/files%2F'
 

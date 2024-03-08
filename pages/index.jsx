@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Navigation from '../src/components/Navigation'
 import HomeDetails from '../src/components/HomeDetails'
 import Footer from '../src/components/Footer'
+import { useEffect, useState } from 'react'
+import petServices from '../src/services/pet.services'
 
 export default function Home() {
     function redirectToHome() {
@@ -14,6 +16,17 @@ export default function Home() {
 
     function redirectToMaps() {
         window.location.href = '/mapa'
+    }
+
+    const [Pets, setPets] = useState([])
+
+    useEffect(() => {
+        getPets()
+    }, [])
+
+    async function getPets() {
+        const data = await petServices.getAllPets()
+        setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
     return (
@@ -77,53 +90,23 @@ export default function Home() {
                     <p>Aqui você encontra os pets perdidos, em adoção e achados</p>
 
                     <div className="container">
-                        <div className="content">
-                            <div className="image">
-                                <img src="/faind.jpg" alt="" />
-                            </div>
+                        {
+                            Pets && Pets.slice(0, 4).map((pets, index) => (
+                                <a href="/pets" key={index}>
+                                    <div className="content">
+                                        <div className="image">
+                                            <img src={pets.imageURL ? pets.imageURL : '/faind.jpg'} alt={pets.name} />
+                                        </div>
 
-                            <div className="text">
-                                <p>Faind</p>
-                                <p>13.03.2024</p>
-                                <p>Campinas, São Paulo</p>
-                            </div>
-                        </div>
-
-                        <div className="content">
-                            <div className="image">
-                                <img src="/faind.jpg" alt="" />
-                            </div>
-
-                            <div className="text">
-                                <p>Faind</p>
-                                <p>13.03.2024</p>
-                                <p>Campinas, São Paulo</p>
-                            </div>
-                        </div>
-
-                        <div className="content">
-                            <div className="image">
-                                <img src="/faind.jpg" alt="" />
-                            </div>
-
-                            <div className="text">
-                                <p>Faind</p>
-                                <p>13.03.2024</p>
-                                <p>Campinas, São Paulo</p>
-                            </div>
-                        </div>
-
-                        <div className="content">
-                            <div className="image">
-                                <img src="/faind.jpg" alt="" />
-                            </div>
-
-                            <div className="text">
-                                <p>Faind</p>
-                                <p>13.03.2024</p>
-                                <p>Campinas, São Paulo</p>
-                            </div>
-                        </div>
+                                        <div className="text">
+                                            <p>{pets.name}</p>
+                                            <p>{pets.createdAt}</p>
+                                            <p>{pets.locale}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            ))
+                        }
                     </div>
 
                     <button onClick={redirectToHome}>Veja mais</button>

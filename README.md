@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/assets/logotipo.png?raw=true" width="500"/>
+</p>
 
-## Getting Started
+<p align="center">
+   <a href="https://github.com/Yagasaki7K">
+      <img alt="Kalify Inc" src="https://img.shields.io/badge/-KalifyInc-5965e0?style=flat&logo=Github&logoColor=white" />
+   </a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-findyourpet?color=5965e0">
 
-First, run the development server:
+  <a href="https://github.com/Yagasaki7K/website-findyourpet/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-findyourpet?color=5965e0">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-findyourpet?color=5965e0" />
+  <a href="https://github.com/Yagasaki7K/website-findyourpet/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-findyourpet?color=5965e0&logo=github">
+  </a>
+</p>
+
+<div align="center">
+  <sub>FindYourPet. Built with 💚 by
+    <a href="https://github.com/Yagasaki7K">Anderson Marlon</a> and
+    <a href="https://github.com/Yagasaki7K/mobile-findyourpet/graphs/contributors">
+      contributors
+    </a>
+  </sub>
+</div>
+
+# 📌 Table of Contents
+
+- [📌 Table of Contents](#-table-of-contents)
+- [👀 Demo Website](#-demo-website)
+- [💻 Technologies](#-technologies)
+- [🚀 Features](#-features)
+- [🚧 How to run](#-how-to-run)
+- [🐛 Issues](#-issues)
+- [🎉 Contributing](#-contributing)
+- [📕 License](#-license)
+
+# 👀 Demo Website
+
+👉 Demo: https://findyourpet.vercel.app/
+
+# 💻 Technologies
+
+This project was made using the follow technologies:
+
+-   Vite
+-   ReactJS
+-   Styled Components
+-   Firebase
+-   Vercel
+-   Sonner
+
+# 🚀 Features
+
+🐶 - I lost my dog!
+You enter the application, register, go to the lost animals area, there you can register a new pet so that others know that you are looking for your pet. Fill in information with the type of animal it is, the color, size, name, last location and contact information, soon someone will let you know they found your pet!
+
+🐱 - I found a cat!
+You enter the application, register, go to the lost animals area, there you can find people who are looking for lost pets, so you click on the animal that appears to be it, based on the information of places where it was lost, the description of the pet and you can get in touch with the owner. You deliver or he picks up and everything is resolved!
+
+🐰 - I want to adopt/adopt a pet!
+You enter the application, register, go to the adoption area, and there you will find both people who want to adopt a pet, as well as those who are adopting a new one or something similar. Contact the person about the pet you are donating or looking for and everything is resolved, another pet that will have a new home to call its own!
+
+# 🚧 How to run
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone Repository
+$ git clone https://github.com/Yagasaki7K/website-findyourpet.git
+$ Go to folder using terminal
+$ yarn (needs yarn installed)
+$ yarn dev (if you wanna change something) // yarn start (just to see running)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you need change something, check using yarn build if everything is okay. And later you do a PR.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# 🐛 Issues
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Feel free to **file a new issue** with a respective title and description on the the [FindYourPet](https://github.com/Yagasaki7K/website-findyourpet/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# 🎉 Contributing
 
-## Learn More
+First of all, thank you for being interested in helping out, your time is always appreciated in every way. 💯
 
-To learn more about Next.js, take a look at the following resources:
+Here's some tips:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Check the [issues page](https://github.com/Yagasaki7K/website-findyourpet/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+-   Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 📕 License
 
-## Deploy on Vercel
+Released in 2021
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made by [Anderson Marlon](https://github.com/Yagasaki7K) & [Kalify Team](https://github.com/KalifyInc).
+This project is under the [MIT license](./LICENSE).

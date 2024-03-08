@@ -11,12 +11,10 @@ const SignUp = () => {
     const [PetName, setPetName] = useState('');
     const [PetDescription, setPetDescription] = useState('');
     const [PetFile, setPetFile] = useState('');
-    // eslint-disable-next-line no-unused-vars
     const [PetUrl, setPetUrl] = useState('');
     const [PetLocale, setPetLocale] = useState('');
     const [PetContact, setPetContact] = useState('');
     const [PetSituation, setPetSituation] = useState('');
-    // eslint-disable-next-line no-unused-vars
     const [PetCreated, setPetCreated] = useState('');
     const [PetValid, setPetValid] = useState('');
 
