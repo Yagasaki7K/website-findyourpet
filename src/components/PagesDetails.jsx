@@ -28,6 +28,12 @@ const PagesDetails = styled.div`
         outline: none;
         color: var(--white);
         transition: 1s;
+
+        @media (max-width: 768px){
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px 1rem;
+        }
     }
 
     .advicePets {
@@ -40,6 +46,24 @@ const PagesDetails = styled.div`
         color: var(--green);
     }
 
+    input {
+        margin-top: 1rem;
+        width: 60%;
+        padding: 1.2rem;
+        border-radius: 25px;
+        border: none;
+        background: var(--white);
+        color: var(--gray-alt);
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        outline: none;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
     form {
         display: flex;
         justify-content: center;
@@ -49,6 +73,11 @@ const PagesDetails = styled.div`
         background: var(--green);
         color: var(--white);
         border-radius: 15px;
+
+        @media (max-width: 768px) {
+            padding: 20px 20px;
+            margin: 2rem 1rem;
+        }
 
         input, textarea, select {
             margin-bottom: 10px;

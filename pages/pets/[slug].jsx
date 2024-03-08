@@ -26,7 +26,6 @@ const slug = () => {
         toast.success('Link copiado com sucesso!')
     }
 
-    console.log(slug)
     return (
         <>
             <Navigation />

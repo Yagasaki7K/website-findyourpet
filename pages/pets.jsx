@@ -3,9 +3,12 @@ import PagesDetails from '../src/components/PagesDetails'
 import petServices from '../src/services/pet.services'
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer'
+import Head from 'next/head'
 
 const pets = () => {
+
     const [Pets, setPets] = useState([])
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         getPets()
@@ -41,19 +44,33 @@ const pets = () => {
     }
 
     setInterval(checkTime, 86400000)
+
+    function handleSearch(event) {
+        const query = event.target.value;
+
+        setSearch(query);
+    }
+
+    const filteredPets = search !== "" ? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLocaleLowerCase())) : Pets;
     return (
         <>
+            <Head>
+                <title>FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar</title>
+            </Head>
+
             <Navigation />
             <PagesDetails>
                 <a href="/reporte" className="advice">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
                 </a>
 
+                <input type="text" placeholder="Pesquisar" onChange={handleSearch} />
+
                 <h2 className="titlePets">Últimos animais cadastrados:</h2>
                 {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div> */}
                 <div className="container">
                     {
-                        Pets ? Pets.map((pets, index) => (
+                        filteredPets ? filteredPets.map((pets, index) => (
                             <a href={`/pets/` + pets.slug} key={index}>
                                 <div className="content">
                                     <div className="image">
