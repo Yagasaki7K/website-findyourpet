@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const FooterDetails = styled.div`
     box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.2);
-    background: var(--green);
+    background: var(--green-alt);
 
     footer {
         display: flex;
@@ -45,7 +45,7 @@ const FooterDetails = styled.div`
                 margin-top: 10px;
 
                 &:hover {
-                    color: var(--green-alt);
+                    color: var(--green);
                 }
             }
 
