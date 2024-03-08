@@ -11,7 +11,7 @@ const Navigation = () => {
                 <li><a href="#">Achados & Perdidos</a></li>
                 <li><a href="#">Mapa</a></li>
                 <li><a href="#">Artigos</a></li>
-                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Contato</a></li>
                 <button>Entre</button>
             </div>
         </NavigationDetails>
@@ -33,6 +33,10 @@ const NavigationDetails = styled.div`
     h4 {
         font-size: 1.8rem;
         color: var(--green);
+    }
+
+    @media (max-width: 768px){
+        margin-left: -2rem;
     }
 
     .menu {

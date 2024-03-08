@@ -67,7 +67,6 @@ export default class MyDocument extends Document {
 
                 <Head>
                     <meta name="keywords" content="" />
-
                     <meta name="author" content="Anderson 'Yagasaki' Marlon" />
                     <meta name="robots" content="index, follow" />
                     <link rel="shortcut icon" href="/logo.png" />

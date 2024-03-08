@@ -35,7 +35,7 @@ const Footer = () => {
                 <hr />
 
                 <div className="copyright">
-                    <p> © 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas as imagens dos animais são de propriedade de seus devidos anunciantes</p>
+                    <p> © 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas as imagens são de responsabilidade de seus anunciantes</p>
                 </div>
             </FooterDetails>
         </>

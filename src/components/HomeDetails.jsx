@@ -9,6 +9,10 @@ const HomeDetails = styled.div`
             width: 40rem;
             padding-left: 4rem;
 
+            @media (max-width: 768px){
+                padding-left: 2rem;
+            }
+
             h3 {
                 font-size: 3rem;
                 color: var(--green);
@@ -18,6 +22,10 @@ const HomeDetails = styled.div`
             p {
                 font-size: 1.25rem;
                 margin-bottom: 1.5rem;
+
+                @media (max-width: 768px){
+                    width: 85%;
+                }
             }
 
             .button, .button2 {
@@ -44,6 +52,10 @@ const HomeDetails = styled.div`
                     h4 {
                         font-size: 1.2rem;
                         margin-bottom: 0;
+
+                        @media (max-width: 768px){
+                            margin-top: 1.2rem;
+                        }
                     }
 
                     p {
@@ -83,6 +95,10 @@ const HomeDetails = styled.div`
                 @media (max-width: 1024px) {
                     width: 35rem;
                 }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }
@@ -93,6 +109,11 @@ const HomeDetails = styled.div`
         margin-top: 10rem;
         margin-bottom: 2rem;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .leftContent {
             img {
                 width: 30rem;
@@ -101,10 +122,18 @@ const HomeDetails = styled.div`
                 @media (max-width: 1024px) {
                     margin-right: 2rem;
                 }
+
+                @media (max-width: 768px) {
+                    width: 20rem;
+                }
             }
         }
 
         .rightContent {
+            @media (max-width: 768px) {
+                margin-left: 3rem;
+
+            }
             h2 {
                 font-size: 1.8rem;
             }
@@ -118,6 +147,10 @@ const HomeDetails = styled.div`
                 transition: 0.3s;
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 768px) {
+                    width: 85%;
+                }
 
                 img {
                     margin-right: 1rem;
@@ -240,8 +273,11 @@ const HomeDetails = styled.div`
         align-items: center;
         margin: 8rem 0;
 
-        .leftContent {
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
 
+        .leftContent {
             img {
                 width: 14rem;
                 margin: 0 10rem;
@@ -257,6 +293,10 @@ const HomeDetails = styled.div`
 
             @media (max-width: 1024px) {
                 padding: 0 2rem;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
             }
 
             h1 {
@@ -294,12 +334,20 @@ const HomeDetails = styled.div`
         margin: 4rem 0 2rem 0;
         background: var(--green-alt);
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
         .leftContent {
             padding: 2rem 0;
 
             img {
                 width: 16rem;
                 margin-right: 5rem;
+
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -312,6 +360,11 @@ const HomeDetails = styled.div`
 
             h2 {
                 font-size: 2.5rem;
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                    margin-top: -1rem;
+                }
             }
 
             button {
@@ -325,6 +378,10 @@ const HomeDetails = styled.div`
                 font-family: 'Poppins', sans-serif;
                 cursor: pointer;
                 transition: 1s;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
@@ -334,9 +391,18 @@ const HomeDetails = styled.div`
         flex-direction: column;
         padding: 0.5rem 4rem;
 
+        @media (max-width: 768px) {
+            padding: 0.5rem 2rem;
+        }
+
         h1 {
             color: var(--green);
             font-size: 2.5rem;
+
+            @media (max-width: 768px) {
+                margin-top: -1rem;
+                font-size: 2rem;
+            }
         }
 
         p {
@@ -344,6 +410,11 @@ const HomeDetails = styled.div`
             width: 50rem;
             font-size: 1.2rem;
             color: var(--green);
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-top: 0;
+            }
         }
 
         .container {
@@ -471,6 +542,10 @@ const HomeDetails = styled.div`
 
         img {
             width: 25rem;
+
+            @media (max-width: 768px) {
+                width: 20rem;
+            }
         }
     }
 `
