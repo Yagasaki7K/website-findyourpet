@@ -1,7 +1,10 @@
 :root {
-  --background: #303446;
+  --background: #eeeeee;
   --background-alt: #232634;
-  --green: #a6d189;
+  --green: #199966;
+  --green-alt: #3dcf9a;
+  --green-bubble: #75bea2;
+  --green-light: #c1e8bb;
   --orange: #ef9f76;
   --yellow: #eed49f;
   --purple: #ca9ee6;
@@ -12,17 +15,12 @@
   --black: #000;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #232634;
-    --background-alt: #303446;
-    --font: #f8f8f2;
-    --font-alt: #ccc;
-    --gray: rgba(255, 255, 255, 0.3);
-    --border: #3d3f52;
-    --font-black: #282a36;
+    --white: #232634;
+    --background: #eeeeee;
   }
-}
+} */
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -32,7 +30,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: var(--white);
+  background: var(--background);
   scroll-behavior: smooth;
 }
 
