@@ -80,7 +80,7 @@ const pets = () => {
 
                                     <div className="text">
                                         <p>{pets.name}</p>
-                                        <p>{pets.createdAt}</p>
+                                        <p>{pets.status}</p>
                                         <p>{pets.locale}</p>
                                     </div>
                                 </div>
