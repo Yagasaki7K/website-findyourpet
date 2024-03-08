@@ -4,7 +4,7 @@ import React from 'react'
 const Navigation = () => {
 
     function redirectToHome() {
-        window.location.href = '/pets'
+        window.location.href = '/reporte'
     }
 
     return (
@@ -18,7 +18,7 @@ const Navigation = () => {
                 <li><a href="/">Artigos</a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
 
-                <button onClick={redirectToHome}><i className="uil uil-signout"></i> Acessar</button>
+                <button onClick={redirectToHome}><i className="uil uil-signout"></i> Reportar</button>
             </div>
         </NavigationDetails>
     )
