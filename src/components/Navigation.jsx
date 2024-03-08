@@ -49,6 +49,15 @@ const NavigationDetails = styled.div`
             &:hover {
                 color: var(--green-alt);
             }
+
+            @media (max-width: 1024px) {
+                font-size: 0.9rem;
+                margin-right: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         button {

@@ -79,6 +79,10 @@ const HomeDetails = styled.div`
             img {                
                 margin-top: -10rem;
                 width: 50rem;
+
+                @media (max-width: 1024px) {
+                    width: 35rem;
+                }
             }
         }
     }
@@ -93,11 +97,14 @@ const HomeDetails = styled.div`
             img {
                 width: 30rem;
                 margin-right: 15rem;
+
+                @media (max-width: 1024px) {
+                    margin-right: 2rem;
+                }
             }
         }
 
         .rightContent {
-
             h2 {
                 font-size: 1.8rem;
             }
@@ -151,6 +158,12 @@ const HomeDetails = styled.div`
                 height: 25rem;
                 margin-right: 10rem;
 
+                @media (max-width: 1366px) {
+                    margin-right: 5rem;
+                    margin-bottom: -4rem;
+                    width: 14rem;
+                }
+
                 &:hover {
                     .image {
                         img {
@@ -173,6 +186,11 @@ const HomeDetails = styled.div`
                         height: 25rem;
                         object-fit: cover;
                         border-radius: 15px;
+
+                        @media (max-width: 1366px) {
+                            width: 18rem;
+                            height: 20rem;
+                        }
                     }
                 }
 
@@ -227,11 +245,19 @@ const HomeDetails = styled.div`
             img {
                 width: 14rem;
                 margin: 0 10rem;
+
+                @media (max-width: 1024px) {
+                    margin: 0 5rem;
+                }
             }
         }
 
         .rightContent {
             width: 40rem;
+
+            @media (max-width: 1024px) {
+                padding: 0 2rem;
+            }
 
             h1 {
                 font-size: 2.5rem;
@@ -327,10 +353,19 @@ const HomeDetails = styled.div`
             align-items: center;
             flex-wrap: wrap;
 
+            @media (max-width: 1024px) {
+                flex-direction: column;
+            }
+
             .card {
                 width: 30rem;
                 margin-right: 2rem;
                 cursor: pointer;
+
+                @media (max-width: 1366px) {
+                    width: 20rem;
+                    margin-right: 5rem;
+                }
 
                 &:hover {
                     .content {
@@ -346,12 +381,24 @@ const HomeDetails = styled.div`
 
                 img, .content {
                     width: 30rem;
+
+                    @media (max-width: 1366px) {
+                        width: 22rem;
+                    }
+
+                    @media (max-width: 1024px) {
+                        width: 20rem;
+                    }
                 }
 
                 img {
                     height: 20rem;
                     object-fit: cover;
                     border-radius: 15px 15px 0 0;
+
+                    @media (max-width: 1024px) {
+                        margin-top: 2rem;
+                    }
                 }
 
                 .content {
@@ -370,13 +417,21 @@ const HomeDetails = styled.div`
                     p {
                         color: var(--white);
                         font-size: 1rem;
-                        width: 30rem;
                         margin-top: -1rem;
+                        width: 30rem;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 3;
                         overflow: hidden;
                         display: -webkit-box;
+
+                        @media (max-width: 1366px) {
+                            width: 20rem;
+                        }
+
+                        @media (max-width: 1024px) {
+                            width: 18rem;
+                        }
                     }
 
                     .bottom-content {

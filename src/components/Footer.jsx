@@ -1,10 +1,10 @@
 import React from 'react'
-import PetsDetails from '../components/PetsDetails'
+import FooterDetails from './FooterDetails'
 
 const Footer = () => {
     return (
         <>
-            <PetsDetails>
+            <FooterDetails>
                 <footer>
                     <div className="footer-content break">
                         <h2>Geral</h2>
@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className="copyright">
                     <p> © 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas as imagens dos animais são de propriedade de seus devidos anunciantes</p>
                 </div>
-            </PetsDetails>
+            </FooterDetails>
         </>
     )
 }

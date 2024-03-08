@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const HomeDetails = styled.div`
+const FooterDetails = styled.div`
     box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.2);
     background: var(--green);
 
@@ -27,6 +27,10 @@ const HomeDetails = styled.div`
             margin-right: 200px;
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 1024px) {
+                margin-right: 100px;
+            }
 
             @media (max-width: 768px) {
                 margin-right: 50px;
@@ -57,7 +61,7 @@ const HomeDetails = styled.div`
 
     .copyright {
         text-align: center;
-        color: var(--gray);
+        color: var(--white);
         margin-top: 20px;
         padding: 1rem 0;
     }
@@ -71,4 +75,4 @@ const HomeDetails = styled.div`
     }
 `
 
-export default HomeDetails
+export default FooterDetails

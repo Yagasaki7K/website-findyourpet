@@ -22,6 +22,19 @@
   }
 } */
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--green-alt);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 20px;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }

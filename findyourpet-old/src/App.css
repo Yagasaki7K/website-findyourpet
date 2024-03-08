@@ -5,8 +5,6 @@
     --font-color: #f7f7f7;
 }
 
-
-
 .logo img {
     width: 3%;
     margin: 25px 0 0 70px;
@@ -180,7 +178,7 @@ button {
         margin-left: 2rem;
     }
 
-    .links{
+    .links {
         font-size: 0.9em;
         transform: scale(1.2);
     }
