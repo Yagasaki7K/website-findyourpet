@@ -15,8 +15,8 @@ const Navigation = () => {
                 <li><a href="/#howWorks">Como Funciona?</a></li>
                 <li><a href="/pets">Achados & Perdidos</a></li>
                 <li><a href="/mapa">Mapa</a></li>
-                <li><a href="#">Artigos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="/">Artigos</a></li>
+                <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
 
                 <button onClick={redirectToHome}><i className="uil uil-signout"></i> Acessar</button>
             </div>
