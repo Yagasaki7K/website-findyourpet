@@ -45,13 +45,12 @@ const pets = () => {
         <>
             <Navigation />
             <PagesDetails>
-
                 <a href="/reporte" className="advice">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
                 </a>
 
                 <h2 className="titlePets">Últimos animais cadastrados:</h2>
-                <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div>
+                {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div> */}
                 <div className="container">
                     {
                         Pets ? Pets.map((pets, index) => (

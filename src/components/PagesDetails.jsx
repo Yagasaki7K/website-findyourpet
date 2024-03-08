@@ -36,6 +36,10 @@ const PagesDetails = styled.div`
         color: var(--gray-alt);
     }
 
+    .titlePets {
+        color: var(--green);
+    }
+
     form {
         display: flex;
         justify-content: center;
