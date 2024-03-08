@@ -6,7 +6,7 @@ const SlugDetails = styled.div`
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 2rem 0;
+        margin: 5.5rem 0;
 
         .leftContent {
             img {
