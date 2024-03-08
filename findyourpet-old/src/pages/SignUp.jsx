@@ -66,10 +66,10 @@ const SignUp = () => {
     function getImage(event) {
         const file = event.target.files[0];
         setPetFile(file);
-    
+
         const storageRef = ref(storage, `/files/${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file);
-    
+
         uploadTask.on(
             "state_changed",
             (snapshot) => {
@@ -85,7 +85,7 @@ const SignUp = () => {
             }
         );
     }
-    
+
 
     function Redirect() {
         location.assign("/pets");
@@ -145,7 +145,7 @@ const SignUp = () => {
             <PetsDetails>
                 <Navigation />
 
-                <a href="/cadastro" className="advice-yellow">
+                <a href="/reporte" className="advice-yellow">
                     <i className="uil uil-shield-exclamation"></i>&nbsp;
                     Procure colocar as informações corretamente - Não será possível editar depois!
                     &nbsp;<i className="uil uil-shield-exclamation"></i>

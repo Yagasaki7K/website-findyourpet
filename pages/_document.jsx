@@ -39,15 +39,15 @@ export default class MyDocument extends Document {
             <Html lang="pt-br">
                 <NextSeo
                     title='Template'
-                    description='Description'
-                    canonical={`localhost:3000`}
+                    description='Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa.'
+                    canonical={`https://findyourpet.vercel.app/`}
                     openGraph={{
-                        url: 'localhost:3000',
+                        url: 'https://findyourpet.vercel.app/',
                         title: 'Template',
-                        description: 'Description',
+                        description: 'Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa.',
                         images: [
                             {
-                                url: 'https://i.imgur.com/VoOogmx.png',
+                                url: 'https://i.imgur.com/1u4wb4s.png',
                                 width: 460,
                                 height: 460,
                                 alt: 'Template',
