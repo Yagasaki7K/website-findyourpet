@@ -139,53 +139,52 @@ export default function Home() {
                     <p>Sua fonte preferida de artigos, dicas e conselhos sobre animais de estimação perdidos e achados, cuidados com animais de estimação e muito mais.</p>
 
                     <div className="container">
-                        <a href="#">
-                            <div className="card">
-                                <img src="/faind.jpg" alt="" />
-                                <div className="content">
-                                    <h4>Perdi meu animalzinho - O que eu faço?</h4>
-                                    <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
+                        <div className="container">
+                            <a href="https://blog-findyourpet.vercel.app/blog/perdi-meu-animalzinho-o-que-fazer" target="_blank" rel="noreferrer">
+                                <div className="card">
+                                    <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                    <div className="content">
+                                        <h4>Perdi meu animalzinho - O que eu faço?</h4>
+                                        <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
 
-                                    <div className="bottom-content">
-                                        <p>13.03.2024</p>
-                                        <button>Veja mais</button>
+                                        <div className="bottom-content">
+                                            <p>11.03.2024</p>
+                                            <button>Veja mais</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
-                        <a href="#">
-                            <div className="card">
-                                <img src="/faind.jpg" alt="" />
-                                <div className="content">
-                                    <h4>Perdi meu animalzinho - O que eu faço?</h4>
-                                    <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
+                            <a href="https://blog-findyourpet.vercel.app/blog/perdi-meu-animalzinho-o-que-fazer" target="_blank" rel="noreferrer">
+                                <div className="card">
+                                    <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                    <div className="content">
+                                        <h4>Perdi meu animalzinho - O que eu faço?</h4>
+                                        <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
 
-                                    <div className="bottom-content">
-                                        <p>13.03.2024</p>
-                                        <button>Veja mais</button>
+                                        <div className="bottom-content">
+                                            <p>11.03.2024</p>
+                                            <button>Veja mais</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
-                        <a href="#">
-                            <div className="card">
-                                <div className="image">
-                                    <img src="/faind.jpg" alt="" />
-                                </div>
+                            <a href="https://blog-findyourpet.vercel.app/blog/perdi-meu-animalzinho-o-que-fazer" target="_blank" rel="noreferrer">
+                                <div className="card">
+                                    <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                    <div className="content">
+                                        <h4>Perdi meu animalzinho - O que eu faço?</h4>
+                                        <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
 
-                                <div className="content">
-                                    <h4>Perdi meu animalzinho - O que eu faço?</h4>
-                                    <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
-
-                                    <div className="bottom-content">
-                                        <p>13.03.2024</p>
-                                        <button>Veja mais</button>
+                                        <div className="bottom-content">
+                                            <p>11.03.2024</p>
+                                            <button>Veja mais</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
