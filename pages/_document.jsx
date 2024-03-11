@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
                         description: 'Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa.',
                         images: [
                             {
-                                url: 'https://i.imgur.com/1u4wb4s.png',
+                                url: 'https://cdn-images-1.medium.com/v2/resize:fit:800/0*nfX-byWFyxV9Sznb.png',
                                 width: 460,
                                 height: 460,
                                 alt: 'Template',
