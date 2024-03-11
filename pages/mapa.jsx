@@ -1,10 +1,13 @@
-import React from 'react'
-import PagesDetails from '../src/components/PagesDetails'
+import dynamic from "next/dynamic";
 
-const mapa = () => {
+const MapComponent = dynamic(() => import("../src/components/MapComponent"), {
+    ssr: false,
+});
+
+export default function Mapa() {
     return (
-        <PagesDetails><h1>EM CONSTRUÇÃO</h1></PagesDetails>
-    )
+        <div>
+            <MapComponent />
+        </div>
+    );
 }
-
-export default mapa
