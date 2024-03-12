@@ -6,6 +6,8 @@ import { toast } from 'sonner'
 import formatPhoneNumber from '../src/utils/formatPhone'
 import { badWords } from '../src/utils/badwords'
 import Head from 'next/head'
+import imgServices from '../src/services/img.services'
+import petServices from '../src/services/pet.services'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
@@ -35,26 +37,21 @@ const SignUp = () => {
     }
 
     function getImage(event) {
-        const file = event.target.files[0];
-        setPetFile(file);
-
-        const storageRef = ref(storage, `/files/${file.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, file);
-
-        uploadTask.on(
-            "state_changed",
-            (snapshot) => {
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log(Math.floor(progress));
-            },
-            (error) => console.log(error),
-            () => {
-                // download url
-                getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-                    setPetUrl(url);
-                });
-            }
-        );
+        const file = event.target.files[0]
+        if (file.type !== "image/jpeg" && file.type !== "image/jpg" && file.type !== "image/png") {
+            toast.warning("Apenas arquivos de imagem .png ou .jpg")
+            event.target.value = ''
+            event.target.files = null
+        } else if (file.size > 4 * 1024 * 1024) {
+            toast.warning("Tamanho do arquivo de imagem incompativel")
+            event.target.value = ''
+            event.target.files = null
+        } else {
+            imgServices.uploadImgPost("files", file, file.type).then((url) => {
+                setPetFile(file.name)
+                setPetUrl(url)
+            })
+        }
     }
 
     function Redirect() {
@@ -80,14 +77,14 @@ const SignUp = () => {
             locale: PetLocale,
             contact: PetContact,
             status: PetSituation,
-            image: PetFile.name,
+            image: PetFile,
             imageURL: PetUrl,
             slug: PetName.toLowerCase().replace(/ /g, '-') + Math.floor(Math.random() * 1000),
             createdAt: PetCreated,
             validDate: PetValid
         }
 
-        await (PetServices.addPets(NewPets))
+        await (petServices.addPets(NewPets))
         toast.success('Registro efetuado com sucesso!');
 
         Redirect();
@@ -139,7 +136,7 @@ const SignUp = () => {
                             maxLength={15} size={24} onChange={(event) => { setPetName(event.target.value) }} value={PetName} />
 
                         <h4>Foto do Animal</h4>
-                        <input type="file" id="photo" onChange={getImage}></input>
+                        <input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={getImage}></input>
 
                         <h4>Descrição do Animal</h4>
                         <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}
