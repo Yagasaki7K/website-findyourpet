@@ -20,6 +20,8 @@ const SignUp = () => {
     const [PetCreated, setPetCreated] = useState('');
     const [PetValid, setPetValid] = useState('');
 
+    const [badWordsExists, setBadWordsExists] = useState(false)
+
     function collectData() {
         //Pet registration creation date
         const date = new Date()
@@ -61,8 +63,9 @@ const SignUp = () => {
 
         if (hasBadWords) {
             toast.warning('Por favor, não use palavras inapropriadas!');
+            setBadWordsExists(true)
         } else {
-            null
+            setBadWordsExists(false)
         }
     }
 
@@ -92,7 +95,11 @@ const SignUp = () => {
         } else {
             checkBadWords(PetName);
             checkBadWords(PetDescription);
-            addToFirebase();
+
+            if (badWordsExists === false) {
+                addToFirebase();
+            }
+
         }
     }
 
