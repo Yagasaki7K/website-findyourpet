@@ -54,10 +54,6 @@ const SignUp = () => {
         }
     }
 
-    function Redirect() {
-        location.assign("/pets");
-    }
-
     function checkBadWords(string) {
         const filterBadWords = badWords;
 
@@ -66,7 +62,7 @@ const SignUp = () => {
         if (hasBadWords) {
             toast.warning('Por favor, não use palavras inapropriadas!');
         } else {
-            toast.success('Texto validado com sucesso!');
+            null
         }
     }
 
@@ -86,8 +82,7 @@ const SignUp = () => {
 
         await (petServices.addPets(NewPets))
         toast.success('Registro efetuado com sucesso!');
-
-        Redirect();
+        window.location.href = "/pets"
     }
 
     function sendData() {
