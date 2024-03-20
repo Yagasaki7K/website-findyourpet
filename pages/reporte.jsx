@@ -3,7 +3,6 @@ import PagesDetails from '../src/components/PagesDetails'
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer'
 import { toast } from 'sonner'
-import formatPhoneNumber from '../src/utils/formatPhone'
 import { badWords } from '../src/utils/badwords'
 import Head from 'next/head'
 import imgServices from '../src/services/img.services'
@@ -21,6 +20,31 @@ const SignUp = () => {
     const [PetValid, setPetValid] = useState('');
 
     const [badWordsExists, setBadWordsExists] = useState(false)
+
+    const handleChangeContact = (event) => {
+        const inputPhoneNumber = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        setPetContact(formatPhoneNumber(inputPhoneNumber));
+    };
+
+    const formatPhoneNumber = (phoneNumber) => {
+        if (!phoneNumber) return ''; // Retorna vazio se não houver número
+
+        // Aplica a máscara ao número de telefone
+        let formattedPhoneNumber = '';
+        formattedPhoneNumber += `(${phoneNumber.slice(0, 2)}`;
+
+        if (phoneNumber.length > 2) {
+            formattedPhoneNumber += `) ${phoneNumber.slice(2, 3)}`;
+        }
+        if (phoneNumber.length > 3) {
+            formattedPhoneNumber += ` ${phoneNumber.slice(3, 7)}`;
+        }
+        if (phoneNumber.length > 7) {
+            formattedPhoneNumber += `-${phoneNumber.slice(7, 11)}`;
+        }
+
+        return formattedPhoneNumber;
+    };
 
     function collectData() {
         //Pet registration creation date
@@ -89,7 +113,8 @@ const SignUp = () => {
     }
 
     function sendData() {
-        if (!PetName || !PetDescription || !PetLocale || !PetContact) {
+        if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 16) {
+            console.log(PetContact.length)
             toast.warning('Por favor, preencha todos os campos obrigatórios.');
 
         } else {
@@ -158,8 +183,9 @@ const SignUp = () => {
 
                         <h4>Número do WhatsApp*</h4>
                         <div>
-                            <input type="text" id="contact" placeholder="19123456789"
-                                onChange={(event) => { setPetContact(event.target.value) }} value={PetContact} maxLength={11} size={24} />
+                            <input type="text" id="contact" placeholder="(00) 0 0000-0000"
+                                onChange={handleChangeContact} value={PetContact} maxLength={16}
+                            />
                         </div>
 
                         <div>
