@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/assets/logo.png?raw=true" width="500"/>
+   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/public/logo.png" width="500"/>
 </p>
 
 <p align="center">
