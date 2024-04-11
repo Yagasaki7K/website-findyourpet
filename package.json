@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "yagasaki": "yarn upgrade-interactive --latest && npx update-browserslist-db@latest"
+    "yagasaki": "yarn upgrade-interactive --latest && npx update-browserslist-db@latest",
+    "commit": "yarn run build && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
