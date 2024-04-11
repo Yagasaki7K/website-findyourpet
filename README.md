@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/assets/logotipo.png?raw=true" width="500"/>
+   <img src="https://github.com/Yagasaki7K/website-findyourpet/blob/main/public/logo.png" width="200"/>
 </p>
 
 <p align="center">
@@ -13,8 +13,8 @@
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-findyourpet?color=5965e0" />
-  <a href="https://github.com/Yagasaki7K/website-findyourpet/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-findyourpet?color=5965e0&logo=github">
+  <a href="https://twitter.com/yagasaki7k">
+    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Contact%20me%20at%20@Yagasaki7K" alt="Contact me at @Yagasaki7K" />
   </a>
 </p>
 
@@ -26,6 +26,10 @@
     </a>
   </sub>
 </div>
+
+<p align="center">
+  <img src="https://github.com/Yagasaki7K/website-cafecomleite/assets/23272064/febb5104-0741-481a-9171-44ff1b2b3e26" alt="café com leite palette" width="400" />
+</p>
 
 # 📌 Table of Contents
 

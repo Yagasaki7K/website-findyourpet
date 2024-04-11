@@ -20,11 +20,11 @@ const pets = () => {
     }
 
     async function deletePets(id, image) {
-        await Promise.all([PetServices.deletePets(id), ImgServices.deleteImage(image)])
+        await Promise.all([petServices.deletePets(id), ImgServices.deleteImage(image)])
     }
 
     async function checkTime() {
-        const data = await PetServices.getAllPets()
+        const data = await petServices.getAllPets()
         const id = data.docs.map((doc) => doc.id)
         const image = data.docs.map((doc) => doc.data().image)
         const validUntil = data.docs.map((doc) => doc.data().validDate)

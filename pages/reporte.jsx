@@ -20,10 +20,12 @@ const SignUp = () => {
     const [PetValid, setPetValid] = useState('');
 
     const [badWordsExists, setBadWordsExists] = useState(false)
+    const [fieldContact, getFieldContact] = useState('');
 
     const handleChangeContact = (event) => {
         const inputPhoneNumber = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-        setPetContact(formatPhoneNumber(inputPhoneNumber));
+        setPetContact(inputPhoneNumber);
+        getFieldContact(formatPhoneNumber(inputPhoneNumber));
     };
 
     const formatPhoneNumber = (phoneNumber) => {
@@ -113,8 +115,7 @@ const SignUp = () => {
     }
 
     function sendData() {
-        if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 16) {
-            console.log(PetContact.length)
+        if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 11) {
             toast.warning('Por favor, preencha todos os campos obrigatórios.');
 
         } else {
@@ -135,6 +136,7 @@ const SignUp = () => {
         setPetUrl('');
         setPetLocale('');
         setPetContact('');
+        getFieldContact('');
         setPetSituation('');
         setPetCreated('');
         setPetValid('');
@@ -184,7 +186,7 @@ const SignUp = () => {
                         <h4>Número do WhatsApp*</h4>
                         <div>
                             <input type="text" id="contact" placeholder="(00) 0 0000-0000"
-                                onChange={handleChangeContact} value={PetContact} maxLength={16}
+                                onChange={handleChangeContact} value={fieldContact} maxLength={16}
                             />
                         </div>
 
