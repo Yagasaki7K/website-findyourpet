@@ -16,7 +16,7 @@ const Maps = () => {
             zoom: 12
         });
 
-        new mapboxgl.Marker({ color: 'red' })
+        new mapboxgl.Marker({ color: 'purple' })
             .setLngLat([-22.856497135943872, -47.05535307439016])
             .setPopup(new mapboxgl.Popup().setHTML("<h3>Animal 1</h3><p>Descrição do animal 1</p>"))
             .addTo(map);
@@ -24,11 +24,6 @@ const Maps = () => {
         new mapboxgl.Marker({ color: 'blue' })
             .setLngLat([-22.851217688320244, -47.06275597127332])
             .setPopup(new mapboxgl.Popup().setHTML("<h3>Animal 2</h3><p>Descrição do animal 2</p>"))
-            .addTo(map);
-
-        new mapboxgl.Marker({ color: 'purple' })
-            .setLngLat([-22.842596127208118, -47.05443039448861])
-            .setPopup(new mapboxgl.Popup().setHTML("<h3>Animal 3</h3><p>Descrição do animal 3</p>"))
             .addTo(map);
 
         return () => map.remove();
