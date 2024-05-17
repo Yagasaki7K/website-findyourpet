@@ -10,10 +10,12 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "firebase": "^10.11.0",
+    "mapbox-gl": "^3.3.0",
     "next": "14.2.1",
     "next-seo": "^6.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-map-gl": "^7.1.7",
     "sonner": "^1.4.41",
     "styled-components": "^6.1.8"
   },

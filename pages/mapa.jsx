@@ -1,10 +1,13 @@
-import React from 'react'
-import PagesDetails from '../src/components/PagesDetails'
+import React from 'react';
+import Maps from '../src/components/Maps';
 
-const mapa = () => {
+const Mapa = () => {
     return (
-        <PagesDetails><h1>EM CONSTRUÇÃO</h1></PagesDetails>
-    )
-}
+        <div style={{ width: '100%', height: '100vh' }}>
+            <title>FindYourPet | Mapa</title>
+            <Maps />
+        </div>
+    );
+};
 
-export default mapa
+export default Mapa;
