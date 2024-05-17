@@ -26,6 +26,11 @@ const Maps = () => {
             .setPopup(new mapboxgl.Popup().setHTML("<h3>Animal 2</h3><p>Descrição do animal 2</p>"))
             .addTo(map);
 
+        new mapboxgl.Marker({ color: 'purple' })
+            .setLngLat([-22.842596127208118, -47.05443039448861])
+            .setPopup(new mapboxgl.Popup().setHTML("<h3>Animal 3</h3><p>Descrição do animal 3</p>"))
+            .addTo(map);
+
         return () => map.remove();
     }, []);
 
