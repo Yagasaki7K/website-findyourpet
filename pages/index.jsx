@@ -4,6 +4,7 @@ import HomeDetails from '../src/components/HomeDetails'
 import Footer from '../src/components/Footer'
 import { useEffect, useState } from 'react'
 import petServices from '../src/services/pet.services'
+import { getLabelColorBasedOnStatus } from '../src/utils/getLabelColorBasedOnStatus'
 
 export default function Home() {
     function redirectToHome() {
@@ -99,9 +100,17 @@ export default function Home() {
                                         </div>
 
                                         <div className="text">
-                                            <p>{pets.name}</p>
-                                            <p>{pets.createdAt}</p>
-                                            <p>{pets.locale}</p>
+                                            <p style={{backgroundColor: "#a3a3a3"}} >
+                                                {pets.name}
+                                            </p>
+                                            
+                                            <p style={{backgroundColor: getLabelColorBasedOnStatus(pets.status)}} >
+                                                {pets.status} - {pets.createdAt}
+                                            </p>
+
+                                            <p>
+                                                {pets.locale}
+                                            </p>
                                         </div>
                                     </div>
                                 </a>
