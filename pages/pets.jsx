@@ -4,6 +4,7 @@ import petServices from '../src/services/pet.services'
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer'
 import Head from 'next/head'
+import { getLabelColorBasedOnStatus } from '../src/utils/getLabelColorBasedOnStatus'
 
 const pets = () => {
 
@@ -79,9 +80,17 @@ const pets = () => {
                                     </div>
 
                                     <div className="text">
-                                        <p>{pets.name}</p>
-                                        <p>{pets.status}</p>
-                                        <p>{pets.locale}</p>
+                                        <p style={{backgroundColor: "#a3a3a3"}}>
+                                            {pets.name}
+                                        </p>
+
+                                        <p style={{backgroundColor: getLabelColorBasedOnStatus(pets.status)}}>
+                                            {pets.status} - {pets.createdAt}
+                                        </p>
+                                        
+                                        <p>
+                                            {pets.locale}
+                                        </p>
                                     </div>
                                 </div>
                             </a>
