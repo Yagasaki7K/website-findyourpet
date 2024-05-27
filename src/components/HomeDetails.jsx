@@ -6,8 +6,8 @@ const HomeDetails = styled.div`
         justify-content: space-between;
 
         .leftContent {
-            width: 40rem;
-            padding-left: 4rem;
+            width: 60rem;
+            padding-left: 12rem;
 
             @media (max-width: 768px){
                 padding-left: 2rem;
@@ -15,8 +15,12 @@ const HomeDetails = styled.div`
 
             h3 {
                 font-size: 3rem;
-                color: var(--green);
+                color: var(--black);
                 margin-bottom: 1.5rem;
+
+                span {
+                    color: var(--green);
+                }
             }
 
             p {
@@ -106,8 +110,8 @@ const HomeDetails = styled.div`
     .howWorks {
         display: flex;
         justify-content: center;
-        margin-top: 10rem;
-        margin-bottom: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 4rem;
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -117,7 +121,7 @@ const HomeDetails = styled.div`
         .leftContent {
             img {
                 width: 30rem;
-                margin-right: 15rem;
+                margin-right: 10rem;
 
                 @media (max-width: 1024px) {
                     margin-right: 2rem;
@@ -130,15 +134,18 @@ const HomeDetails = styled.div`
         }
 
         .rightContent {
+            width: 40rem;
             @media (max-width: 768px) {
                 margin-left: 3rem;
 
             }
+
             h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+                color: var(--green);
             }
 
-            li {
+            p {
                 list-style: none;
                 margin-bottom: 1.2rem;
                 font-size: 1.2rem;
@@ -252,7 +259,7 @@ const HomeDetails = styled.div`
             background: var(--green-alt);
             color: var(--white);
             border: none;
-            padding: 2rem 8rem;
+            padding: 1rem 5rem;
             border-radius: 20px;
             font-size: 1.5rem;
             font-weight: 600;
@@ -279,8 +286,11 @@ const HomeDetails = styled.div`
 
         .leftContent {
             img {
-                width: 14rem;
+                width: 32rem;
                 margin: 0 10rem;
+                background: var(--green-alt);
+                padding: 2rem;
+                border-radius: 15px;
 
                 @media (max-width: 1024px) {
                     margin: 0 5rem;
@@ -301,6 +311,7 @@ const HomeDetails = styled.div`
 
             h1 {
                 font-size: 2.5rem;
+                color: var(--green);
             }
 
             p {
@@ -339,10 +350,10 @@ const HomeDetails = styled.div`
         }
 
         .leftContent {
-            padding: 2rem 0;
+            padding: 4rem 0;
 
             img {
-                width: 16rem;
+                width: 24rem;
                 margin-right: 5rem;
 
                 @media (max-width: 768px) {
@@ -551,6 +562,47 @@ const HomeDetails = styled.div`
                 width: 20rem;
             }
         }
+    }
+
+    .painel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 4rem 0;
+
+        p {
+            width: 50rem;
+        }
+
+        button {
+            background: var(--white);
+            color: var(--green-alt);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: 1s;
+
+            &:hover {
+                background: var(--green-bubble);
+                color: var(--white);
+            }
+        }
+    }
+
+    .white {
+        background: var(--white);
+        color: var(--green);
+    }
+
+    .green {
+        background: var(--green-alt);
+        color: var(--white);
     }
 `
 

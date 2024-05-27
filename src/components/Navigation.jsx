@@ -15,8 +15,8 @@ const Navigation = () => {
                 <li><a href="/pets" className="active">Achar um Pet</a></li>
                 <li><a href="/#howWorks">Como Funciona?</a></li>
                 <li><a href="/mapa">Mapa</a></li>
-                <li><a href="/">Artigos</a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
+                <li><a href="https://blog-findyourpet.vercel.app/blog" target="_blank" rel="noreferrer">Blog <i className="uil uil-external-link-alt"></i></a></li>
 
                 <button onClick={redirectToHome}>Cadastrar <i className="uil uil-signout"></i></button>
             </div>
@@ -33,7 +33,6 @@ const NavigationDetails = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0rem 4rem;
-    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.2);
     background: var(--background);
 
     img {
