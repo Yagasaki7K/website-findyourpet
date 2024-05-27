@@ -9,16 +9,16 @@ const Navigation = () => {
 
     return (
         <NavigationDetails>
-            <h4><a href="/">FindYourPet</a></h4>
+            <a href="/"><img src="/logotipo-100px.png" alt="logo" /></a>
 
             <div className="menu">
-                <li><a href="/pets">Achados & Perdidos</a></li>
+                <li><a href="/pets" className="active">Achar um Pet</a></li>
                 <li><a href="/#howWorks">Como Funciona?</a></li>
                 <li><a href="/mapa">Mapa</a></li>
                 <li><a href="/">Artigos</a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
 
-                <button onClick={redirectToHome}><i className="uil uil-signout"></i> Reportar</button>
+                <button onClick={redirectToHome}>Cadastrar <i className="uil uil-signout"></i></button>
             </div>
         </NavigationDetails>
     )
@@ -36,9 +36,9 @@ const NavigationDetails = styled.div`
     box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.2);
     background: var(--background);
 
-    h4 {
-        font-size: 1.8rem;
-        color: var(--green);
+    img {
+        width: 25rem;
+        padding: 1rem;
     }
 
     @media (max-width: 768px){
@@ -52,12 +52,12 @@ const NavigationDetails = styled.div`
         li {
             list-style: none;
             margin-right: 2.5rem;
-            color: var(--green);
+            color: var(--green-alt);
             font-size: 1.2rem;
             transition: 1s;
 
             &:hover {
-                color: var(--green-alt);
+                color: var(--green);
             }
 
             @media (max-width: 1024px) {
@@ -68,6 +68,10 @@ const NavigationDetails = styled.div`
             @media (max-width: 768px) {
                 display: none;
             }
+        }
+
+        .active {
+            color: var(--green);
         }
 
         button {

@@ -11,16 +11,16 @@ const Footer = () => {
                         <li><a href="/reporte">Perdi meu pet</a></li>
                         <li><a href="/reporte">Achei um pet</a></li>
                         <li><a href="/pets">Quero adotar um pet</a></li>
-                        <li><a href="#">Artigos</a></li>
+                        <li><a href="https://blog-findyourpet.vercel.app/blog" target="_blank" rel="noreferrer">Artigos</a></li>
                         <li><a href="/mapa">Mapa</a></li>
                         <li><a href="https://kalify.vercel.app/" target="_blank" rel="noreferrer">Sobre</a></li>
                     </div>
 
                     <div className="footer-content break">
                         <h2>Sobre Nós</h2>
-                        <li><a href="#">Nossa missão</a></li>
-                        <li><a href="#">Voluntários</a></li>
-                        <li><a href="#">Junte-se ao time</a></li>
+                        <li><a href="https://kalify.vercel.app/#about" target="_blank" rel="noreferrer">Nossa missão</a></li>
+                        <li><a href="https://kalify.vercel.app/#team" target="_blank" rel="noreferrer">Voluntários</a></li>
+                        <li><a href="https://kalify.vercel.app/#team" target="_blank" rel="noreferrer">Junte-se ao time</a></li>
                         <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
                     </div>
 

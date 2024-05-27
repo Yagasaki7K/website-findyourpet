@@ -80,14 +80,14 @@ const pets = () => {
                                     </div>
 
                                     <div className="text">
-                                        <p style={{backgroundColor: "#a3a3a3"}}>
+                                        <p style={{ backgroundColor: "#3dcf9a" }}>
                                             {pets.name}
                                         </p>
 
-                                        <p style={{backgroundColor: getLabelColorBasedOnStatus(pets.status)}}>
+                                        <p style={{ backgroundColor: getLabelColorBasedOnStatus(pets.status) }}>
                                             {pets.status} - {pets.createdAt}
                                         </p>
-                                        
+
                                         <p>
                                             {pets.locale}
                                         </p>

@@ -1,9 +1,9 @@
 export function getLabelColorBasedOnStatus(status) {
     const statusLabelColor = {
-        'Perdido': '#DC2828',
-        'Encontrado': '#3370d4',
-        'Adoção': 'orange',
+        'Perdido': '#e68284',
+        'Encontrado': '#ca9ee6',
+        'Adoção': '#ef9f76',
     };
 
-    return statusLabelColor[status] ?? "#75BEA2";
+    return statusLabelColor[status] ?? "#199966";
 }

@@ -235,7 +235,7 @@ const HomeDetails = styled.div`
                     margin-left: 1rem;
                     
                     p {
-                        background: var(--green-bubble);
+                        background: var(--green);
                         color: var(--white);
                         padding: 0.5rem;
                         text-align: center;
@@ -493,7 +493,7 @@ const HomeDetails = styled.div`
                         color: var(--white);
                         font-size: 1rem;
                         margin-top: -1rem;
-                        width: 30rem;
+                        width: 28rem;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 3;
