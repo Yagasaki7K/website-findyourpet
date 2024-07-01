@@ -26,4 +26,5 @@ class ImgServices {
         return await deleteObject(filesImagesRef);
     };
 }
+
 export default new ImgServices();
