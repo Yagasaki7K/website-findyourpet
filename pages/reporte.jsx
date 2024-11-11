@@ -162,13 +162,13 @@ const SignUp = () => {
                     <form onChange={() => collectData()}>
                         <h4>Nome do Animal</h4>
                         <input type="text" id="name" placeholder="Nome do Animalzinho"
-                            maxLength={15} size={24} onChange={(event) => { setPetName(event.target.value) }} value={PetName} />
+                            maxLength={25} size={24} onChange={(event) => { setPetName(event.target.value) }} value={PetName} />
 
                         <h4>Foto do Animal</h4>
                         <input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={getImage}></input>
 
                         <h4>Descrição do Animal</h4>
-                        <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={50}
+                        <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={300}
                             rows="4" cols="28" size={30} onChange={(event) => { setPetDescription(event.target.value) }} value={PetDescription} />
 
                         <h4>Cidade/Bairro do Animal</h4>
