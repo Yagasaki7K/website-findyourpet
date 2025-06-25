@@ -106,6 +106,10 @@ const PetsPage = ({ initialPets }) => {
         <>
             <Head>
                 <title>FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar</title>
+                <link rel="icon" type="image/png" href="/logo.png" />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa." />
             </Head>
 
             <Navigation />

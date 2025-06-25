@@ -34,6 +34,8 @@ const PetSlugPage = ({ pet }) => {
                 <title>FindYourPet | {pet?.name}</title>
                 <meta name="description" content={pet?.description} />
                 <link rel="icon" type="image/png" href="/logo.png" />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <Navigation />
             <PagesDetails>
