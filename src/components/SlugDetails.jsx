@@ -7,11 +7,12 @@ const SlugDetails = styled.div`
         justify-content: center;
         align-items: center;
         margin: 5.5rem 0;
+        max-width: 50vw;
 
         .leftContent {
             img {
-                width: 20rem;
-                height: 19rem;
+                width: 22rem;
+                height: 25rem;
                 border-radius: 15px 0 0 15px;
                 object-fit: cover;
             }
@@ -22,7 +23,7 @@ const SlugDetails = styled.div`
             padding: 1rem;
             border-radius: 0 15px 15px 0;
             color: var(--white);
-            height: 19rem;
+            height: 25rem;
             margin-top: -6px;
 
             p {

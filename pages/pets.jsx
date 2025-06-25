@@ -145,7 +145,6 @@ const PetsPage = ({ initialPets }) => {
                         )) : 'Carregando...'
                     }
                 </div>
-                {/* <Modal /> */}
             </PagesDetails>
             <Footer />
         </>

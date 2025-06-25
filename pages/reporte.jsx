@@ -107,6 +107,7 @@ const SignUp = () => {
 
         await (petServices.addPets(NewPets))
         toast.success('Registro efetuado com sucesso!');
+        getInfosAndSendToDiscord(NewPets)
         window.location.href = "/success"
     }
 

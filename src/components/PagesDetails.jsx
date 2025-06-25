@@ -143,81 +143,80 @@ const PagesDetails = styled.div`
     }
 
     .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 50vh;
 
-            .content {
-                cursor: pointer;
-                width: 15rem;
-                height: 25rem;
-                margin-right: 10rem;
-                margin: 1rem 10rem 1rem 0;
+        .content {
+            cursor: pointer;
+            width: 15rem;
+            height: 25rem;
+            margin: 1rem 10rem 1rem 0;
 
-                @media (max-width: 1366px) {
-                    margin-right: 5rem;
-                    margin-bottom: -4rem;
-                    width: 14rem;
-                }
+            @media (max-width: 1366px) {
+                margin-right: 5rem;
+                margin-bottom: -4rem;
+                width: 14rem;
+            }
 
-                &:hover {
-                    .image {
-                        img {
-                            transition: 1s;
-                            filter: brightness(80%);
-                        }
-                    }
-
-                    .text {
-                        p {
-                            transition: 1s;
-                            background: var(--green);
-                        }
-                    }
-                }
-                
+            &:hover {
                 .image {
                     img {
-                        width: 22rem;
-                        height: 25rem;
-                        object-fit: cover;
-                        border-radius: 15px;
-
-                        @media (max-width: 1366px) {
-                            width: 18rem;
-                            height: 20rem;
-                        }
+                        transition: 1s;
+                        filter: brightness(80%);
                     }
                 }
 
                 .text {
-                    position: relative;
-                    z-index: 1;
-                    width: 13rem;
-                    margin-top: -9rem;
-                    margin-left: 1rem;
-                    
                     p {
-                        background: var(--green-bubble);
-                        color: var(--white);
-                        padding: 0.5rem;
-                        text-align: center;
-                        font-size: 0.9rem;
-                        border-radius: 25px;
-                        margin-top: 0;
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .locale {
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        transition: 1s;
+                        background: var(--green);
                     }
                 }
             }
+            
+            .image {
+                img {
+                    width: 22rem;
+                    height: 25rem;
+                    object-fit: cover;
+                    border-radius: 15px;
+
+                    @media (max-width: 1366px) {
+                        width: 18rem;
+                        height: 20rem;
+                    }
+                }
+            }
+
+            .text {
+                position: relative;
+                z-index: 1;
+                width: 13rem;
+                margin-top: -9rem;
+                margin-left: 1rem;
+                
+                p {
+                    background: var(--green-bubble);
+                    color: var(--white);
+                    padding: 0.5rem;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    border-radius: 25px;
+                    margin-top: 0;
+                    margin-bottom: 0.5rem;
+                }
+
+                .locale {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
         }
+    }
 `
 
 export default PagesDetails
