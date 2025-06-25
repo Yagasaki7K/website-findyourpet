@@ -209,6 +209,12 @@ const PagesDetails = styled.div`
                         margin-top: 0;
                         margin-bottom: 0.5rem;
                     }
+
+                    .locale {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }

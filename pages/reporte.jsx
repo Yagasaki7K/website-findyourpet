@@ -3,7 +3,6 @@ import PagesDetails from '../src/components/PagesDetails'
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer'
 import { toast } from 'sonner'
-import { badWords } from '../src/utils/badwords'
 import Head from 'next/head'
 import imgServices from '../src/services/img.services'
 import petServices from '../src/services/pet.services'
@@ -19,8 +18,8 @@ const SignUp = () => {
     const [PetCreated, setPetCreated] = useState('');
     const [PetValid, setPetValid] = useState('');
 
-    const [badWordsExists, setBadWordsExists] = useState(false)
     const [fieldContact, getFieldContact] = useState('');
+    const [isUploading, setIsUploading] = useState(false);
 
     const handleChangeContact = (event) => {
         const inputPhoneNumber = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
@@ -64,21 +63,31 @@ const SignUp = () => {
         setPetValid(`${dayv}/${monthv}/${yearv}`)
     }
 
-    function getImage(event) {
-        const file = event.target.files[0]
+    async function getImage(event) {
+        const file = event.target.files[0];
+        if (!file) return;
         if (file.type !== "image/jpeg" && file.type !== "image/jpg" && file.type !== "image/png") {
             toast.warning("Apenas arquivos de imagem .png ou .jpg")
             event.target.value = ''
-            event.target.files = null
+            return;
         } else if (file.size > 4 * 1024 * 1024) {
             toast.warning("Tamanho do arquivo de imagem incompativel")
             event.target.value = ''
-            event.target.files = null
+            return;
         } else {
-            imgServices.uploadImgPost("files", file, file.type).then((url) => {
-                setPetFile(file.name)
-                setPetUrl(url)
-            })
+            try {
+                setIsUploading(true);
+                const url = await imgServices.uploadImgPost("files", file, file.type);
+                setPetFile(file.name);
+                setPetUrl(url);
+                toast.success("Imagem enviada com sucesso!");
+            } catch (err) {
+                toast.error("Erro ao enviar imagem.");
+                setPetFile('');
+                setPetUrl('');
+            } finally {
+                setIsUploading(false);
+            }
         }
     }
 
@@ -101,12 +110,15 @@ const SignUp = () => {
         window.location.href = "/success"
     }
 
-    function sendData() {
+    async function sendData() {
         if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 11) {
             toast.warning('Por favor, preencha todos os campos obrigatórios.');
-
+        } else if (!PetUrl) {
+            toast.warning('Por favor, envie uma imagem do animal antes de cadastrar.');
+        } else if (isUploading) {
+            toast.warning('Aguarde o envio da imagem ser concluído.');
         } else {
-            addToFirebase();
+            await addToFirebase();
         }
     }
 
@@ -140,13 +152,25 @@ const SignUp = () => {
                 </a>
 
                 <div className="modal-signup">
-                    <form onChange={() => collectData()}>
+                    <form onChange={() => collectData()} onSubmit={e => e.preventDefault()}>
                         <h4>Nome do Animal</h4>
                         <input type="text" id="name" placeholder="Nome do Animalzinho"
                             maxLength={25} size={24} onChange={(event) => { setPetName(event.target.value) }} value={PetName} />
 
                         <h4>Foto do Animal</h4>
-                        <input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={() => getImage()}></input>
+                        <input
+                            type="file"
+                            id="photo"
+                            accept=".png, .jpg, .jpeg"
+                            onChange={getImage}
+                            disabled={isUploading}
+                        />
+                        {isUploading && <div style={{ color: '#3dcf9a', marginTop: 4 }}>Enviando imagem...</div>}
+                        {PetUrl && (
+                            <div style={{ marginTop: 8 }}>
+                                <img src={PetUrl} alt="Pré-visualização" style={{ maxWidth: 120, maxHeight: 120, borderRadius: 8 }} />
+                            </div>
+                        )}
 
                         <h4>Descrição do Animal</h4>
                         <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={300}
@@ -156,7 +180,7 @@ const SignUp = () => {
                         <input type="text" id="locale" placeholder="Sua Cidade e Bairro" onChange={(event) => { setPetLocale(event.target.value) }} value={PetLocale} />
 
                         <h4>Qual é a Situação:</h4>
-                        <select id="status" onChange={(event) => { setPetSituation(event.target.value) }}>
+                        <select id="status" onChange={(event) => { setPetSituation(event.target.value) }} value={PetSituation}>
                             <option value="">Selecione</option>
                             <option value="Adoção">Animal para Adoção</option>
                             <option value="Encontrado">Animal Encontrado</option>
@@ -171,7 +195,9 @@ const SignUp = () => {
                         </div>
 
                         <div>
-                            <button type="button" className="send" onClick={sendData}>Cadastrar</button>
+                            <button type="button" className="send" onClick={sendData} disabled={isUploading}>
+                                {isUploading ? 'Aguarde...' : 'Cadastrar'}
+                            </button>
                             <button type="reset" className="reset" onClick={resetData}>Limpar</button>
                         </div>
                     </form>

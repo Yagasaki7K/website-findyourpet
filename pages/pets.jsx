@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import PagesDetails from '../src/components/PagesDetails'
 import petServices from '../src/services/pet.services'
 import Navigation from '../src/components/Navigation'
@@ -6,53 +6,101 @@ import Footer from '../src/components/Footer'
 import Head from 'next/head'
 import { getLabelColorBasedOnStatus } from '../src/utils/getLabelColorBasedOnStatus'
 
-const pets = () => {
+export async function getServerSideProps() {
+    const data = await petServices.getAllPets();
+    const pets = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 
-    const [Pets, setPets] = useState([])
-    const [search, setSearch] = useState('')
-
-    useEffect(() => {
-        getPets()
-    }, [])
-
-    async function getPets() {
-        const data = await petServices.getAllPets()
-        setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-    }
-
-    async function deletePets(id, image) {
-        await Promise.all([petServices.deletePets(id), ImgServices.deleteImage(image)])
-    }
-
-    async function checkTime() {
-        const data = await petServices.getAllPets()
-        const id = data.docs.map((doc) => doc.id)
-        const image = data.docs.map((doc) => doc.data().image)
-        const validUntil = data.docs.map((doc) => doc.data().validDate)
-
-        const date = new Date()
-        const year = date.getFullYear()
-        const month = (date.getMonth() + 1).toString().padStart(2, '0')
-        const day = date.getDate().toString().padStart(2, '0')
-        const today = `${day}/${month}/${year}`
-
-        for (let index = 0; index < validUntil.length; index++) {
-            if (validUntil[index] === today) {
-                deletePets(id[index], image[index])
-                getPets()
+    // Checa e deleta pets com mais de 60 dias
+    const today = new Date();
+    const petsToKeep = [];
+    for (const pet of pets) {
+        const [day, month, year] = pet.createdAt.split('/');
+        const createdDate = new Date(`${year}-${month}-${day}`);
+        const diffTime = today - createdDate;
+        const diffDays = diffTime / (1000 * 60 * 60 * 24);
+        if (diffDays > 60) {
+            try {
+                await petServices.deletePets(pet.id);
+                if (pet.image) {
+                    if (typeof require !== "undefined") {
+                        try {
+                            const ImgServices = require('../src/services/img.services').default;
+                            await ImgServices.deleteImage(pet.image);
+                        } catch (e) {
+                            console.log(e)
+                        }
+                    }
+                }
+            } catch (e) {
+                console.log(e)
             }
+        } else {
+            petsToKeep.push(pet);
         }
     }
 
-    setInterval(checkTime, 86400000)
+    return {
+        props: {
+            initialPets: petsToKeep,
+        },
+    };
+}
+
+const PetsPage = ({ initialPets }) => {
+    const [Pets, setPets] = useState(initialPets || []);
+    const [search, setSearch] = useState('');
+
+    useEffect(() => {
+        setPets(initialPets || []);
+    }, [initialPets]);
+
+    useEffect(() => {
+        // Função para checar e deletar pets expirados
+        async function checkTime() {
+            const today = new Date();
+            const petsToKeep = [];
+            for (const pet of Pets) {
+                const [day, month, year] = pet.createdAt.split('/');
+                const createdDate = new Date(`${year}-${month}-${day}`);
+                const diffTime = today - createdDate;
+                const diffDays = diffTime / (1000 * 60 * 60 * 24);
+                if (diffDays > 60) {
+                    try {
+                        await petServices.deletePets(pet.id);
+                        if (pet.image) {
+                            try {
+                                const ImgServices = (await import('../src/services/img.services')).default;
+                                await ImgServices.deleteImage(pet.image);
+                            } catch (e) {}
+                        }
+                    } catch (e) {}
+                } else {
+                    petsToKeep.push(pet);
+                }
+            }
+            setPets(petsToKeep);
+        }
+
+        checkTime();
+        const interval = setInterval(checkTime, 86400000);
+        return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     function handleSearch(event) {
         const query = event.target.value;
-
         setSearch(query);
     }
 
-    const filteredPets = search !== "" ? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLocaleLowerCase()) || pet.locale.toLowerCase().includes(search.toLocaleLowerCase())) : Pets;
+    const parseDate = (dateStr) => {
+        const [day, month, year] = dateStr.split("/");
+        return new Date(`${year}-${month}-${day}`);
+    };
+
+    const filteredPets = search !== ""
+        ? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLowerCase())
+            || pet.locale.toLowerCase().includes(search.toLowerCase()))
+        : Pets.slice().sort((a, b) => parseDate(b.createdAt) - parseDate(a.createdAt));
 
     return (
         <>
@@ -72,7 +120,7 @@ const pets = () => {
                 <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div>
                 <div className="container">
                     {
-                        filteredPets ? filteredPets.map((pets, index) => (
+                        filteredPets && filteredPets.length > 0 ? filteredPets.map((pets, index) => (
                             <a href={`/pets/` + pets.slug} key={index}>
                                 <div className="content">
                                     <div className="image">
@@ -88,7 +136,7 @@ const pets = () => {
                                             {pets.status} - {pets.createdAt}
                                         </p>
 
-                                        <p>
+                                        <p className="locale">
                                             {pets.locale}
                                         </p>
                                     </div>
@@ -104,4 +152,4 @@ const pets = () => {
     )
 }
 
-export default pets
+export default PetsPage
