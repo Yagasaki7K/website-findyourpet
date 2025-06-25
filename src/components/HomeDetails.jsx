@@ -184,6 +184,10 @@ const HomeDetails = styled.div`
 
         p {
             font-size: 1.2rem;
+            //max one line
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         
         .container {

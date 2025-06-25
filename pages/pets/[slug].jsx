@@ -30,6 +30,11 @@ const PetSlugPage = ({ pet }) => {
 
     return (
         <>
+            <Head>
+                <title>FindYourPet | {pet?.name}</title>
+                <meta name="description" content={pet?.description} />
+                <link rel="icon" type="image/png" href="/logo.png" />
+            </Head>
             <Navigation />
             <PagesDetails>
                 <SlugDetails>

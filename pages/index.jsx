@@ -15,10 +15,6 @@ export default function Home() {
         window.location.href = '/reporte'
     }
 
-    function redirectToMaps() {
-        window.location.href = '/mapa'
-    }
-
     const [Pets, setPets] = useState([])
 
     useEffect(() => {
@@ -34,9 +30,11 @@ export default function Home() {
         <>
             <Head>
                 <link rel="icon" type="image/png" href="/logo.png" />
+                <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar</title>
-                <meta name="description" content="" />
+                <meta name="description" content="Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa." />
+                <meta name="robots" content="index, follow" />
             </Head>
             <Navigation />
             <HomeDetails>
@@ -126,9 +124,8 @@ export default function Home() {
                     </div>
                     <div className="rightContent">
                         <h1>Confira animais e abrigos relatados no mapa</h1>
-                        <p>Explore um mapa ao vivo com animais de estimação perdidos e encontrados, bem como abrigos de animais locais. <br />
-                            Descubra uma rede de apoio para ajudar animais de estimação necessitados e ajudá-los a encontrar o caminho de casa!</p>
-                        <button onClick={redirectToMaps}>Veja no mapa</button>
+                        <p>Explore na página do pet, um mapa que destaca a localização da onde ele foi encontrado da última vez. <br /> Descubra uma rede de apoio para ajudar animais de estimação necessitados e ajudá-los a encontrar o caminho de casa!</p>
+                        <button onClick={redirectToHome}>Veja os pets</button>
                     </div>
                 </div>
 
@@ -159,7 +156,7 @@ export default function Home() {
                 <div className="painel white">
                     <h1>Explore Mais Opções</h1>
 
-                    <p>Se você ainda não encontrou seu pet em nosso site, recomendamos explorar outras plataformas de resgate. Continuar a busca aumenta as chances de reencontro. Não desista!</p>
+                    <p>Se você ainda não encontrou seu pet em nosso site, cadastre-o e também, recomendamos explorar outras plataformas de resgate. Continuar a busca aumenta as chances de reencontro. Não desista!</p>
                 </div>
             </HomeDetails>
             <Footer />
