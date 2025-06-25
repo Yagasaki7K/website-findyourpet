@@ -34,35 +34,37 @@ const PetSlugPage = ({ pet }) => {
             <PagesDetails>
                 <SlugDetails>
                     {pet ? (
-                        <div className="content">
-                            <div className="leftContent">
-                                <img src={pet.imageURL ? pet.imageURL : 'faind.jpg'} alt={pet?.name} />
-                            </div>
+                        <>
+                            <div className="content">
+                                <div className="leftContent">
+                                    <img src={pet.imageURL ? pet.imageURL : 'faind.jpg'} alt={pet?.name} />
+                                </div>
 
-                            <div className="rightContent">
-                                <h1>
-                                    {pet.name} - {pet.status}
-                                </h1>
-                                <p><i className="uil uil-map-marker"></i> Localizado em {pet?.locale}</p>
+                                <div className="rightContent">
+                                    <h1>
+                                        {pet.name} - {pet.status}
+                                    </h1>
+                                    <p><i className="uil uil-map-marker"></i> Localizado em {pet?.locale}</p>
 
-                                <p>Quem é {pet.name}? <br /> {pet?.description}</p>
+                                    <p>Quem é {pet.name}? <br /> {pet?.description}</p>
 
-                                <div className="link">
-                                    <a
-                                        href={`https://api.whatsapp.com/send/?phone=${pet?.contact}&text=Olá%2C+tudo+bom%3F+Vim+do+FindYourPet+e+estou+interessada+em+saber+mais+a+respeito+do+${pet.name}+que+está+no+anúncio+..`}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <i className="uil uil-whatsapp"></i> Entre em Contato!
-                                    </a>
+                                    <div className="link">
+                                        <a
+                                            href={`https://api.whatsapp.com/send/?phone=${pet?.contact}&text=Olá%2C+tudo+bom%3F+Vim+do+FindYourPet+e+estou+interessada+em+saber+mais+a+respeito+do+${pet.name}+que+está+no+anúncio+..`}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <i className="uil uil-whatsapp"></i> Entre em Contato!
+                                        </a>
 
-                                    <button onClick={() => { getLink(pet.slug) }} id="buttonON">
-                                        <i className="uil uil-share-alt"></i> Compartilhe!
-                                    </button>
-                                    <button id="buttonOFF">Link Copiado!</button>
+                                        <button onClick={() => { getLink(pet.slug) }} id="buttonON">
+                                            <i className="uil uil-share-alt"></i> Compartilhe!
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <iframe width="100%" height="650px" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=${pet?.locale}&zoom=15&maptype=roadmap`}></iframe>
+                        </>
                     ) : (
                         <div>Pet não encontrado.</div>
                     )}

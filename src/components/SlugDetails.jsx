@@ -6,7 +6,7 @@ const SlugDetails = styled.div`
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 5.5rem 0;
+        margin: 3rem 0 5rem 0;
         max-width: 50vw;
 
         .leftContent {
@@ -67,15 +67,14 @@ const SlugDetails = styled.div`
                     transition: 1s;
                 }
             }
-
-            #buttonON {
-                display: initial;
-            }
-
-            #buttonOFF {
-                display: none;
-            }
         }
+    }
+
+    iframe {
+        margin: -4rem 0 2rem 0;
+        border: none;
+        border-radius: 15px;
+        height: 450px;
     }
 `
 

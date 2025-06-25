@@ -14,9 +14,7 @@ const Navigation = () => {
             <div className="menu">
                 <li><a href="/pets" className="active">Banco de Pets</a></li>
                 <li><a href="/#howWorks">Como Funciona?</a></li>
-                <li><a href="/mapa">Mapa</a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
-                <li><a href="https://blog-findyourpet.vercel.app/blog" target="_blank" rel="noreferrer">Blog <i className="uil uil-external-link-alt"></i></a></li>
 
                 <button onClick={redirectToHome}>Cadastrar <i className="uil uil-signout"></i></button>
             </div>
