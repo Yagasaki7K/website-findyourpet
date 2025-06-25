@@ -47,7 +47,7 @@ export default function Home() {
                             Após o recente acidente no Rio Grande do Sul, 'FindYourPet' conecta pets perdidos a suas famílias. Adicione fotos do seu amigo desaparecido ou ajude reconhecendo pets encontrados por abrigos e voluntários. Vamos reunir cada animal com seu lar.
                         </p>
 
-                        <div className="button" onClick={redirectToReport}>
+                        <div className="button" onClick={redirectToHome}>
                             <div className="icon">
                                 <i className="uil uil-search"></i>
                             </div>
@@ -139,43 +139,6 @@ export default function Home() {
                     <div className="rightContent">
                         <h2>Tenha seu pet de volta</h2>
                         <button onClick={redirectToReport}>Reportar agora</button>
-                    </div>
-                </div>
-
-                <div className="blog">
-                    <h1>Artigos e mais ...</h1>
-                    <p>Sua fonte preferida de artigos, dicas e conselhos sobre animais de estimação perdidos e achados, cuidados com animais de estimação e muito mais.</p>
-
-                    <div className="container">
-                        <a href="https://blog-findyourpet.vercel.app/blog/caso-rio-grande-do-sul" target="_blank" rel="noreferrer">
-                            <div className="card">
-                                <img src="https://medias.itatiaia.com.br/dims4/default/ec70fba/2147483647/strip/true/crop/1000x563+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F03%2Fb8%2F4840744c1255edc85b0be27a3302%2Fenchente-no-rio-gran01a4e8bc-3a0c-41ac-8e38-026aaac931f0.jpg" alt="" />
-                                <div className="content">
-                                    <h4>E quanto ao caso do Rio Grande do Sul? O FindYourPet também serve?</h4>
-                                    <p>Recentemente, o Rio Grande do Sul enfrentou uma série de enchentes devastadoras que causaram a destruição de lares e o abandono de inúmeros animais ...</p>
-
-                                    <div className="bottom-content">
-                                        <p>27.05.2024</p>
-                                        <button>Veja mais</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://blog-findyourpet.vercel.app/blog/perdi-meu-animalzinho-o-que-fazer" target="_blank" rel="noreferrer">
-                            <div className="card">
-                                <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                                <div className="content">
-                                    <h4>Perdi meu animalzinho - O que eu faço?</h4>
-                                    <p>Seu guia completo para agir e se reunir com seu querido amigo peludo. Tudo que você precisa saber e como reportar no FindYourPet em primeira mão ...</p>
-
-                                    <div className="bottom-content">
-                                        <p>11.03.2024</p>
-                                        <button>Veja mais</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
 

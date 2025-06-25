@@ -53,6 +53,8 @@ const slug = () => {
                                             <button onClick={() => { getLink(pets.slug) }} id="buttonON"><i className="uil uil-share-alt"></i> Compartilhe!</button>
                                             <button id="buttonOFF">Link Copiado!</button>
                                         </div>
+
+                                        
                                     </div>
                                 </div>
                             ) : null

@@ -82,19 +82,6 @@ const SignUp = () => {
         }
     }
 
-    function checkBadWords(string) {
-        const filterBadWords = badWords;
-
-        const hasBadWords = filterBadWords.some(word => string.toLowerCase().includes(word.toLowerCase()));
-
-        if (hasBadWords) {
-            toast.warning('Por favor, não use palavras inapropriadas!');
-            setBadWordsExists(true)
-        } else {
-            setBadWordsExists(false)
-        }
-    }
-
     async function addToFirebase() {
         const NewPets = {
             name: PetName,
@@ -119,13 +106,7 @@ const SignUp = () => {
             toast.warning('Por favor, preencha todos os campos obrigatórios.');
 
         } else {
-            checkBadWords(PetName);
-            checkBadWords(PetDescription);
-
-            if (badWordsExists === false) {
-                addToFirebase();
-            }
-
+            addToFirebase();
         }
     }
 
@@ -165,15 +146,14 @@ const SignUp = () => {
                             maxLength={25} size={24} onChange={(event) => { setPetName(event.target.value) }} value={PetName} />
 
                         <h4>Foto do Animal</h4>
-                        <input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={getImage}></input>
+                        <input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={() => getImage()}></input>
 
                         <h4>Descrição do Animal</h4>
                         <textarea id="description" placeholder="Cachorro pequeno, Pêlo branco, carinhoso, gosta de bolinhas" maxLength={300}
                             rows="4" cols="28" size={30} onChange={(event) => { setPetDescription(event.target.value) }} value={PetDescription} />
 
                         <h4>Cidade/Bairro do Animal</h4>
-                        <input type="text" id="locale" placeholder="Sua Cidade e Bairro"
-                            maxLength={20} size={24} onChange={(event) => { setPetLocale(event.target.value) }} value={PetLocale} />
+                        <input type="text" id="locale" placeholder="Sua Cidade e Bairro" onChange={(event) => { setPetLocale(event.target.value) }} value={PetLocale} />
 
                         <h4>Qual é a Situação:</h4>
                         <select id="status" onChange={(event) => { setPetSituation(event.target.value) }}>

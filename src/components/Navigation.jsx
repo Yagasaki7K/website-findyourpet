@@ -12,7 +12,7 @@ const Navigation = () => {
             <a href="/"><img src="/logotipo-100px.png" alt="logo" /></a>
 
             <div className="menu">
-                <li><a href="/pets" className="active">Achar um Pet</a></li>
+                <li><a href="/pets" className="active">Banco de Pets</a></li>
                 <li><a href="/#howWorks">Como Funciona?</a></li>
                 <li><a href="/mapa">Mapa</a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>

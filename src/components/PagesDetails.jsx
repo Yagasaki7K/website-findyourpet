@@ -147,6 +147,7 @@ const PagesDetails = styled.div`
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            min-height: 50vh;
 
             .content {
                 cursor: pointer;

@@ -68,8 +68,8 @@ const pets = () => {
 
                 <input type="text" placeholder="Digite o nome do animal, cidade ou bairro..." onChange={handleSearch} />
 
-                <h2 className="titlePets">Galeria de pets cadastrados</h2>
-                {/* <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div> */}
+                <h2 className="titlePets">Banco de pets cadastrados</h2>
+                <div className="advicePets"><i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i></div>
                 <div className="container">
                     {
                         filteredPets ? filteredPets.map((pets, index) => (
