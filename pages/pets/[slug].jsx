@@ -1,4 +1,3 @@
-import React from 'react'
 import PagesDetails from '../../src/components/PagesDetails'
 import Navigation from '../../src/components/Navigation'
 import Footer from '../../src/components/Footer'
@@ -9,15 +8,22 @@ import { toast } from 'sonner'
 export async function getServerSideProps(context) {
     const { slug } = context.params;
 
-    const data = await petServices.getAllPets();
-    const pets = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    const pet = pets.find((p) => p.slug === slug) || null;
+    try {
+        const data = await petServices.getAllPets();
+        const pets = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        const pet = pets.find((p) => p.slug === slug) || null;
 
-    return {
-        props: {
-            pet,
-        },
-    };
+        return {
+            props: {
+                pet,
+            },
+        };
+    } catch (error) {
+        console.error(error);
+        return {
+            notFound: true,
+        };
+    }
 }
 
 const PetSlugPage = ({ pet }) => {
