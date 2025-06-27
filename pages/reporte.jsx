@@ -6,6 +6,7 @@ import { toast } from 'sonner'
 import Head from 'next/head'
 import imgServices from '../src/services/img.services'
 import petServices from '../src/services/pet.services'
+import { getInfosAndSendToDiscord } from '../src/utils/getInfosAndSendToDiscord'
 
 const SignUp = () => {
     const [PetName, setPetName] = useState('');
