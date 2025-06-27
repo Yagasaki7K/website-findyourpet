@@ -3,9 +3,11 @@ import Navigation from '../../src/components/Navigation'
 import Footer from '../../src/components/Footer'
 import SlugDetails from '../../src/components/SlugDetails'
 import petServices from '../../src/services/pet.services'
+import Head from 'next/head'
 import { toast } from 'sonner'
 
 export async function getServerSideProps(context) {
+    
     const { slug } = context.params;
 
     try {
@@ -21,7 +23,9 @@ export async function getServerSideProps(context) {
     } catch (error) {
         console.error(error);
         return {
-            notFound: true,
+            props: {
+                pet: null
+            },
         };
     }
 }
