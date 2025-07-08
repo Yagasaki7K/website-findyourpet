@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const HomeDetails = styled.div`
     .helping {
@@ -460,6 +460,6 @@ const HomeDetails = styled.div`
         background: var(--green-alt);
         color: var(--white);
     }
-`
+`;
 
-export default HomeDetails
+export default HomeDetails;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SlugDetails = styled.div`
     .content {
@@ -76,6 +76,6 @@ const SlugDetails = styled.div`
         border-radius: 15px;
         height: 450px;
     }
-`
+`;
 
-export default SlugDetails
+export default SlugDetails;

@@ -1,25 +1,28 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbo",
-    "vercel": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "commit": "bun update && yarn run vercel && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
-  },
-  "dependencies": {
-    "dotenv": "^16.6.0",
-    "firebase": "^10.14.1",
-    "next": "^15.3.4",
-    "next-seo": "^6.8.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-map-gl": "^7.1.9",
-    "sonner": "^1.7.4",
-    "styled-components": "^6.1.19"
-  },
-  "devDependencies": {
-    "eslint": "9.0.0",
-    "eslint-config-next": "14.2.1"
-  }
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbo",
+		"vercel": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"create:mylint": "bunx --bun biome init && mylint",
+		"mylint": "bunx biome format --write",
+		"commit": "git pull && bun run vercel && bun mylint && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
+	},
+	"dependencies": {
+		"dotenv": "^16.6.0",
+		"firebase": "^10.14.1",
+		"next": "^15.3.4",
+		"next-seo": "^6.8.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-map-gl": "^7.1.9",
+		"sonner": "^1.7.4",
+		"styled-components": "^6.1.19"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.1",
+		"eslint": "9.0.0",
+		"eslint-config-next": "14.2.1"
+	}
 }

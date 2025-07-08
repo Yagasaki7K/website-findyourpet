@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const FooterDetails = styled.div`
     box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.2);
@@ -73,6 +73,6 @@ const FooterDetails = styled.div`
         margin-left: 25%;
         border: 1px solid var(--gray);
     }
-`
+`;
 
-export default FooterDetails
+export default FooterDetails;

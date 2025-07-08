@@ -1,28 +1,41 @@
-import styled from 'styled-components'
-import React from 'react'
+import styled from "styled-components";
+import React from "react";
 
 const Navigation = () => {
+	function redirectToHome() {
+		window.location.href = "/reporte";
+	}
 
-    function redirectToHome() {
-        window.location.href = '/reporte'
-    }
+	return (
+		<NavigationDetails>
+			<a href="/">
+				<img src="/logotipo-100px.png" alt="logo" />
+			</a>
 
-    return (
-        <NavigationDetails>
-            <a href="/"><img src="/logotipo-100px.png" alt="logo" /></a>
+			<div className="menu">
+				<li>
+					<a href="/pets" className="active">
+						Banco de Pets
+					</a>
+				</li>
+				<li>
+					<a href="/#howWorks">Como Funciona?</a>
+				</li>
+				<li>
+					<a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">
+						Contato
+					</a>
+				</li>
 
-            <div className="menu">
-                <li><a href="/pets" className="active">Banco de Pets</a></li>
-                <li><a href="/#howWorks">Como Funciona?</a></li>
-                <li><a href="https://api.whatsapp.com/send/?phone=5519998018174&text=Ol%C3%A1+preciso+de+ajuda+com+o+FindYourPet&type=phone_number&app_absent=0">Contato</a></li>
+				<button onClick={redirectToHome}>
+					Cadastrar <i className="uil uil-signout"></i>
+				</button>
+			</div>
+		</NavigationDetails>
+	);
+};
 
-                <button onClick={redirectToHome}>Cadastrar <i className="uil uil-signout"></i></button>
-            </div>
-        </NavigationDetails>
-    )
-}
-
-export default Navigation
+export default Navigation;
 
 const NavigationDetails = styled.div`
     position: relative;
@@ -90,4 +103,4 @@ const NavigationDetails = styled.div`
             }
         }
     }
-`
+`;

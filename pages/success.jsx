@@ -1,32 +1,39 @@
-import React from 'react'
-import styled from 'styled-components'
-import Navigation from '../src/components/Navigation'
-import Footer from '../src/components/Footer'
+import React from "react";
+import styled from "styled-components";
+import Navigation from "../src/components/Navigation";
+import Footer from "../src/components/Footer";
 
 const success = () => {
-    return (
-        <>
-            <Navigation />
-            <SuccessDetails>
-                <div className="leftContent">
-                    <h1>Cadastro Concluído com Sucesso!</h1>
-                    <p>Faça a Diferença! Compartilhe nossa plataforma e ajude mais famílias a reunirem-se com seus pets desaparecidos!</p>
-                    <hr />
-                    <p>Deseja cadastrar mais pets?</p>
-                    <button onClick={() => window.location.href = '/pets'}>Ver Pets Cadastrados <i className="uil uil-angle-right"></i></button>
-                    <button onClick={() => window.location.href = '/reporte'}>Cadastrar mais <i className="uil uil-angle-right"></i></button>
-                </div>
+	return (
+		<>
+			<Navigation />
+			<SuccessDetails>
+				<div className="leftContent">
+					<h1>Cadastro Concluído com Sucesso!</h1>
+					<p>
+						Faça a Diferença! Compartilhe nossa plataforma e ajude mais famílias
+						a reunirem-se com seus pets desaparecidos!
+					</p>
+					<hr />
+					<p>Deseja cadastrar mais pets?</p>
+					<button onClick={() => (window.location.href = "/pets")}>
+						Ver Pets Cadastrados <i className="uil uil-angle-right"></i>
+					</button>
+					<button onClick={() => (window.location.href = "/reporte")}>
+						Cadastrar mais <i className="uil uil-angle-right"></i>
+					</button>
+				</div>
 
-                <div className="rightContent">
-                    <img src="/success.png" alt="" />
-                </div>
-            </SuccessDetails>
-            <Footer />
-        </>
-    )
-}
+				<div className="rightContent">
+					<img src="/success.png" alt="" />
+				</div>
+			</SuccessDetails>
+			<Footer />
+		</>
+	);
+};
 
-export default success
+export default success;
 
 const SuccessDetails = styled.div`
     display: flex;
@@ -78,4 +85,4 @@ const SuccessDetails = styled.div`
             width: 30rem;
         }
     }
-`
+`;

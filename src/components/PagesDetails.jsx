@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const PagesDetails = styled.div`
     display: flex;
@@ -217,6 +217,6 @@ const PagesDetails = styled.div`
             }
         }
     }
-`
+`;
 
-export default PagesDetails
+export default PagesDetails;
