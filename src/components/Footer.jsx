@@ -18,11 +18,7 @@ const Footer = () => {
 							<a href="/pets">Quero adotar um pet</a>
 						</li>
 						<li>
-							<a
-								href="https://blog-findyourpet.vercel.app/blog"
-								target="_blank"
-								rel="noreferrer"
-							>
+							<a href="https://blog-findyourpet.vercel.app/blog" target="_blank" rel="noreferrer">
 								Artigos
 							</a>
 						</li>
@@ -30,11 +26,7 @@ const Footer = () => {
 							<a href="/mapa">Mapa</a>
 						</li>
 						<li>
-							<a
-								href="https://kalify.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
+							<a href="https://kalify.vercel.app/" target="_blank" rel="noreferrer">
 								Sobre
 							</a>
 						</li>
@@ -43,29 +35,17 @@ const Footer = () => {
 					<div className="footer-content break">
 						<h2>Sobre Nós</h2>
 						<li>
-							<a
-								href="https://kalify.vercel.app/#about"
-								target="_blank"
-								rel="noreferrer"
-							>
+							<a href="https://kalify.vercel.app/#about" target="_blank" rel="noreferrer">
 								Nossa missão
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://kalify.vercel.app/#team"
-								target="_blank"
-								rel="noreferrer"
-							>
+							<a href="https://kalify.vercel.app/#team" target="_blank" rel="noreferrer">
 								Voluntários
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://kalify.vercel.app/#team"
-								target="_blank"
-								rel="noreferrer"
-							>
+							<a href="https://kalify.vercel.app/#team" target="_blank" rel="noreferrer">
 								Junte-se ao time
 							</a>
 						</li>
@@ -93,11 +73,7 @@ const Footer = () => {
 				<hr />
 
 				<div className="copyright">
-					<p>
-						{" "}
-						© 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas
-						as imagens são de responsabilidade de seus anunciantes
-					</p>
+					<p> © 2022 - {new Date().getFullYear()} FindYourPet - Kalify Inc | Todas as imagens são de responsabilidade de seus anunciantes</p>
 				</div>
 			</FooterDetails>
 		</>

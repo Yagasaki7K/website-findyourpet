@@ -5,6 +5,8 @@ import SlugDetails from "../../src/components/SlugDetails";
 import petServices from "../../src/services/pet.services";
 import Head from "next/head";
 import { toast } from "sonner";
+import { getReportAndSendToDiscord } from "../../src/utils/getReportAndSendToDiscord";
+import { NextSeo } from "next-seo";
 
 export async function getServerSideProps(context) {
 	const { slug } = context.params;
@@ -32,9 +34,7 @@ export async function getServerSideProps(context) {
 const PetSlugPage = ({ pet }) => {
 	const getLink = (slug) => {
 		if (typeof window !== "undefined" && navigator?.clipboard) {
-			navigator.clipboard.writeText(
-				"https://findyourpet.vercel.app/pets/" + slug,
-			);
+			navigator.clipboard.writeText("https://findyourpet.vercel.app/pets/" + slug);
 			toast.success("Link copiado com sucesso!");
 		}
 	};
@@ -48,6 +48,27 @@ const PetSlugPage = ({ pet }) => {
 				<meta name="robots" content="index, follow" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
+
+			<NextSeo
+				title={`FindYourPet | ${pet?.name}`}
+				description={pet?.description}
+				canonical={`https://findyourpet.vercel.app/pets/${pet?.slug}`}
+				openGraph={{
+					url: `https://findyourpet.vercel.app/pets/${pet?.slug}`,
+					title: `FindYourPet | ${pet?.name}`,
+					description: pet?.description,
+					images: [
+						{
+							url: pet?.imageURL || "https://findyourpet.vercel.app/logo.png",
+							width: 800,
+							height: 600,
+							alt: pet?.name,
+						},
+					],
+					siteName: "FindYourPet",
+				}}
+			/>
+
 			<Navigation />
 			<PagesDetails>
 				<SlugDetails>
@@ -55,10 +76,7 @@ const PetSlugPage = ({ pet }) => {
 						<>
 							<div className="content">
 								<div className="leftContent">
-									<img
-										src={pet.imageURL ? pet.imageURL : "faind.jpg"}
-										alt={pet?.name}
-									/>
+									<img src={pet.imageURL ? pet.imageURL : "faind.jpg"} alt={pet?.name} />
 								</div>
 
 								<div className="rightContent">
@@ -66,12 +84,12 @@ const PetSlugPage = ({ pet }) => {
 										{pet.name} - {pet.status}
 									</h1>
 									<p>
-										<i className="uil uil-map-marker"></i> Localizado em{" "}
+										<i className="uil uil-map-marker"></i> <b>Localizado em: </b>
 										{pet?.locale}
 									</p>
 
 									<p>
-										Quem é {pet.name}? <br /> {pet?.description}
+										<b>Quem é {pet.name}?</b> <br /> {pet?.description}
 									</p>
 
 									<div className="link">
@@ -91,6 +109,12 @@ const PetSlugPage = ({ pet }) => {
 										>
 											<i className="uil uil-share-alt"></i> Compartilhe!
 										</button>
+									</div>
+
+									<div className="report">
+										<p onClick={() => getReportAndSendToDiscord(pet)}>
+											<i className="uil uil-exclamation-triangle"></i> Reportar Publicação
+										</p>
 									</div>
 								</div>
 							</div>

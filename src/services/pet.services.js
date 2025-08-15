@@ -1,12 +1,5 @@
 import database from "../../client";
-import {
-	collection,
-	getDocs,
-	getDoc,
-	addDoc,
-	deleteDoc,
-	doc,
-} from "firebase/firestore";
+import { collection, getDocs, getDoc, addDoc, deleteDoc, doc } from "firebase/firestore";
 
 const petCollectionRef = collection(database, "pets");
 

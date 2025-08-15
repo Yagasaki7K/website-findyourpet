@@ -24,8 +24,7 @@ export async function getServerSideProps() {
 				if (pet.image) {
 					if (typeof require !== "undefined") {
 						try {
-							const ImgServices =
-								require("../src/services/img.services").default;
+							const ImgServices = require("../src/services/img.services").default;
 							await ImgServices.deleteImage(pet.image);
 						} catch (e) {
 							console.log(e);
@@ -70,9 +69,7 @@ const PetsPage = ({ initialPets }) => {
 						await petServices.deletePets(pet.id);
 						if (pet.image) {
 							try {
-								const ImgServices = (
-									await import("../src/services/img.services")
-								).default;
+								const ImgServices = (await import("../src/services/img.services")).default;
 								await ImgServices.deleteImage(pet.image);
 							} catch (e) {}
 						}
@@ -102,21 +99,13 @@ const PetsPage = ({ initialPets }) => {
 
 	const filteredPets =
 		search !== ""
-			? Pets.filter(
-					(pet) =>
-						pet.name.toLowerCase().includes(search.toLowerCase()) ||
-						pet.locale.toLowerCase().includes(search.toLowerCase()),
-				)
-			: Pets.slice().sort(
-					(a, b) => parseDate(b.createdAt) - parseDate(a.createdAt),
-				);
+			? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLowerCase()) || pet.locale.toLowerCase().includes(search.toLowerCase()))
+			: Pets.slice().sort((a, b) => parseDate(b.createdAt) - parseDate(a.createdAt));
 
 	return (
 		<>
 			<Head>
-				<title>
-					FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar
-				</title>
+				<title>FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar</title>
 				<link rel="icon" type="image/png" href="/logo.png" />
 				<meta name="robots" content="index, follow" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -129,23 +118,15 @@ const PetsPage = ({ initialPets }) => {
 			<Navigation />
 			<PagesDetails>
 				<a href="/reporte" className="advice">
-					<i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um
-					animal? Está querendo doar um? Ou encontrou um perdido? Cadastre
-					ele!&nbsp;<i className="uil uil-shield-exclamation"></i>
+					<i className="uil uil-shield-exclamation"></i>&nbsp;Você perdeu um animal? Está querendo doar um? Ou encontrou um perdido? Cadastre ele!&nbsp;
+					<i className="uil uil-shield-exclamation"></i>
 				</a>
 
-				<input
-					type="text"
-					placeholder="Digite o nome do animal, cidade ou bairro..."
-					onChange={handleSearch}
-				/>
+				<input type="text" placeholder="Digite o nome do animal, cidade ou bairro..." onChange={handleSearch} />
 
 				<h2 className="titlePets">Banco de pets cadastrados</h2>
 				<div className="advicePets">
-					<i>
-						*Os animais serão deletados automaticamente após 60 dias após a data
-						da publicação
-					</i>
+					<i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i>
 				</div>
 				<div className="container">
 					{filteredPets && filteredPets.length > 0
@@ -153,20 +134,15 @@ const PetsPage = ({ initialPets }) => {
 								<a href={`/pets/` + pets.slug} key={index}>
 									<div className="content">
 										<div className="image">
-											<img
-												src={pets.imageURL ? pets.imageURL : "/faind.jpg"}
-												alt={pets.name}
-											/>
+											<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
 										</div>
 
 										<div className="text">
-											<p style={{ backgroundColor: "#3dcf9a" }}>{pets.name}</p>
+											<p style={{ backgroundColor: "var(--green-alt)" }}>{pets.name}</p>
 
 											<p
 												style={{
-													backgroundColor: getLabelColorBasedOnStatus(
-														pets.status,
-													),
+													backgroundColor: getLabelColorBasedOnStatus(pets.status),
 												}}
 											>
 												{pets.status} - {pets.createdAt}

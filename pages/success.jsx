@@ -10,10 +10,7 @@ const success = () => {
 			<SuccessDetails>
 				<div className="leftContent">
 					<h1>Cadastro Concluído com Sucesso!</h1>
-					<p>
-						Faça a Diferença! Compartilhe nossa plataforma e ajude mais famílias
-						a reunirem-se com seus pets desaparecidos!
-					</p>
+					<p>Faça a Diferença! Compartilhe nossa plataforma e ajude mais famílias a reunirem-se com seus pets desaparecidos!</p>
 					<hr />
 					<p>Deseja cadastrar mais pets?</p>
 					<button onClick={() => (window.location.href = "/pets")}>

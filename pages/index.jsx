@@ -32,9 +32,7 @@ export default function Home() {
 				<link rel="icon" type="image/png" href="/logo.png" />
 				<meta name="robots" content="index, follow" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>
-					FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar
-				</title>
+				<title>FindYourPet | Ajudando Animais de Estimação A Encontrarem O Seu Lar</title>
 				<meta
 					name="description"
 					content="Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa."
@@ -46,14 +44,11 @@ export default function Home() {
 				<div className="helping">
 					<div className="leftContent">
 						<h3>
-							<span>Encontre seu Pet.</span> <br /> Juntos na Busca por Nossos
-							Pets Perdidos em todo o Brasil
+							<span>Encontre seu Pet.</span> <br /> Juntos na Busca por Nossos Pets Perdidos em todo o Brasil
 						</h3>
 						<p>
-							Após o recente acidente no Rio Grande do Sul, 'FindYourPet'
-							conecta pets perdidos a suas famílias. Adicione fotos do seu amigo
-							desaparecido ou ajude reconhecendo pets encontrados por abrigos e
-							voluntários. Vamos reunir cada animal com seu lar.
+							Após o recente acidente no Rio Grande do Sul, 'FindYourPet' conecta pets perdidos a suas famílias. Adicione fotos do seu amigo desaparecido ou
+							ajude reconhecendo pets encontrados por abrigos e voluntários. Vamos reunir cada animal com seu lar.
 						</p>
 
 						<div className="button" onClick={redirectToHome}>
@@ -89,19 +84,14 @@ export default function Home() {
 						<h2>Como funciona?</h2>
 
 						<p>
-							O site oferece uma base de dados abrangente de animais perdidos,
-							animais resgatados e em adoção, compilados a partir de informações
-							fornecidas por instituições e ONGs dedicadas ao bem-estar animal,
-							bem como usuários comuns. Com recursos de busca avançada e filtros
-							específicos, tornamos mais fácil para os donos encontrar seus
-							animais perdidos e para aqueles que encontraram animais perdidos
-							localizar seus donos.
+							O site oferece uma base de dados abrangente de animais perdidos, animais resgatados e em adoção, compilados a partir de informações fornecidas por
+							instituições e ONGs dedicadas ao bem-estar animal, bem como usuários comuns. Com recursos de busca avançada e filtros específicos, tornamos mais
+							fácil para os donos encontrar seus animais perdidos e para aqueles que encontraram animais perdidos localizar seus donos.
 						</p>
 
 						<p>
-							"FindYourPet" é mais do que uma plataforma, é uma comunidade unida
-							pelo amor aos animais e pelo desejo de ajudar uns aos outros em
-							momentos de dificuldade.
+							"FindYourPet" é mais do que uma plataforma, é uma comunidade unida pelo amor aos animais e pelo desejo de ajudar uns aos outros em momentos de
+							dificuldade.
 						</p>
 					</div>
 				</div>
@@ -116,10 +106,7 @@ export default function Home() {
 								<a href="/pets" key={index}>
 									<div className="content">
 										<div className="image">
-											<img
-												src={pets.imageURL ? pets.imageURL : "/faind.jpg"}
-												alt={pets.name}
-											/>
+											<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
 										</div>
 
 										<div className="text">
@@ -127,9 +114,7 @@ export default function Home() {
 
 											<p
 												style={{
-													backgroundColor: getLabelColorBasedOnStatus(
-														pets.status,
-													),
+													backgroundColor: getLabelColorBasedOnStatus(pets.status),
 												}}
 											>
 												{pets.status} - {pets.createdAt}
@@ -152,10 +137,8 @@ export default function Home() {
 					<div className="rightContent">
 						<h1>Confira animais e abrigos relatados no mapa</h1>
 						<p>
-							Explore na página do pet, um mapa que destaca a localização da
-							onde ele foi encontrado da última vez. <br /> Descubra uma rede de
-							apoio para ajudar animais de estimação necessitados e ajudá-los a
-							encontrar o caminho de casa!
+							Explore na página do pet, um mapa que destaca a localização da onde ele foi encontrado da última vez. <br /> Descubra uma rede de apoio para
+							ajudar animais de estimação necessitados e ajudá-los a encontrar o caminho de casa!
 						</p>
 						<button onClick={redirectToHome}>Veja os pets</button>
 					</div>
@@ -181,10 +164,8 @@ export default function Home() {
 					<h1>Faça a Diferença na Vida de um Pet</h1>
 
 					<p>
-						Não espere mais! Se você encontrou um pet perdido, cadastre-o aqui e
-						ajude-nos a reconectá-lo com sua família. Cada ação sua traz
-						esperança. Clique no botão abaixo para começar a fazer a diferença
-						agora mesmo.
+						Não espere mais! Se você encontrou um pet perdido, cadastre-o aqui e ajude-nos a reconectá-lo com sua família. Cada ação sua traz esperança. Clique
+						no botão abaixo para começar a fazer a diferença agora mesmo.
 					</p>
 
 					<button onClick={() => (window.location.href = "/reporte")}>
@@ -196,9 +177,8 @@ export default function Home() {
 					<h1>Explore Mais Opções</h1>
 
 					<p>
-						Se você ainda não encontrou seu pet em nosso site, cadastre-o e
-						também, recomendamos explorar outras plataformas de resgate.
-						Continuar a busca aumenta as chances de reencontro. Não desista!
+						Se você ainda não encontrou seu pet em nosso site, cadastre-o e também, recomendamos explorar outras plataformas de resgate. Continuar a busca
+						aumenta as chances de reencontro. Não desista!
 					</p>
 				</div>
 			</HomeDetails>

@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -12,7 +12,9 @@ const firebaseConfig = {
 	appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+// Evita inicializar mais de uma vez
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
 const database = getFirestore(app);
 export const storage = getStorage(app);
 

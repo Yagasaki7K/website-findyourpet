@@ -67,6 +67,27 @@ const SlugDetails = styled.div`
                     transition: 1s;
                 }
             }
+
+            .report {
+                text-align: center;
+                background: var(--red);
+                color: var(--white);
+                width: 14rem;
+                height: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0rem 1rem;
+                border-radius: 5px;
+                margin: 0 auto;
+                transition: 0.3s;
+                cursor: pointer;
+                margin-top: 2rem;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
         }
     }
 

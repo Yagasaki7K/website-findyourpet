@@ -13,8 +13,7 @@ export default class MyDocument extends Document {
 		try {
 			ctx.renderPage = () =>
 				originalRenderPage({
-					enhanceApp: (App) => (props) =>
-						sheet.collectStyles(<App {...props} />),
+					enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);
@@ -72,10 +71,7 @@ export default class MyDocument extends Document {
 					<link rel="shortcut icon" href="/logo.png" />
 					<meta property="og:locale" content="pt_BR" />
 
-					<link
-						rel="stylesheet"
-						href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-					/>
+					<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 				</Head>
 				<body>
 					<Main />

@@ -67,11 +67,7 @@ const SignUp = () => {
 	async function getImage(event) {
 		const file = event.target.files[0];
 		if (!file) return;
-		if (
-			file.type !== "image/jpeg" &&
-			file.type !== "image/jpg" &&
-			file.type !== "image/png"
-		) {
+		if (file.type !== "image/jpeg" && file.type !== "image/jpg" && file.type !== "image/png") {
 			toast.warning("Apenas arquivos de imagem .png ou .jpg");
 			event.target.value = "";
 			return;
@@ -105,9 +101,7 @@ const SignUp = () => {
 			status: PetSituation,
 			image: PetFile,
 			imageURL: PetUrl,
-			slug:
-				PetName.toLowerCase().replace(/ /g, "-") +
-				Math.floor(Math.random() * 1000),
+			slug: PetName.toLowerCase().replace(/ /g, "-") + Math.floor(Math.random() * 1000),
 			createdAt: PetCreated,
 			validDate: PetValid,
 		};
@@ -122,9 +116,7 @@ const SignUp = () => {
 		if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 11) {
 			toast.warning("Por favor, preencha todos os campos obrigatórios.");
 		} else if (!PetUrl) {
-			toast.warning(
-				"Por favor, envie uma imagem do animal antes de cadastrar.",
-			);
+			toast.warning("Por favor, envie uma imagem do animal antes de cadastrar.");
 		} else if (isUploading) {
 			toast.warning("Aguarde o envio da imagem ser concluído.");
 		} else {
@@ -157,16 +149,12 @@ const SignUp = () => {
 			<PagesDetails>
 				<a href="/cadastro" className="advice-yellow">
 					<i className="uil uil-shield-exclamation" />
-					&nbsp; Procure colocar as informações corretamente - Não será possível
-					editar depois! &nbsp;
+					&nbsp; Procure colocar as informações corretamente - Não será possível editar depois! &nbsp;
 					<i className="uil uil-shield-exclamation" />
 				</a>
 
 				<div className="modal-signup">
-					<form
-						onChange={() => collectData()}
-						onSubmit={(e) => e.preventDefault()}
-					>
+					<form onChange={() => collectData()} onSubmit={(e) => e.preventDefault()}>
 						<h4>Nome do Animal</h4>
 						<input
 							type="text"
@@ -181,25 +169,11 @@ const SignUp = () => {
 						/>
 
 						<h4>Foto do Animal</h4>
-						<input
-							type="file"
-							id="photo"
-							accept=".png, .jpg, .jpeg"
-							onChange={getImage}
-							disabled={isUploading}
-						/>
-						{isUploading && (
-							<div style={{ color: "#3dcf9a", marginTop: 4 }}>
-								Enviando imagem...
-							</div>
-						)}
+						<input type="file" id="photo" accept=".png, .jpg, .jpeg" onChange={getImage} disabled={isUploading} />
+						{isUploading && <div style={{ color: "#3dcf9a", marginTop: 4 }}>Enviando imagem...</div>}
 						{PetUrl && (
 							<div style={{ marginTop: 8 }}>
-								<img
-									src={PetUrl}
-									alt="Pré-visualização"
-									style={{ maxWidth: 120, maxHeight: 120, borderRadius: 8 }}
-								/>
+								<img src={PetUrl} alt="Pré-visualização" style={{ maxWidth: 120, maxHeight: 120, borderRadius: 8 }} />
 							</div>
 						)}
 
@@ -244,23 +218,11 @@ const SignUp = () => {
 
 						<h4>Número do WhatsApp*</h4>
 						<div>
-							<input
-								type="text"
-								id="contact"
-								placeholder="(00) 0 0000-0000"
-								onChange={handleChangeContact}
-								value={fieldContact}
-								maxLength={16}
-							/>
+							<input type="text" id="contact" placeholder="(00) 0 0000-0000" onChange={handleChangeContact} value={fieldContact} maxLength={16} />
 						</div>
 
 						<div>
-							<button
-								type="button"
-								className="send"
-								onClick={sendData}
-								disabled={isUploading}
-							>
+							<button type="button" className="send" onClick={sendData} disabled={isUploading}>
 								{isUploading ? "Aguarde..." : "Cadastrar"}
 							</button>
 							<button type="reset" className="reset" onClick={resetData}>
