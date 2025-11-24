@@ -43,17 +43,14 @@ const NavigationDetails = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 clamp(1.5rem, 4vw, 5rem);
+    padding: 0rem 4rem;
     background: var(--background);
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    
+
     img {
-        width: clamp(12rem, 18vw, 16rem);
+        width: 25rem;
         padding: 1rem;
     }
-    
+
     @media (max-width: 768px){
         margin-left: -2rem;
     }
@@ -93,8 +90,8 @@ const NavigationDetails = styled.div`
             color: var(--white);
             border-radius: 15px;
             border: none;
-            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.8rem, 3vw, 3rem);
-            font-size: clamp(0.95rem, 1vw, 1rem);
+            padding: 1rem 3rem;
+            font-size: 1rem;
             font-weight: bold;
             font-family: 'Poppins', sans-serif;
             text-transform: uppercase;

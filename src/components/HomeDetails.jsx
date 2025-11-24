@@ -4,26 +4,17 @@ const HomeDetails = styled.div`
     .helping {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        width: min(1200px, 100% - 2.5rem);
-        margin: 4rem auto;
-        padding: clamp(1.5rem, 3vw, 3rem);
-        gap: clamp(2rem, 4vw, 5rem);
 
         .leftContent {
-            flex: 1 1 20rem;
-            max-width: 720px;
-            padding-left: clamp(0.5rem, 4vw, 4rem);
-            padding-right: clamp(0.5rem, 2vw, 2rem);
+            width: 60rem;
+            padding-left: 12rem;
 
-            @media (max-width: 1024px) {
-                padding-left: 0;
-                padding-right: 0;
+            @media (max-width: 768px){
+                padding-left: 2rem;
             }
 
             h3 {
-                font-size: clamp(2.2rem, 3vw, 3rem);
+                font-size: 3rem;
                 color: var(--black);
                 margin-bottom: 1.5rem;
 
@@ -33,17 +24,17 @@ const HomeDetails = styled.div`
             }
 
             p {
-                font-size: clamp(1rem, 1.4vw, 1.25rem);
+                font-size: 1.25rem;
                 margin-bottom: 1.5rem;
 
                 @media (max-width: 768px){
-                    width: 100%;
+                    width: 85%;
                 }
             }
 
             .button, .button2 {
                 display: flex;
-                width: min(20rem, 100%);
+                width: 20rem;
                 height: 5rem;
                 padding: 0.3rem 2rem 0.3rem 1rem;
                 cursor: pointer;
@@ -82,7 +73,7 @@ const HomeDetails = styled.div`
                 background: var(--green-light);
                 color: var(--green);
                 margin-bottom: 1rem;
-
+                
                 &:hover {
                     background: var(--green);
                     color: var(--green-light);
@@ -101,17 +92,12 @@ const HomeDetails = styled.div`
         }
 
         .rightContent {
-            flex: 1 1 18rem;
-            display: flex;
-            justify-content: center;
-
-            img {
-                margin-top: clamp(-6rem, -4vw, -2rem);
-                width: clamp(18rem, 38vw, 32rem);
+            img {                
+                margin-top: -10rem;
+                width: 50rem;
 
                 @media (max-width: 1024px) {
-                    width: clamp(16rem, 60vw, 28rem);
-                    margin-top: -2rem;
+                    width: 35rem;
                 }
 
                 @media (max-width: 768px) {
@@ -124,14 +110,8 @@ const HomeDetails = styled.div`
     .howWorks {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: min(1200px, 100% - 2.5rem);
-        margin: 5rem auto 4rem;
-        gap: clamp(2rem, 5vw, 6rem);
-
-        @media (max-width: 1024px) {
-            flex-wrap: wrap;
-        }
+        margin-top: 5rem;
+        margin-bottom: 4rem;
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -140,21 +120,24 @@ const HomeDetails = styled.div`
 
         .leftContent {
             img {
-                width: clamp(18rem, 40vw, 30rem);
-                margin-right: 0;
+                width: 30rem;
+                margin-right: 10rem;
+
+                @media (max-width: 1024px) {
+                    margin-right: 2rem;
+                }
 
                 @media (max-width: 768px) {
-                    width: clamp(16rem, 70vw, 22rem);
+                    width: 20rem;
                 }
             }
         }
 
         .rightContent {
-            width: 100%;
-            max-width: 40rem;
-
+            width: 40rem;
             @media (max-width: 768px) {
-                margin-left: 0;
+                margin-left: 3rem;
+
             }
 
             h2 {
@@ -173,7 +156,7 @@ const HomeDetails = styled.div`
                 align-items: center;
 
                 @media (max-width: 768px) {
-                    width: 100%;
+                    width: 85%;
                 }
 
                 img {
@@ -188,42 +171,41 @@ const HomeDetails = styled.div`
         background: var(--green);
         background: linear-gradient(180deg, var(--green) 0%, var(--background) 100%);
         color: var(--white);
-        padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4rem);
+        padding: 2rem 4rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
 
         h2 {
             font-size: 2rem;
             margin-bottom: -1rem;
-            text-align: center;
         }
 
         p {
             font-size: 1.2rem;
-            text-align: center;
+            //max one line
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-
+        
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: clamp(1.5rem, 3vw, 3rem);
-            width: min(1300px, 100%);
 
             .content {
                 cursor: pointer;
-                width: min(18rem, 90vw);
+                width: 15rem;
                 height: 25rem;
+                margin-right: 10rem;
 
                 @media (max-width: 1366px) {
-                    height: auto;
+                    margin-right: 5rem;
+                    margin-bottom: -4rem;
+                    width: 14rem;
                 }
 
                 &:hover {
@@ -241,15 +223,16 @@ const HomeDetails = styled.div`
                         }
                     }
                 }
-
+                
                 .image {
                     img {
-                        width: 100%;
+                        width: 22rem;
                         height: 25rem;
                         object-fit: cover;
                         border-radius: 15px;
 
                         @media (max-width: 1366px) {
+                            width: 18rem;
                             height: 20rem;
                         }
                     }
@@ -261,7 +244,7 @@ const HomeDetails = styled.div`
                     width: 13rem;
                     margin-top: -9rem;
                     margin-left: 1rem;
-
+                    
                     p {
                         background: var(--green);
                         color: var(--white);
@@ -299,36 +282,28 @@ const HomeDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 8rem auto;
-        flex-wrap: wrap;
-        gap: clamp(2rem, 5vw, 6rem);
-        width: min(1200px, 100% - 2.5rem);
+        margin: 8rem 0;
 
         @media (max-width: 768px) {
             flex-direction: column;
         }
 
         .leftContent {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-
             img {
-                width: clamp(20rem, 45vw, 32rem);
-                margin: 0;
+                width: 32rem;
+                margin: 0 10rem;
                 background: var(--green-alt);
                 padding: 2rem;
                 border-radius: 15px;
 
                 @media (max-width: 1024px) {
-                    margin: 0;
+                    margin: 0 5rem;
                 }
             }
         }
 
         .rightContent {
-            width: 100%;
-            max-width: 40rem;
+            width: 40rem;
 
             @media (max-width: 1024px) {
                 padding: 0 2rem;
@@ -336,7 +311,6 @@ const HomeDetails = styled.div`
 
             @media (max-width: 768px) {
                 width: 100%;
-                padding: 0;
             }
 
             h1 {
@@ -372,23 +346,19 @@ const HomeDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 4rem auto 2rem;
+        margin: 4rem 0 2rem 0;
         background: var(--green-alt);
-        padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
-        gap: clamp(1.5rem, 4vw, 4rem);
-        width: min(1200px, 100%);
 
         @media (max-width: 768px) {
             flex-direction: column;
-            text-align: center;
         }
 
         .leftContent {
-            padding: 0;
+            padding: 4rem 0;
 
             img {
-                width: clamp(18rem, 40vw, 24rem);
-                margin-right: 0;
+                width: 24rem;
+                margin-right: 5rem;
 
                 @media (max-width: 768px) {
                     margin-right: 0;
@@ -440,7 +410,6 @@ const HomeDetails = styled.div`
         justify-content: center;
         align-items: center;
         margin: 6rem 0;
-        padding: 0 clamp(1rem, 4vw, 3rem);
 
         img {
             width: 25rem;
@@ -457,11 +426,10 @@ const HomeDetails = styled.div`
         align-items: center;
         text-align: center;
         flex-direction: column;
-        padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
-        width: 100%;
+        padding: 4rem 0;
 
         p {
-            width: min(50rem, 100%);
+            width: 50rem;
         }
 
         button {

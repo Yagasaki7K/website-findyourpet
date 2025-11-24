@@ -5,9 +5,6 @@ const PagesDetails = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: min(1200px, 100% - 2rem);
-    margin: 0 auto;
-    padding: clamp(1.5rem, 3vw, 3rem) 0;
 
     .advice {
         background: var(--green);
@@ -51,7 +48,7 @@ const PagesDetails = styled.div`
 
     input {
         margin-top: 1rem;
-        width: min(900px, 90vw);
+        width: 60%;
         padding: 1.2rem;
         border-radius: 25px;
         border: none;
@@ -64,7 +61,7 @@ const PagesDetails = styled.div`
 
         @media (max-width: 768px) {
             width: 100%;
-            padding: 1rem;
+            padding: 1rem
         }
     }
 
@@ -150,16 +147,19 @@ const PagesDetails = styled.div`
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: clamp(1.5rem, 3vw, 2.5rem);
         min-height: 50vh;
-        width: 100%;
-        padding: 0 clamp(1rem, 3vw, 2rem);
 
         .content {
             cursor: pointer;
-            width: min(18rem, 90vw);
+            width: 15rem;
             height: 25rem;
-            margin: 0;
+            margin: 1rem 10rem 1rem 0;
+
+            @media (max-width: 1366px) {
+                margin-right: 5rem;
+                margin-bottom: -4rem;
+                width: 14rem;
+            }
 
             &:hover {
                 .image {
@@ -176,16 +176,16 @@ const PagesDetails = styled.div`
                     }
                 }
             }
-            }
             
             .image {
                 img {
-                    width: 100%;
+                    width: 22rem;
                     height: 25rem;
                     object-fit: cover;
                     border-radius: 15px;
 
                     @media (max-width: 1366px) {
+                        width: 18rem;
                         height: 20rem;
                     }
                 }
