@@ -7,16 +7,12 @@ const FooterDetails = styled.div`
     footer {
         display: flex;
         justify-content: center;
-        margin-left: 100px;
+        flex-wrap: wrap;
+        gap: clamp(2rem, 4vw, 5rem);
+        padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
+        margin: 0 auto;
+        max-width: 1400px;
         color: var(--white);
-
-        @media (max-width: 1366px) {
-            margin-left: 200px;
-        }
-
-        @media (max-width: 768px) {
-            margin-left: 50px;
-        }
 
         @media (max-width: 414px) {
             flex-direction: column;
@@ -24,16 +20,12 @@ const FooterDetails = styled.div`
         }
 
         .footer-content {
-            margin-right: 200px;
             display: flex;
             flex-direction: column;
-
-            @media (max-width: 1024px) {
-                margin-right: 100px;
-            }
+            min-width: 180px;
 
             @media (max-width: 768px) {
-                margin-right: 50px;
+                align-items: center;
             }
 
             h2 {
@@ -67,10 +59,8 @@ const FooterDetails = styled.div`
     }
 
     hr {
-        margin-top: 2rem;
-        margin-bottom: -1rem;
-        width: 50%;
-        margin-left: 25%;
+        margin: 2rem auto -1rem;
+        width: min(50rem, 80%);
         border: 1px solid var(--gray);
     }
 `;
