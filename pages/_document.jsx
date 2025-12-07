@@ -1,8 +1,6 @@
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { NextSeo } from "next-seo";
-import { Toaster } from "sonner";
 
 export default class MyDocument extends Document {
 	// Fast refresh with NextJS doesn't broken the CSS
@@ -32,41 +30,12 @@ export default class MyDocument extends Document {
 	}
 	// Finish Here
 
-	render() {
-		return (
-			<Html lang="pt-br">
-				<NextSeo
-					title="Template"
-					description="Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa."
-					canonical={`https://findyourpet.vercel.app/`}
-					openGraph={{
-						url: "https://findyourpet.vercel.app/",
-						title: "Template",
-						description:
-							"Nossa missão é reunir animais de estimação perdidos com suas famílias. Estamos empenhados em promover conexões, garantindo que cada animal de estimação perdido encontre o caminho de volta para casa.",
-						images: [
-							{
-								url: "https://cdn-images-1.medium.com/v2/resize:fit:800/0*nfX-byWFyxV9Sznb.png",
-								width: 460,
-								height: 460,
-								alt: "Template",
-								type: "image/jpeg" || "image/png",
-							},
-						],
-						siteName: "Template",
-					}}
-					twitter={{
-						handle: "@Template",
-						site: "@Template",
-						cardType: "summary_large_image",
-					}}
-				/>
-
-				<Toaster richColors position="top-right" />
-
-				<Head>
-					<meta name="keywords" content="" />
-					<meta name="author" content="Anderson 'Yagasaki' Marlon" />
+        render() {
+                return (
+                        <Html lang="pt-br">
+                                <Head>
+                                        <meta name="keywords" content="" />
+                                        <meta name="author" content="Anderson 'Yagasaki' Marlon" />
 					<meta name="robots" content="index, follow" />
 					<link rel="shortcut icon" href="/logo.png" />
 					<meta property="og:locale" content="pt_BR" />

@@ -3,10 +3,11 @@ import Navigation from "../../src/components/Navigation";
 import Footer from "../../src/components/Footer";
 import SlugDetails from "../../src/components/SlugDetails";
 import petServices from "../../src/services/pet.services";
-import Head from "next/head";
 import { toast } from "sonner";
 import { getReportAndSendToDiscord } from "../../src/utils/getReportAndSendToDiscord";
 import { NextSeo } from "next-seo";
+
+const siteUrl = "https://findyourpet.vercel.app";
 
 export async function getServerSideProps(context) {
 	const { slug } = context.params;
@@ -39,35 +40,29 @@ const PetSlugPage = ({ pet }) => {
 		}
 	};
 
-	return (
-		<>
-			<Head>
-				<title>FindYourPet | {pet?.name}</title>
-				<meta name="description" content={pet?.description} />
-				<link rel="icon" type="image/png" href="/logo.png" />
-				<meta name="robots" content="index, follow" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			</Head>
-
-			<NextSeo
-				title={`FindYourPet | ${pet?.name}`}
-				description={pet?.description}
-				canonical={`https://findyourpet.vercel.app/pets/${pet?.slug}`}
-				openGraph={{
-					url: `https://findyourpet.vercel.app/pets/${pet?.slug}`,
-					title: `FindYourPet | ${pet?.name}`,
-					description: pet?.description,
-					images: [
-						{
-							url: pet?.imageURL || "https://findyourpet.vercel.app/logo.png",
-							width: 800,
-							height: 600,
-							alt: pet?.name,
-						},
-					],
-					siteName: "FindYourPet",
-				}}
-			/>
+        return (
+                <>
+                        {pet && (
+                                <NextSeo
+                                        title={`FindYourPet | ${pet.name}`}
+                                        description={pet.description}
+                                        canonical={`${siteUrl}/pets/${pet.slug}`}
+                                        openGraph={{
+                                                url: `${siteUrl}/pets/${pet.slug}`,
+                                                title: `FindYourPet | ${pet.name}`,
+                                                description: pet.description,
+                                                images: [
+                                                        {
+                                                                url: pet.imageURL || `${siteUrl}/logo.png`,
+                                                                width: 800,
+                                                                height: 600,
+                                                                alt: pet.name,
+                                                        },
+                                                ],
+                                                siteName: "FindYourPet",
+                                        }}
+                                />
+                        )}
 
 			<Navigation />
 			<PagesDetails>
