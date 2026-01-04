@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import Head from "next/head";
 import imgServices from "../src/services/img.services";
 import petServices from "../src/services/pet.services";
+import fetchCEP from "../src/services/cep.services";
 import { getInfosAndSendToDiscord } from "../src/utils/getInfosAndSendToDiscord";
 
 const SignUp = () => {
@@ -21,6 +22,23 @@ const SignUp = () => {
 
 	const [fieldContact, getFieldContact] = useState("");
 	const [isUploading, setIsUploading] = useState(false);
+
+	const handleChangeLocale = (event) => {
+		setPetLocale(event.target.value);
+
+		const cepRegex = /^[0-9]{8}$/;
+
+		if (!cepRegex.test(event.target.value)) {
+			return;
+		}
+
+		fetchCEP(event.target.value).then((data) => {
+			if (data && data.bairro) {
+				setPetLocale(`${data.bairro}, ${data.localidade}`);
+			}
+		});
+
+	}
 
 	const handleChangeContact = (event) => {
 		const inputPhoneNumber = event.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
@@ -113,7 +131,7 @@ const SignUp = () => {
 	}
 
 	async function sendData() {
-		if (!PetName || !PetDescription || !PetLocale || PetContact.length !== 11) {
+		if (!PetName || !PetDescription || !PetSituation || !PetLocale || PetContact.length !== 11) {
 			toast.warning("Por favor, preencha todos os campos obrigatórios.");
 		} else if (!PetUrl) {
 			toast.warning("Por favor, envie uma imagem do animal antes de cadastrar.");
@@ -195,9 +213,9 @@ const SignUp = () => {
 						<input
 							type="text"
 							id="locale"
-							placeholder="Sua Cidade e Bairro"
+							placeholder="Sua Cidade/Bairro ou CEP"
 							onChange={(event) => {
-								setPetLocale(event.target.value);
+								handleChangeLocale(event);
 							}}
 							value={PetLocale}
 						/>

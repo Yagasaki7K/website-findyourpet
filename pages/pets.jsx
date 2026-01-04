@@ -4,6 +4,7 @@ import petServices from "../src/services/pet.services";
 import Navigation from "../src/components/Navigation";
 import Footer from "../src/components/Footer";
 import Head from "next/head";
+
 import { getLabelColorBasedOnStatus } from "../src/utils/getLabelColorBasedOnStatus";
 
 export async function getServerSideProps() {
@@ -97,11 +98,20 @@ const PetsPage = ({ initialPets }) => {
 		return new Date(`${year}-${month}-${day}`);
 	};
 
+	const NotFound = () => {
+		return (
+			<div className="not-found">
+				<img src="/not-found.png" width={400} height={400} alt="Not Found" />
+				<button onClick={() => window.location.href = "/reporte"}>CADASTRAR PET</button>
+			</div>
+		)
+	}
+
 	const filteredPets =
 		search !== ""
 			? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLowerCase()) || pet.locale.toLowerCase().includes(search.toLowerCase()))
 			: Pets.slice().sort((a, b) => parseDate(b.createdAt) - parseDate(a.createdAt));
-
+	
 	return (
 		<>
 			<Head>
@@ -126,7 +136,7 @@ const PetsPage = ({ initialPets }) => {
 
 				<h2 className="titlePets">Banco de pets cadastrados</h2>
 				<div className="advicePets">
-					<i>*Os animais serão deletados automaticamente após 60 dias após a data da publicação</i>
+					<i>*Os animais serão deletados automaticamente após 60 dias a partir da data da publicação</i>
 				</div>
 				<div className="container">
 					{filteredPets && filteredPets.length > 0
@@ -153,7 +163,8 @@ const PetsPage = ({ initialPets }) => {
 									</div>
 								</a>
 							))
-						: "Carregando..."}
+						: filteredPets && filteredPets.length === 0 ? <NotFound /> : "Carregando..."}
+
 				</div>
 			</PagesDetails>
 			<Footer />
