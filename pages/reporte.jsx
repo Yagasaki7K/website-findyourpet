@@ -37,8 +37,7 @@ const SignUp = () => {
 				setPetLocale(`${data.bairro}, ${data.localidade}`);
 			}
 		});
-
-	}
+	};
 
 	const handleChangeContact = (event) => {
 		const inputPhoneNumber = event.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos

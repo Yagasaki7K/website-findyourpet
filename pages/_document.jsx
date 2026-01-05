@@ -30,12 +30,12 @@ export default class MyDocument extends Document {
 	}
 	// Finish Here
 
-        render() {
-                return (
-                        <Html lang="pt-br">
-                                <Head>
-                                        <meta name="keywords" content="" />
-                                        <meta name="author" content="Anderson 'Yagasaki' Marlon" />
+	render() {
+		return (
+			<Html lang="pt-br">
+				<Head>
+					<meta name="keywords" content="" />
+					<meta name="author" content="Anderson 'Yagasaki' Marlon" />
 					<meta name="robots" content="index, follow" />
 					<link rel="shortcut icon" href="/logo.png" />
 					<meta property="og:locale" content="pt_BR" />

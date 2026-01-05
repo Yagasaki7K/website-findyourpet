@@ -102,16 +102,16 @@ const PetsPage = ({ initialPets }) => {
 		return (
 			<div className="not-found">
 				<img src="/not-found.png" width={400} height={400} alt="Not Found" />
-				<button onClick={() => window.location.href = "/reporte"}>CADASTRAR PET</button>
+				<button onClick={() => (window.location.href = "/reporte")}>CADASTRAR PET</button>
 			</div>
-		)
-	}
+		);
+	};
 
 	const filteredPets =
 		search !== ""
 			? Pets.filter((pet) => pet.name.toLowerCase().includes(search.toLowerCase()) || pet.locale.toLowerCase().includes(search.toLowerCase()))
 			: Pets.slice().sort((a, b) => parseDate(b.createdAt) - parseDate(a.createdAt));
-	
+
 	return (
 		<>
 			<Head>
@@ -139,32 +139,35 @@ const PetsPage = ({ initialPets }) => {
 					<i>*Os animais serão deletados automaticamente após 60 dias a partir da data da publicação</i>
 				</div>
 				<div className="container">
-					{filteredPets && filteredPets.length > 0
-						? filteredPets.map((pets, index) => (
-								<a href={`/pets/` + pets.slug} key={index}>
-									<div className="content">
-										<div className="image">
-											<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
-										</div>
-
-										<div className="text">
-											<p style={{ backgroundColor: "var(--green-alt)" }}>{pets.name}</p>
-
-											<p
-												style={{
-													backgroundColor: getLabelColorBasedOnStatus(pets.status),
-												}}
-											>
-												{pets.status} - {pets.createdAt}
-											</p>
-
-											<p className="locale">{pets.locale}</p>
-										</div>
+					{filteredPets && filteredPets.length > 0 ? (
+						filteredPets.map((pets, index) => (
+							<a href={`/pets/` + pets.slug} key={index}>
+								<div className="content">
+									<div className="image">
+										<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
 									</div>
-								</a>
-							))
-						: filteredPets && filteredPets.length === 0 ? <NotFound /> : "Carregando..."}
 
+									<div className="text">
+										<p style={{ backgroundColor: "var(--green-alt)" }}>{pets.name}</p>
+
+										<p
+											style={{
+												backgroundColor: getLabelColorBasedOnStatus(pets.status),
+											}}
+										>
+											{pets.status} - {pets.createdAt}
+										</p>
+
+										<p className="locale">{pets.locale}</p>
+									</div>
+								</div>
+							</a>
+						))
+					) : filteredPets && filteredPets.length === 0 ? (
+						<NotFound />
+					) : (
+						"Carregando..."
+					)}
 				</div>
 			</PagesDetails>
 			<Footer />
