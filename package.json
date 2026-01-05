@@ -4,10 +4,7 @@
 		"dev": "next dev --turbo",
 		"vercel": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"create:mylint": "bunx --bun biome init && bun mylint",
-		"mylint": "bunx biome format --write",
-		"commit": "git pull && bun update && bun run vercel && bun mylint && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push",
+		"commit": "git pull && bun update && bun run vercel && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push",
 		"clean": "rm -rf node_modules && bun install"
 	},
 	"dependencies": {
@@ -22,7 +19,6 @@
 		"styled-components": "^6.1.19"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.3.11",
 		"eslint": "^9.39.2",
 		"eslint-config-next": "^16.1.1"
 	}
