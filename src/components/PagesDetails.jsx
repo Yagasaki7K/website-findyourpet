@@ -217,6 +217,25 @@ const PagesDetails = styled.div`
             }
         }
     }
+
+    .not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .not-found button {
+        padding: 0.5rem 1rem;
+        background-color: var(--green);
+        color: var(--white);
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 2rem;
+    }
+    
 `;
 
 export default PagesDetails;
