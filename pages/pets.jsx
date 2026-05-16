@@ -4,6 +4,7 @@ import petServices from "../src/services/pet.services";
 import Navigation from "../src/components/Navigation";
 import Footer from "../src/components/Footer";
 import Head from "next/head";
+import Image from "next/image";
 
 import { getLabelColorBasedOnStatus } from "../src/utils/getLabelColorBasedOnStatus";
 
@@ -101,7 +102,7 @@ const PetsPage = ({ initialPets }) => {
 	const NotFound = () => {
 		return (
 			<div className="not-found">
-				<img src="/not-found.png" width={400} height={400} alt="Not Found" />
+				<Image src="/not-found.png" width={400} height={400} alt="Not Found" sizes="(max-width: 768px) 80vw, 400px" />
 				<button onClick={() => (window.location.href = "/reporte")}>CADASTRAR PET</button>
 			</div>
 		);
@@ -144,7 +145,7 @@ const PetsPage = ({ initialPets }) => {
 							<a href={`/pets/` + pets.slug} key={index}>
 								<div className="content">
 									<div className="image">
-										<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
+										<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={352} height={400} sizes="(max-width: 1366px) 18rem, 22rem" style={{ width: "22rem", height: "25rem", objectFit: "cover", borderRadius: "15px" }} />
 									</div>
 
 									<div className="text">

@@ -1,7 +1,14 @@
 import Head from "next/head";
+import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
 import "../styles/globals.css";
 import SEO from "../next-seo.config";
+
+const poppins = Poppins({
+	weight: ["300", "400", "500", "600", "700"],
+	subsets: ["latin"],
+	display: "swap",
+});
 
 function MyApp({ Component, pageProps }) {
 	const defaultOgImage = SEO?.openGraph?.images?.[0];
@@ -33,7 +40,9 @@ function MyApp({ Component, pageProps }) {
 				{SEO.twitter?.handle && <meta name="twitter:creator" content={SEO.twitter.handle} />}
 				{SEO.twitter?.site && <meta name="twitter:site" content={SEO.twitter.site} />}
 			</Head>
-			<Component {...pageProps} />
+			<main className={poppins.className}>
+				<Component {...pageProps} />
+			</main>
 			<Toaster richColors position="top-right" />
 		</>
 	);
