@@ -70,7 +70,7 @@ const PetSlugPage = ({ pet }) => {
 						<>
 							<div className="content">
 								<div className="leftContent">
-									<Image src={pet.imageURL ? pet.imageURL : "/faind.jpg"} alt={pet?.name || "Pet"} width={352} height={400} priority sizes="(max-width: 768px) 90vw, 22rem" />
+									<Image src={pet.imageURL ? pet.imageURL : "/faind.jpg"} alt={pet?.name || "Pet"} width={352} height={400} priority sizes="(max-width: 768px) 90vw, 22rem" style={{ width: "22rem", height: "25rem", objectFit: "cover", borderRadius: "15px 0 0 15px" }} />
 								</div>
 
 								<div className="rightContent">

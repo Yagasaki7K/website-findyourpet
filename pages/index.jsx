@@ -83,13 +83,13 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="rightContent">
-						<Image src="/dog.png" alt="" width={800} height={800} priority sizes="(max-width: 768px) 0px, 50vw" />
+						<Image src="/dog.png" alt="" width={800} height={800} priority sizes="(max-width: 768px) 0px, 50vw" style={{ marginTop: "-10rem", width: "50rem", height: "auto" }} />
 					</div>
 				</div>
 
 				<div className="howWorks" id="howWorks">
 					<div className="leftContent">
-						<Image src="/howtowork.png" alt="" width={600} height={600} sizes="(max-width: 768px) 80vw, 30vw" />
+						<Image src="/howtowork.png" alt="" width={480} height={480} sizes="(max-width: 768px) 80vw, 30vw" style={{ width: "30rem", height: "auto", marginRight: "10rem" }} />
 					</div>
 					<div className="rightContent">
 						<h2>Como funciona?</h2>
@@ -117,7 +117,7 @@ export default function Home() {
 								<a href="/pets" key={index}>
 									<div className="content">
 										<div className="image">
-											<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={440} height={500} sizes="(max-width: 1366px) 18rem, 22rem" />
+											<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={352} height={400} sizes="(max-width: 1366px) 18rem, 22rem" style={{ width: "22rem", height: "25rem", objectFit: "cover", borderRadius: "15px" }} />
 										</div>
 
 										<div className="text">
@@ -143,7 +143,7 @@ export default function Home() {
 
 				<div className="maps">
 					<div className="leftContent">
-						<Image src="/girllooking.png" alt="" width={600} height={600} sizes="(max-width: 768px) 0px, 30vw" />
+						<Image src="/girllooking.png" alt="" width={500} height={500} sizes="(max-width: 768px) 0px, 30vw" style={{ width: "25rem", height: "auto" }} />
 					</div>
 					<div className="rightContent">
 						<h1>Confira animais e abrigos relatados no mapa</h1>
@@ -157,7 +157,7 @@ export default function Home() {
 
 				<div className="petBack">
 					<div className="leftContent">
-						<Image src="/smilingbaby.png" alt="" width={600} height={600} sizes="(max-width: 768px) 0px, 30vw" />
+						<Image src="/smilingbaby.png" alt="" width={500} height={500} sizes="(max-width: 768px) 0px, 30vw" style={{ width: "25rem", height: "auto" }} />
 					</div>
 					<div className="rightContent">
 						<h2>Tenha seu pet de volta</h2>
@@ -166,11 +166,11 @@ export default function Home() {
 				</div>
 
 				<div className="hotdog">
-					<Image src="/hotdog.png" alt="Cachorro Salsicha" width={700} height={350} sizes="100vw" />
+					<Image src="/hotdog.png" alt="Cachorro Salsicha" width={700} height={350} sizes="100vw" style={{ width: "100%", height: "auto" }} />
 				</div>
 
 				<div className="painel green">
-					<Image src="/littlelogo.png" alt="pet" width={120} height={120} />
+					<Image src="/littlelogo.png" alt="pet" width={100} height={100} style={{ width: "6.25rem", height: "6.25rem" }} />
 
 					<h1>Faça a Diferença na Vida de um Pet</h1>
 

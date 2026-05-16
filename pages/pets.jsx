@@ -145,7 +145,7 @@ const PetsPage = ({ initialPets }) => {
 							<a href={`/pets/` + pets.slug} key={index}>
 								<div className="content">
 									<div className="image">
-										<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={440} height={500} sizes="(max-width: 1366px) 18rem, 22rem" />
+										<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={352} height={400} sizes="(max-width: 1366px) 18rem, 22rem" style={{ width: "22rem", height: "25rem", objectFit: "cover", borderRadius: "15px" }} />
 									</div>
 
 									<div className="text">
