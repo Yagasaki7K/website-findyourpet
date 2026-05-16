@@ -1,6 +1,8 @@
 async function fetchCEP(cep_value) {
 	try {
-		const response = await fetch(`https://viacep.com.br/ws/${cep_value}/json/`);
+		const response = await fetch(`https://viacep.com.br/ws/${cep_value}/json/`, {
+			next: { revalidate: 86400 },
+		});
 		if (response.status === 200) {
 			return response.json();
 		}

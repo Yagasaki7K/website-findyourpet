@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import Image from "next/image";
 
 const Navigation = () => {
 	function redirectToHome() {
@@ -9,7 +10,7 @@ const Navigation = () => {
 	return (
 		<NavigationDetails>
 			<a href="/">
-				<img src="/logotipo-100px.png" alt="logo" />
+				<Image src="/logotipo-100px.png" alt="logo" width={400} height={100} priority sizes="(max-width: 768px) 60vw, 25rem" />
 			</a>
 
 			<div className="menu">

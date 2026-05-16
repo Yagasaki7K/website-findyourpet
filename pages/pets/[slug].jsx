@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { toast } from "sonner";
 import Footer from "../../src/components/Footer";
 import Navigation from "../../src/components/Navigation";
@@ -69,7 +70,7 @@ const PetSlugPage = ({ pet }) => {
 						<>
 							<div className="content">
 								<div className="leftContent">
-									<img src={pet.imageURL ? pet.imageURL : "faind.jpg"} alt={pet?.name} />
+									<Image src={pet.imageURL ? pet.imageURL : "/faind.jpg"} alt={pet?.name || "Pet"} width={352} height={400} priority sizes="(max-width: 768px) 90vw, 22rem" />
 								</div>
 
 								<div className="rightContent">

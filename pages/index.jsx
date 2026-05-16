@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Navigation from "../src/components/Navigation";
 import HomeDetails from "../src/components/HomeDetails";
 import Footer from "../src/components/Footer";
@@ -16,14 +17,24 @@ export default function Home() {
 	}
 
 	const [Pets, setPets] = useState([]);
+	const PETS_CACHE_KEY = "home-pets-cache-v1";
 
 	useEffect(() => {
 		getPets();
 	}, []);
 
 	async function getPets() {
+		const cached = typeof window !== "undefined" ? sessionStorage.getItem(PETS_CACHE_KEY) : null;
+		if (cached) {
+			setPets(JSON.parse(cached));
+		}
+
 		const data = await petServices.getAllPets();
-		setPets(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+		const mappedPets = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+		setPets(mappedPets);
+		if (typeof window !== "undefined") {
+			sessionStorage.setItem(PETS_CACHE_KEY, JSON.stringify(mappedPets));
+		}
 	}
 
 	return (
@@ -72,13 +83,13 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="rightContent">
-						<img src="/dog.png" alt="" />
+						<Image src="/dog.png" alt="" width={800} height={800} priority sizes="(max-width: 768px) 0px, 50vw" />
 					</div>
 				</div>
 
 				<div className="howWorks" id="howWorks">
 					<div className="leftContent">
-						<img src="/howtowork.png" alt="" />
+						<Image src="/howtowork.png" alt="" width={600} height={600} sizes="(max-width: 768px) 80vw, 30vw" />
 					</div>
 					<div className="rightContent">
 						<h2>Como funciona?</h2>
@@ -106,7 +117,7 @@ export default function Home() {
 								<a href="/pets" key={index}>
 									<div className="content">
 										<div className="image">
-											<img src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} />
+											<Image src={pets.imageURL ? pets.imageURL : "/faind.jpg"} alt={pets.name} width={440} height={500} sizes="(max-width: 1366px) 18rem, 22rem" />
 										</div>
 
 										<div className="text">
@@ -132,7 +143,7 @@ export default function Home() {
 
 				<div className="maps">
 					<div className="leftContent">
-						<img src="/girllooking.png" alt="" />
+						<Image src="/girllooking.png" alt="" width={600} height={600} sizes="(max-width: 768px) 0px, 30vw" />
 					</div>
 					<div className="rightContent">
 						<h1>Confira animais e abrigos relatados no mapa</h1>
@@ -146,7 +157,7 @@ export default function Home() {
 
 				<div className="petBack">
 					<div className="leftContent">
-						<img src="/smilingbaby.png" alt="" />
+						<Image src="/smilingbaby.png" alt="" width={600} height={600} sizes="(max-width: 768px) 0px, 30vw" />
 					</div>
 					<div className="rightContent">
 						<h2>Tenha seu pet de volta</h2>
@@ -155,11 +166,11 @@ export default function Home() {
 				</div>
 
 				<div className="hotdog">
-					<img src="/hotdog.png" alt="Cachorro Salsicha" />
+					<Image src="/hotdog.png" alt="Cachorro Salsicha" width={700} height={350} sizes="100vw" />
 				</div>
 
 				<div className="painel green">
-					<img src="/littlelogo.png" alt="pet" />
+					<Image src="/littlelogo.png" alt="pet" width={120} height={120} />
 
 					<h1>Faça a Diferença na Vida de um Pet</h1>
 
